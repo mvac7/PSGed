@@ -1,0 +1,1139 @@
+<msxOpenDocument app="tMSgfX devtool" version="0.9.7.0">
+  <info name="PSGed" group="303bcn" version="0.82" author="aorante" startDate="637553376000000000" lastUpdate="637556832000000000">
+    <description>
+    </description>
+  </info>
+  <screens name="">
+    <screen name="LOAD_SCR" ScreenMode="2" SpriteSize="2" SpriteZoom="0" PaletteID="0" ForegroundColor="15" BackgroundColor="4" MapID="33765891" TilesetA_ID="36732157" TilesetB_ID="36732157" TilesetC_ID="36732157" SpritesetID="7317091" OAMID="27572766" />
+    <screen name="psged_v082B_logo_TSET" ScreenMode="2" SpriteSize="2" SpriteZoom="0" PaletteID="66579078" ForegroundColor="15" BackgroundColor="4" MapID="10610228" TilesetA_ID="50264032" TilesetB_ID="50264032" TilesetC_ID="50264032" SpritesetID="0" OAMID="0" />
+    <screen name="psged_v082B_TSET" ScreenMode="2" SpriteSize="2" SpriteZoom="0" PaletteID="20709667" ForegroundColor="15" BackgroundColor="4" MapID="35458159" TilesetA_ID="36732157" TilesetB_ID="36732157" TilesetC_ID="36732157" SpritesetID="0" OAMID="0" />
+  </screens>
+  <palettes>
+    <palette id="66579078" name="logo_PAL">
+      <color index="1" red="0" green="0" blue="0" />
+      <color index="2" red="3" green="3" blue="3" />
+      <color index="3" red="4" green="4" blue="4" />
+      <color index="4" red="0" green="0" blue="5" />
+      <color index="5" red="2" green="2" blue="7" />
+      <color index="6" red="5" green="0" blue="0" />
+      <color index="7" red="0" green="5" blue="7" />
+      <color index="8" red="7" green="0" blue="0" />
+      <color index="9" red="7" green="3" blue="3" />
+      <color index="10" red="6" green="6" blue="0" />
+      <color index="11" red="7" green="7" blue="4" />
+      <color index="12" red="1" green="6" blue="1" />
+      <color index="13" red="5" green="3" blue="5" />
+      <color index="14" red="6" green="6" blue="6" />
+      <color index="15" red="7" green="7" blue="7" />
+    </palette>
+    <palette id="20709667" name="new_PAL">
+      <color index="1" red="0" green="0" blue="0" />
+      <color index="2" red="3" green="3" blue="3" />
+      <color index="3" red="4" green="4" blue="4" />
+      <color index="4" red="0" green="0" blue="5" />
+      <color index="5" red="3" green="3" blue="7" />
+      <color index="6" red="6" green="0" blue="0" />
+      <color index="7" red="2" green="6" blue="7" />
+      <color index="8" red="7" green="0" blue="0" />
+      <color index="9" red="7" green="3" blue="3" />
+      <color index="10" red="6" green="6" blue="0" />
+      <color index="11" red="7" green="7" blue="4" />
+      <color index="12" red="1" green="6" blue="1" />
+      <color index="13" red="4" green="1" blue="5" />
+      <color index="14" red="5" green="5" blue="5" />
+      <color index="15" red="7" green="7" blue="7" />
+    </palette>
+    <palette id="33992247" name="TMS9918A_PAL">
+      <color index="1" red="0" green="0" blue="0" />
+      <color index="2" red="2" green="5" blue="2" />
+      <color index="3" red="3" green="6" blue="3" />
+      <color index="4" red="2" green="2" blue="6" />
+      <color index="5" red="3" green="3" blue="7" />
+      <color index="6" red="5" green="2" blue="1" />
+      <color index="7" red="2" green="6" blue="7" />
+      <color index="8" red="7" green="2" blue="2" />
+      <color index="9" red="7" green="3" blue="3" />
+      <color index="10" red="5" green="5" blue="0" />
+      <color index="11" red="6" green="6" blue="3" />
+      <color index="12" red="2" green="4" blue="2" />
+      <color index="13" red="5" green="2" blue="6" />
+      <color index="14" red="6" green="6" blue="6" />
+      <color index="15" red="7" green="7" blue="7" />
+    </palette>
+  </palettes>
+  <gfx>
+    <tileset id="50264032" name="logo_TSET" mode="2" foregroundColor="15" backgroundColor="4">
+      <tile index="0" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="1" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="2" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="3" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="4" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="5" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="6" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="7" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="8" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="9" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="10" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="11" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="12" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="13" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="14" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="15" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="16" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="17" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="18" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="19" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="20" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="21" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="22" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="23" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="24" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="25" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="26" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="27" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="28" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="29" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="30" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="31" gfxData="0000000000000000" colorData="1414141414141414" />
+      <tile index="32" gfxData="FFFFFFFFFFFFFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="33" gfxData="FFF3F3F3FFF3F3FF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="34" gfxData="FFEBEBFFFFFFFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="35" gfxData="FFC98080C1E3F7FF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="36" gfxData="F7C197C1F4C1F7FF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="37" gfxData="FFCCC9F3E4CCFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="38" gfxData="FFFFFFFFFFFFFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="39" gfxData="FFFFFFFFFFFFFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="40" gfxData="F9F3F3F3F3F3F9FF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="41" gfxData="CFE7E7E7E7E7CFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="42" gfxData="FFA5C381C3A5FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="43" gfxData="FFE7E781E7E7FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="44" gfxData="FFFFFFFFE7E7EFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="45" gfxData="FFFFFF81FFFFFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="46" gfxData="FFFFFFFFE7E7FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="47" gfxData="FFF9F3E7CF9FFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="48" gfxData="FFC19C9C9CC1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="49" gfxData="FFE7C7E7E7C3FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="50" gfxData="FF81FCC19F80FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="51" gfxData="FF81FCE1FC81FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="52" gfxData="FF9C9C80FCFCFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="53" gfxData="FF809F81FC81FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="54" gfxData="FFC19F819CC1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="55" gfxData="FF80FCF9F3F3FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="56" gfxData="FFC19CC19CC1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="57" gfxData="FFC19CC0FCC1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="58" gfxData="FFE7E7FFE7E7FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="59" gfxData="FFE7E7FFE7E7EFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="60" gfxData="FFF3E7CFE7F3FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="61" gfxData="FFFFC3FFC3FFFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="62" gfxData="FFCFE7F3E7CFFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="63" gfxData="FFE1CCF9F3FFF3FF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="64" gfxData="FFFFFFFFFFFFFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="65" gfxData="FFC19C809C9CFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="66" gfxData="FF819C819C81FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="67" gfxData="FFC09F9F9FC0FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="68" gfxData="FF819C9C9C81FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="69" gfxData="FF809F839F80FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="70" gfxData="FF809F839F9FFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="71" gfxData="FFC09F989CC0FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="72" gfxData="FF9C9C809C9CFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="73" gfxData="FFE1F3F3F3E1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="74" gfxData="FFE1F3F393C7FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="75" gfxData="FF9C9983999CFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="76" gfxData="FF9F9F9F9F80FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="77" gfxData="FF9C8880949CFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="78" gfxData="FF9C8C849098FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="79" gfxData="FFC19C9C9CC1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="80" gfxData="FF819C9C819FFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="81" gfxData="FFC19C9499C2FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="82" gfxData="FF819C9C819CFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="83" gfxData="FFC09FC1FC81FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="84" gfxData="FF81E7E7E7E7FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="85" gfxData="FF9C9C9C9CC1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="86" gfxData="FF9C9C9CC9E3FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="87" gfxData="FF9C9480889CFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="88" gfxData="FF9CC9E3C99CFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="89" gfxData="FF9999C3E7E7FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="90" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="91" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="92" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="93" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="94" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="95" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="96" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="97" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="98" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="99" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="100" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="101" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="102" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="103" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="104" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="105" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="106" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="107" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="108" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="109" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="110" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="111" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="112" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="113" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="114" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="115" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="116" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="117" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="118" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="119" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="120" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="121" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="122" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="123" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="124" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="125" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="126" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="127" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="128" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="129" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="130" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="131" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="132" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="133" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="134" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="135" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="136" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="137" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="138" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="139" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="140" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="141" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="142" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="143" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="144" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="145" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="146" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="147" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="148" gfxData="CDB5B687B7B7FFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="149" gfxData="DFDF3F717F7FFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="150" gfxData="3FDFBFD1DF3FFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="151" gfxData="9C6B9B6C6F9CFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="152" gfxData="EE4D6D6D6DC6FFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="153" gfxData="7FBFBFBFBF7FFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="154" gfxData="8F7C9BEBEB1CFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="155" gfxData="FFDA5A5A5AE6FFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="156" gfxData="FE38D6D6D6D8FFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="157" gfxData="1E7836767618FFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="158" gfxData="B7E1B7B7B7B9FFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="159" gfxData="FF9A696B6B9BFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="160" gfxData="FFFFFFFFFFFFFFFF" colorData="E1E1E1E1E1E1E1E1" />
+      <tile index="161" gfxData="FFFFFFFFFFFFFEFE" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="162" gfxData="DFDF8F8F07070303" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="163" gfxData="AA53FF00FF00FF0F" colorData="FEFEEDEDEDEDEDED" />
+      <tile index="164" gfxData="AE55FF00FF0F0F0F" colorData="FEFEEDEDEDEDEDED" />
+      <tile index="165" gfxData="A55AFF0000000000" colorData="FEFEEDEDEDEDEDED" />
+      <tile index="166" gfxData="0000000000000000" colorData="FDFDFDFDFDFDFDFD" />
+      <tile index="167" gfxData="FCFCF8F8F0F0E0E0" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="168" gfxData="0101000001010303" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="169" gfxData="CFCFCFCFCFCFCFCF" colorData="EDEDEDEDEDEDEDED" />
+      <tile index="170" gfxData="0F0F0F0F0F0F0F0F" colorData="EDEDEDEDEDEDEDED" />
+      <tile index="171" gfxData="F0E0C0C080800000" colorData="E1E1E1E1E1E1E1E1" />
+      <tile index="172" gfxData="000007070F0F1E1E" colorData="E1E1E1E1E1E1E1E1" />
+      <tile index="173" gfxData="0000808000000000" colorData="E1E1E1E1E1E1E1E1" />
+      <tile index="174" gfxData="1F0E0C0C18183030" colorData="E1E1E1E1E1E1E1E1" />
+      <tile index="175" gfxData="0000000000000101" colorData="E1E1E1E1E1E1E1E1" />
+      <tile index="176" gfxData="00007878F0F0E0FF" colorData="E1E1E1E1E1E1E1E1" />
+      <tile index="177" gfxData="01000000010103FF" colorData="E1E1E1E1E1E1E1E1" />
+      <tile index="178" gfxData="0000000000000101" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="179" gfxData="00007878F0F0E0E0" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="180" gfxData="0100000001010303" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="181" gfxData="F0E0C0C080800000" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="182" gfxData="000007070F0F1E1E" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="183" gfxData="0000808000000000" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="184" gfxData="07070F0F1F1F3F3F" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="185" gfxData="FEFEFCFCF8F8F0F0" colorData="E1E1F1E1E1F1F1E1" />
+      <tile index="186" gfxData="558AFF80FFC0FFE0" colorData="FEFEEDEDEDEDEDED" />
+      <tile index="187" gfxData="3C3C7878F0F0E0E0" colorData="E1E1F1E1E1F1F1E1" />
+      <tile index="188" gfxData="0000000001010303" colorData="E1E1E1E1E1F1F1E1" />
+      <tile index="189" gfxData="7078FFFF80800000" colorData="E1E1F1E1E1F1F1E1" />
+      <tile index="190" gfxData="0000FFFF0F0F1E1E" colorData="E1E1F1E1E1F1F1E1" />
+      <tile index="191" gfxData="0000808000000000" colorData="E1E1F1E1E1E1E1E1" />
+      <tile index="192" gfxData="0000FFFF0F0F1E1E" colorData="E1E1F1E1E1F1F1E1" />
+      <tile index="193" gfxData="355AA44AB548954A" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="194" gfxData="1E0E0C0C18183030" colorData="E1E1F1E1E1F1F1E1" />
+      <tile index="195" gfxData="B55AFFFFFFFFFFFF" colorData="FEFEEEEEEEEEEEEE" />
+      <tile index="196" gfxData="3F3F7878F0F0E0E0" colorData="E1E1F1E1E1F1F1E1" />
+      <tile index="197" gfxData="FFFF000001010303" colorData="E1E1E1E1E1F1F1E1" />
+      <tile index="198" gfxData="E0E0C0C080800000" colorData="E4E4F4E4E4F4F4F4" />
+      <tile index="199" gfxData="000007070F0F1E1E" colorData="E4E4F4E4E4F4F4E4" />
+      <tile index="200" gfxData="0000FFFF00000000" colorData="E4E4F4E4E4E4E4E4" />
+      <tile index="201" gfxData="0606FCFC18183030" colorData="E4E4F4E4E4F4F4E4" />
+      <tile index="202" gfxData="CFCFCFCFCFCFCFCF" colorData="EDEDFDEDEDFDFDED" />
+      <tile index="203" gfxData="3C3C7878F0F0E0E0" colorData="E4E4F4E4E4F4F4E4" />
+      <tile index="204" gfxData="0000000001010303" colorData="E4E4E4E4E4F4F4E4" />
+      <tile index="205" gfxData="7F7FFFFFFFFFFFFF" colorData="E4E4F4E4E4F4F4E4" />
+      <tile index="206" gfxData="E0E0C0C080800000" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="207" gfxData="030300000F0F1F1F" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="208" gfxData="C0C00000FFFFFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="209" gfxData="06060E1FFFFFFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="210" gfxData="00000000FFFFFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="211" gfxData="3C3C0000FFFFFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="212" gfxData="00000001FFFFFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="213" gfxData="6060E0F0FFFFFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="214" gfxData="03030000FFFFFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="215" gfxData="C0C00000C0C0E0E0" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="216" gfxData="06060E0F1F1F3F3F" colorData="F1F1F1F1F1F1D1F1" />
+      <tile index="217" gfxData="00000000FFFF00FF" colorData="F4F4F4F4F1F1FDF1" />
+      <tile index="218" gfxData="3C3C0000FFFF00FF" colorData="F4F4F4F4FDFDFDFD" />
+      <tile index="219" gfxData="00000001FFFF00FF" colorData="F4F4F4F4FDFDFDFD" />
+      <tile index="220" gfxData="6060E0F0FFFF00FF" colorData="F4F4F4F4FDFDFDFD" />
+      <tile index="221" gfxData="03030000FFFF00FF" colorData="F4F4F4F4FDFDFDFD" />
+      <tile index="222" gfxData="C0C00000FFFF00FF" colorData="F4F4F4F4FDFDFDFD" />
+      <tile index="223" gfxData="07070F1FFFFF00FF" colorData="F4F4F4F4FDFDFDFD" />
+      <tile index="224" gfxData="FFFFFFFFFFFF00FF" colorData="FDFDFDFDFDFDFDFD" />
+      <tile index="225" gfxData="CFCFCFCFCFCF0FFF" colorData="FDFDFDFDFDFDFDFD" />
+      <tile index="226" gfxData="8080C0C0E0E0F1F1" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="227" gfxData="3F3F7F7FFFFFFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="228" gfxData="FBFBFFFFFFFFFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="229" gfxData="F0F0F8F8FDFDFFFF" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="230" gfxData="8080FF000000FFFF" colorData="1D1DFDFDFDFDFDFD" />
+      <tile index="231" gfxData="0000FF000000FFFF" colorData="FDFDFDFDFDFDFDFD" />
+      <tile index="232" gfxData="0F0FFF000000FFFF" colorData="FDFDFDFDFDFDFDFD" />
+      <tile index="233" gfxData="000000000000FFFF" colorData="FDFDFDFDFDFDFDFD" />
+      <tile index="234" gfxData="837D4D754D7D83FF" colorData="5E5E5E5E5E5E5E5E" />
+      <tile index="235" gfxData="FF81FCC09C80FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="236" gfxData="FFC19C9C9CC1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="237" gfxData="FF908C9F9F9FFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="238" gfxData="FF918C9C9C9CFFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="239" gfxData="CF80CFCFCFE1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="240" gfxData="FFC19C809FC1FFFF" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="241" gfxData="FFF9F3E7CF9FFFFF" colorData="5E5E5E5E5E5E5E5E" />
+      <tile index="242" gfxData="FF81FCE1FC81FFFF" colorData="5858585858585858" />
+      <tile index="243" gfxData="FFC19C9C9CC1FFFF" colorData="5858585858585858" />
+      <tile index="244" gfxData="9F819C9C9C81FFFF" colorData="5757575757575757" />
+      <tile index="245" gfxData="FFC09F9F9FC0FFFF" colorData="5757575757575757" />
+      <tile index="246" gfxData="FF918C9C9C9CFFFF" colorData="5757575757575757" />
+      <tile index="247" gfxData="FFFF00FFFF0000FF" colorData="EFEFEFEFEFEFEFEF" />
+      <tile index="248" gfxData="FFFFFFFFFFFFFFFF" colorData="F3F3F3F3F3F3F3F3" />
+      <tile index="249" gfxData="B55AFFFFFFFFFFFF" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="250" gfxData="0F0F0F0F0F0F0F0F" colorData="FDFDFDFDFDFDFDFD" />
+      <tile index="251" gfxData="0F0F0F0F0F0F0F0F" colorData="EDEDFDEDEDFDFDED" />
+      <tile index="252" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="253" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="254" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+      <tile index="255" gfxData="0000000000000000" colorData="5F5F5F5F5F5F5F5F" />
+    </tileset>
+    <tileset id="36732157" name="main_TSET" mode="2" foregroundColor="15" backgroundColor="14">
+      <tile index="0" gfxData="FFC19C9C9CC1FF00" colorData="2E2F2F2F2F2F2FEE" />
+      <tile index="1" gfxData="FF183818183C0000" colorData="2EF2F2F2F2F2F2EE" />
+      <tile index="2" gfxData="FF81FCC19F80FF00" colorData="2E2F2F2F2F2F2FEE" />
+      <tile index="3" gfxData="FF81FCE1FC81FF00" colorData="2E2F2F2F2F2F2FEE" />
+      <tile index="4" gfxData="FF63637F03030000" colorData="2EF2F2F2F2F2F2EE" />
+      <tile index="5" gfxData="FF809F81FC81FF00" colorData="2E2F2F2F2F2F2FEE" />
+      <tile index="6" gfxData="FFC19F819CC1FF00" colorData="2E2F2F2F2F2F2FEE" />
+      <tile index="7" gfxData="FF80FCF9F3F3FF00" colorData="2E2F2F2F2F2F2FEE" />
+      <tile index="8" gfxData="FFC19CC19CC1FF00" colorData="2E2F2F2F2F2F2FEE" />
+      <tile index="9" gfxData="FFC19CC0FCC1FF00" colorData="2E2F2F2F2F2F2FEE" />
+      <tile index="10" gfxData="00E48CC4848E0000" colorData="74747474747474EE" />
+      <tile index="11" gfxData="00EE81C6888F00FF" colorData="74747474747474EE" />
+      <tile index="12" gfxData="00EE81C6818E00FF" colorData="74747474747474EE" />
+      <tile index="13" gfxData="00E989CF818100FF" colorData="74747474747474EE" />
+      <tile index="14" gfxData="00EF88CE818E00FF" colorData="74747474747474EE" />
+      <tile index="15" gfxData="00392231203B0000" colorData="74747474747474EE" />
+      <tile index="16" gfxData="00CE1090508E00FE" colorData="74747474747474EE" />
+      <tile index="17" gfxData="0039253925250000" colorData="74747474747474EE" />
+      <tile index="18" gfxData="00DC088808C800FE" colorData="74747474747474EE" />
+      <tile index="19" gfxData="000404247C200000" colorData="74747474747474EE" />
+      <tile index="20" gfxData="FF819C9C819FFF00" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="21" gfxData="FFC09FC1FC81FF00" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="22" gfxData="FFC09F989CC0FF00" colorData="F1F1F1F1F1F1F1F1" />
+      <tile index="23" gfxData="FF809F839F80FFFF" colorData="F1F4F4F4F4F4F41E" />
+      <tile index="24" gfxData="FF819C9C9C81FFFF" colorData="FEF4F4F4F4F4F41E" />
+      <tile index="25" gfxData="FFFFFFFFFFFFFFFF" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="26" gfxData="FFFFFFFFFFFFFFFF" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="27" gfxData="FFFFFFFFFFFFFFFF" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="28" gfxData="FFFFFFFFFFFFFFFF" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="29" gfxData="FFFFFFFFFFFFFFFF" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="30" gfxData="FFFFFFFFFFFFFFFF" colorData="FEFEFEFEFEFEFE1E" />
+      <tile index="31" gfxData="80A2948894A280FF" colorData="1818181818181818" />
+      <tile index="32" gfxData="0000000000000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="33" gfxData="000C0C0C0C000C00" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="34" gfxData="0014140000000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="35" gfxData="00143E143E140000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="36" gfxData="083E683E0B3E0800" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="37" gfxData="0033360C1B330000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="38" gfxData="00386C3D663D0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="39" gfxData="0018300000000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="40" gfxData="060C0C0C0C0C0600" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="41" gfxData="3018181818183000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="42" gfxData="005A3C7E3C5A0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="43" gfxData="0018187E18180000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="44" gfxData="0000000018181000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="45" gfxData="0000007E00000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="46" gfxData="0000000018180000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="47" gfxData="00060C1830600000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="48" gfxData="003E6363633E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="49" gfxData="00183818183C0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="50" gfxData="007E033E607F0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="51" gfxData="007E031E037E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="52" gfxData="0063637F03030000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="53" gfxData="007F607E037E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="54" gfxData="003E607E633E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="55" gfxData="007F03060C0C0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="56" gfxData="003E633E633E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="57" gfxData="003E633F033E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="58" gfxData="0018180018180000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="59" gfxData="0018180018181000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="60" gfxData="000C1830180C0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="61" gfxData="00003C003C000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="62" gfxData="0030180C18300000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="63" gfxData="001E33060C000C00" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="64" gfxData="3E415D555F403E00" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="65" gfxData="003E637F63630000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="66" gfxData="007E637E637E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="67" gfxData="003F6060603F0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="68" gfxData="007E6363637E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="69" gfxData="007F607C607F0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="70" gfxData="007F607C60600000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="71" gfxData="003F6067633F0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="72" gfxData="0063637F63630000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="73" gfxData="001E0C0C0C1E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="74" gfxData="001E0C0C6C380000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="75" gfxData="0063667C66630000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="76" gfxData="00606060607F0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="77" gfxData="0063777F6B630000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="78" gfxData="0063737B6F670000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="79" gfxData="003E6363633E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="80" gfxData="007E63637E600000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="81" gfxData="003E636B663D0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="82" gfxData="007E63637E630000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="83" gfxData="003F603E037E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="84" gfxData="007E181818180000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="85" gfxData="00636363633E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="86" gfxData="00636363361C0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="87" gfxData="00636B7F77630000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="88" gfxData="0063361C36630000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="89" gfxData="0066663C18180000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="90" gfxData="007E0C18307E0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="91" gfxData="0E0C0C0C0C0C0E00" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="92" gfxData="006030180C060000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="93" gfxData="3818181818183800" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="94" gfxData="0000000000000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="95" gfxData="0000000000007E00" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="96" gfxData="0000000000000000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="97" gfxData="003E637F63630000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="98" gfxData="007E637E637E0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="99" gfxData="003F6060603F0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="100" gfxData="007E6363637E0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="101" gfxData="007F607C607F0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="102" gfxData="007F607C60600000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="103" gfxData="003F6067633F0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="104" gfxData="0063637F63630000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="105" gfxData="001E0C0C0C1E0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="106" gfxData="001E0C0C6C380000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="107" gfxData="0063667C66630000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="108" gfxData="00606060607F0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="109" gfxData="0063777F6B630000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="110" gfxData="0063737B6F670000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="111" gfxData="003E6363633E0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="112" gfxData="007E63637E600000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="113" gfxData="003E636B663D0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="114" gfxData="007E63637E630000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="115" gfxData="003F603E037E0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="116" gfxData="007E181818180000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="117" gfxData="00636363633E0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="118" gfxData="00636363361C0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="119" gfxData="00636B7F77630000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="120" gfxData="0063361C36630000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="121" gfxData="0066663C18180000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="122" gfxData="007E0C18307E0000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="123" gfxData="0000000000000000" colorData="DEDEDEDEDEDEDEDE" />
+      <tile index="124" gfxData="0307070E0E1E1E3E" colorData="BEBEBEBEBEBEBEBE" />
+      <tile index="125" gfxData="C0E0E0707078787C" colorData="BEBEBEBEBEBEBEBE" />
+      <tile index="126" gfxData="3E7E7FFFFEFEFF7F" colorData="BEBEBEBEBEBEBEBE" />
+      <tile index="127" gfxData="7C7EFEFF7F7FFFFE" colorData="BEBEBEBEBEBEBEBE" />
+      <tile index="128" gfxData="00000000000000FF" colorData="E4E4E4E4E4E4E4E4" />
+      <tile index="129" gfxData="003E637F636300FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="130" gfxData="007E637E637E00FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="131" gfxData="003F6060603F00FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="132" gfxData="007E6363637E00FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="133" gfxData="007F607C607F00FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="134" gfxData="007F607C606000FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="135" gfxData="003F6067633F00FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="136" gfxData="0063637F63630000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="137" gfxData="001E0C0C0C1E0000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="138" gfxData="001E0C0C6C380000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="139" gfxData="0063667C66630000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="140" gfxData="00606060607F0000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="141" gfxData="0063777F6B630000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="142" gfxData="0063737B6F670000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="143" gfxData="003E6363633E00FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="144" gfxData="007E63637E6000FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="145" gfxData="003E636B663D00FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="146" gfxData="007E63637E6300FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="147" gfxData="003F603E037E00FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="148" gfxData="007E1818181800FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="149" gfxData="00636363633E0000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="150" gfxData="00636363361C0000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="151" gfxData="00636B7F77630000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="152" gfxData="0063361C36630000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="153" gfxData="0066663C18180000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="154" gfxData="007E0C18307E00FF" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="155" gfxData="00383C3C3C3C0000" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="156" gfxData="0030383C38300000" colorData="6E6E6E6E6E6E6E6E" />
+      <tile index="157" gfxData="000C1C3C1C0C0000" colorData="6E6E6E6E6E6E6E6E" />
+      <tile index="158" gfxData="070F0F0F0F0F0700" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="159" gfxData="F0F8F8F8F8F8F000" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="160" gfxData="0000000F08080808" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="161" gfxData="000000FF00000000" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="162" gfxData="000000F010101010" colorData="FEFEFEFE1E1E1E1E" />
+      <tile index="163" gfxData="0808080F0F080808" colorData="FEFEFE1EFEFEFEFE" />
+      <tile index="164" gfxData="000000FFFF000000" colorData="FEFEFE1EFEFEFEFE" />
+      <tile index="165" gfxData="000000FFFF080808" colorData="FEFEFE1EFEFEFEFE" />
+      <tile index="166" gfxData="101010F0F0101010" colorData="1E1E1E1EFE1E1E1E" />
+      <tile index="167" gfxData="0808080808080808" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="168" gfxData="1010101010101010" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="169" gfxData="101010FFFF000000" colorData="1E1E1E1EFEFEFEFE" />
+      <tile index="170" gfxData="080808FFFF000000" colorData="FEFEFE1EFEFEFEFE" />
+      <tile index="171" gfxData="000000FF10101010" colorData="FEFEFE1F1F1E1E1E" />
+      <tile index="172" gfxData="0808080F00000000" colorData="FEFEFE1E1E1E1E1E" />
+      <tile index="173" gfxData="000000FF00000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="174" gfxData="101010F000000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="175" gfxData="00000000FFFFFF00" colorData="5E5E5E5E5E5E5E5E" />
+      <tile index="176" gfxData="00000000FEFEFE00" colorData="5E5E5E5E5E5E5E5E" />
+      <tile index="177" gfxData="FEFEFEFEFEFEFE7C" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="178" gfxData="FEFEFEFEFEFEFE7C" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="179" gfxData="080808FFFF080808" colorData="FEFEFE1EFEFEFEFE" />
+      <tile index="180" gfxData="FEFEFEFEFEFEFC00" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="181" gfxData="FEFEFEFEFEFEFC00" colorData="7E7E7E7E7E7E7E7E" />
+      <tile index="182" gfxData="FEFEFEFEFEFEFC00" colorData="5E5E5E5E5E5E5E5E" />
+      <tile index="183" gfxData="FEFEFEFEFEFEFC00" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="184" gfxData="FEFEFEFEFEFEFC00" colorData="9E9E9E9E9E9E9E9E" />
+      <tile index="185" gfxData="FEFEFEFEFEFEFC00" colorData="6E6E6E6E6E6E6E6E" />
+      <tile index="186" gfxData="FEFEFEFEFEFEFC00" colorData="AEAEAEAEAEAEAEAE" />
+      <tile index="187" gfxData="000C146464140C00" colorData="AEFEFEFEFEFEFEFE" />
+      <tile index="188" gfxData="000C146464140C00" colorData="FE3E3E3E3E3E3E3E" />
+      <tile index="189" gfxData="001C2222221C0000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="190" gfxData="001C3E3E3E1C0000" colorData="CECECECECECECECE" />
+      <tile index="191" gfxData="001C3E3E3E1C0000" colorData="8E8E8E8E8E8E8E8E" />
+      <tile index="192" gfxData="406070787C7F0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="193" gfxData="FFFFFFFFFFFFFF00" colorData="FEFEFEFEFE4EFEFE" />
+      <tile index="194" gfxData="0000000000EA0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="195" gfxData="02060E1E3E7F0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="196" gfxData="416171797D7F0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="197" gfxData="04864524140C0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="198" gfxData="1018109250300000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="199" gfxData="4020100805030000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="200" gfxData="10387CFEFFFF0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="201" gfxData="040A102040800000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="202" gfxData="416171797D7F0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="203" gfxData="FFFFFFFFFFFFFF00" colorData="4EFEFEFEFEFEFEFE" />
+      <tile index="204" gfxData="EA000000000000FF" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="205" gfxData="02060E1E3E7F0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="206" gfxData="081828498A0C0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="207" gfxData="2060A22028300000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="208" gfxData="03060E1E3E7E0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="209" gfxData="02070F1F3F7F0000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="210" gfxData="000182C4E8F00000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="211" gfxData="804020100A040000" colorData="4F4F4F4F4F4F4FEE" />
+      <tile index="212" gfxData="FEC6EEEEEEC6FE00" colorData="5E5E5E5E5E5E5E5E" />
+      <tile index="213" gfxData="003C2222223C0000" colorData="85858585858585EE" />
+      <tile index="214" gfxData="3F7F7F7F7F7F3F00" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="215" gfxData="FEFFFFFFFFFFFE00" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="216" gfxData="00180038183C0000" colorData="F4F4F4F4F4F4F4EE" />
+      <tile index="217" gfxData="7F77774177777F00" colorData="5E5E5E5E5E5E5E5E" />
+      <tile index="218" gfxData="7F7F7F417F7F7F00" colorData="5E5E5E5E5E5E5E5E" />
+      <tile index="219" gfxData="7F7F4163777F7F00" colorData="5E5E5E5E5E5E5E5E" />
+      <tile index="220" gfxData="810C1C3C1C0C81FF" colorData="E48484848484E4E4" />
+      <tile index="221" gfxData="C3E7E7E7E7E7C300" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="222" gfxData="FFABD5ABD5ABFF00" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="223" gfxData="0054545454000000" colorData="51515151515151EE" />
+      <tile index="224" gfxData="007F404040404040" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="225" gfxData="00FF000000000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="226" gfxData="00F8080E0E0E0E0E" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="227" gfxData="4040404040404040" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="228" gfxData="404040407F1F1F00" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="229" gfxData="00000000FFFFFF00" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="230" gfxData="0E0E0E0EFEFEFE00" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="231" gfxData="0E0E0E0E0E0E0E0E" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="232" gfxData="000000FF08080808" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="233" gfxData="080808FF00000000" colorData="FEFEFE1E1E1E1E1E" />
+      <tile index="234" gfxData="0000000000000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="235" gfxData="0000000000000000" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="236" gfxData="0000001F10101010" colorData="1E1E1E1E1E1E1E1E" />
+      <tile index="237" gfxData="000000F808080808" colorData="1E1E1E1EFEFEFEFE" />
+      <tile index="238" gfxData="080808F800000000" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="239" gfxData="1010101F00000000" colorData="1E1E1EFEFEFEFEFE" />
+      <tile index="240" gfxData="007F5D6B776B5D7F" colorData="8E8E8E8E8E8E8E8E" />
+      <tile index="241" gfxData="FF0000FF00000000" colorData="4E4E4E1E1E1E1E1E" />
+      <tile index="242" gfxData="C00000FF00000000" colorData="4E4E4E1E1E1E1E1E" />
+      <tile index="243" gfxData="4040404040404040" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="244" gfxData="C0F0FCFFFCF0C000" colorData="8E8E8E8E8E8E8E8E" />
+      <tile index="245" gfxData="C0F0FCFFFCF0C000" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="246" gfxData="FEFEFEFEFEFEFE00" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="247" gfxData="EEEEEEEEEEEEEE00" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="248" gfxData="958A958A958A958A" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="249" gfxData="8080808080808080" colorData="FEFEFEFEFEFEFEFE" />
+      <tile index="250" gfxData="808080FFFF808080" colorData="FEFEFE1EFEFEFEFE" />
+      <tile index="251" gfxData="000000FFFF808080" colorData="FEFEFE1EFEFEFEFE" />
+      <tile index="252" gfxData="808080FF00000000" colorData="FEFEFE1E1E1E1E1E" />
+      <tile index="253" gfxData="7EFFC3CBDF5E0800" colorData="4E4E4E4E4E4E4E4E" />
+      <tile index="254" gfxData="7EFFC3CBDF5E0800" colorData="3E3E3E3E3E3E3E3E" />
+      <tile index="255" gfxData="FFFFFFFFFFFFFFFF" colorData="FEFEFEFEFEFEFEFE" />
+    </tileset>
+  </gfx>
+  <maps>
+    <map id="10610228" name="title_test" maptype="1" tiletype="0" width="32" height="24" tileset="50264032">
+      <line index="0">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="1">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="2">A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0</line>
+      <line index="3">A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A1A2BAA3A4A5C3C1A0A0</line>
+      <line index="4">A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A7A8A0A9AAA6A0C1A0A0</line>
+      <line index="5">A0A0A0A0A0A0ABACADAEAFB0B1ABACADAEB2B3B4B5B6B7B8A0A9AAA6A0C1A0A0</line>
+      <line index="6">F7F7F7F7F7B9AFBBBCBDBEBFC2AFC4C5C6C7C8C9B2CBCCCDF7CAFBA6F7C1F7F7</line>
+      <line index="7">F8F8F8F8F8CECFD0D1D2D3D4D5D6D7D8D9DADBDCDDDEDFE0E0E1FAA6F8C1F8F8</line>
+      <line index="8">F8F8F8F8F8E2E3F8F8F8F8F8F8F8E5E6E7E7E7E7E7E7E7E7E7E7E8E9F8C1F8F8</line>
+      <line index="9">F8F8F8F8F8E4F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F8F8</line>
+      <line index="10">F8F8F8F8F8F8F8F8F8F8F8F8F8F8F8F8F89495969798999A9B9CF89D9E9FF8F8</line>
+      <line index="11">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="12">202020202020EA203230313020EBECEDEBEEEFF0F1F2F3F2F4F5F62020202020</line>
+      <line index="13">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="14">20202020202020202056455253494F4E20302E383242494F5320202020202020</line>
+      <line index="15">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="16">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="17">202020202020202020202020435552534F52204B455953202020202020202020</line>
+      <line index="18">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="19">2020202020202020202020204A4F59535449434B202020202020202020202020</line>
+      <line index="20">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="21">2020202020202020202020204D4F555345202020202020202020202020202020</line>
+      <line index="22">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="23">2020202020202020202020202020202020202020202020202020202020202020</line>
+    </map>
+    <map id="66182856" name="title_SCR" maptype="1" tiletype="0" width="32" height="24" tileset="50264032">
+      <line index="0">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="1">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="2">A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0</line>
+      <line index="3">A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A1A2BAA3A4A5C3C1A0A0</line>
+      <line index="4">A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A7A8A0A9AAA6A0C1A0A0</line>
+      <line index="5">A0A0A0A0A0A0ABACADAEAFB0B1ABACADAEB2B3B4B5B6B7B8A0A9AAA6A0C1A0A0</line>
+      <line index="6">F7F7F7F7F7B9AFBBBCBDBEBFC2AFC4C5C6C7C8C9B2CBCCCDF7CAFBA6F7C1F7F7</line>
+      <line index="7">F8F8F8F8F8CECFD0D1D2D3D4D5D6D7D8D9DADBDCDDDEDFE0E0E1FAA6F8C1F8F8</line>
+      <line index="8">F8F8F8F8F8E2E3F8F8F8F8F8F8F8E5E6E7E7E7E7E7E7E7E7E7E7E8E9F8C1F8F8</line>
+      <line index="9">F8F8F8F8F8E4F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F8F8</line>
+      <line index="10">F8F8F8F8F8F8F8F8F8F8F8F8F8F8F8F8F89495969798999A9B9CF89D9E9FF8F8</line>
+      <line index="11">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="12">202020202020EA203230313020EBECEDEBEEEFF0F1F2F3F2F4F5F62020202020</line>
+      <line index="13">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="14">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="15">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="16">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="17">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="18">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="19">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="20">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="21">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="22">2020202020202020202020202020202020202020202020202020202020202020</line>
+      <line index="23">2020202020202020202020202020202020202020202020202020202020202020</line>
+    </map>
+    <map id="14159374" name="help_SCR" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A748454C502020202020202020202020202020202020202020202020202020A8</line>
+      <line index="3">A3A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4FBA6</line>
+      <line index="4">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="5">A72020202020202020202020202020202020202020202020202020202020FAA6</line>
+      <line index="6">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="7">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="8">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="9">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="10">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="11">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="12">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="13">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="14">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="15">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="16">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="17">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="18">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="19">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="20">A72020202020202020202020202020202020202020202020202020202020FAA6</line>
+      <line index="21">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="22">ACADADADADADADADADADADADADADADADADADADADADADADADADADADADADADFCAE</line>
+      <line index="23">808080808080808080808080808080808080808080808080DD0F108598899480</line>
+    </map>
+    <map id="42498820" name="confirm_WIN" maptype="1" tiletype="0" width="20" height="7" tileset="36732157">
+      <line index="0">E0E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E2</line>
+      <line index="1">E37C7D20202020202020202020202020202020E7</line>
+      <line index="2">E37E7F20202020202020202020202020202020E7</line>
+      <line index="3">E3202020202020202020202020202020202020E7</line>
+      <line index="4">E3202020202020202020202020202020202020E7</line>
+      <line index="5">E32020202020209E1112998593DD0F108E8FD7E7</line>
+      <line index="6">E4E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E6</line>
+    </map>
+    <map id="46849131" name="PSGed_v082b_copyWIN" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A7454449542020202020202020202020202020202020202020202020202000A8</line>
+      <line index="3">A3A4A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A4A4A4AB</line>
+      <line index="4">A76368616E6E656C206120A76368616E6E656C2062A76368616E6E656C2063A8</line>
+      <line index="5">A7544F4E452020BDDFDE20A7544F4E452020BDDFDEA7544F4E452020BDDFDEA8</line>
+      <line index="6">A7465245512E2020202020A7465245512E20202020A7465245512E20202020A8</line>
+      <line index="7">A720202001000000D9DA20A720202001000000D9DAA720202001000000D9DAA8</line>
+      <line index="8">A74E4F49534520BDDFDE20A74E4F49534520BDDFDEA74E4F49534520BDDFDEA8</line>
+      <line index="9">A7454E56454C2EBDDFDE20A7454E56454C2EBDDFDEA7454E56454C2EBDDFDEA8</line>
+      <line index="10">A7414D502E200000D9DA20A7414D502E200000D9DAA7414D502E200000D9DAA8</line>
+      <line index="11">A3A4A4A4A4A4A4A4A4A4A4AAA5A4A4A4A4A4A4A4A4AAA4A4A4A4A4A4A4A4A4AB</line>
+      <line index="12">A76E6F697365202020202020A7656E76656C6F706520202020202020202020A8</line>
+      <line index="13">A7465245512E20200000D9DAA7534841504520200001C0C1C2DB2020202020A8</line>
+      <line index="14">A72020202020202020202020A7504552494F44200001000000D9DA20202020A8</line>
+      <line index="15">A3A4A4A4A4A4A4A4A4A4A4A4B3A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A6</line>
+      <line index="16">A773657175656E6365722020A77061747465726E20202020202020202020F5A8</line>
+      <line index="17">A7D6D8D7D68E8597D7202020A7D6838C92D7D6838F9099D72020200001D9DAA8</line>
+      <line index="18">A7504F532020D4D50001D9DAA7DC20AFAFAFF0E1E1E1E1E1E1E1E1E1E1E1E1E2</line>
+      <line index="19">A75041545445524E0001D9DAA741BBB4B4B4E3544F200001D9DA9E138F8BD7E7</line>
+      <line index="20">A74C454E475448200001D9DAA742BBB4B4B4E4E5E5E5E5E5E5E5E5E5E5E5E5E6</line>
+      <line index="21">A742504D202020010206D9DAA743BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="22">ACADADADADADADADADADADADE9ADADADADADADADADADADADADADADADADADADAE</line>
+      <line index="23">800A88858C90DD0B838F8E86DD0C8C8F8184DD0E928587939F20F520FD20F620</line>
+    </map>
+    <map id="13263341" name="PSGed_v082b_info" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A7454449542020202020202020202020202020202020202020202020202020A8</line>
+      <line index="3">A3A4A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A400A4AB</line>
+      <line index="4">A76368616E6E656C206120A76368616E6E656C2062A76368616E6E656C2063A8</line>
+      <line index="5">A7544F4E452020BDDFDE20A7544F4E452020BDDFDEA7544F4E452020BDDFDEA8</line>
+      <line index="6">A7465245512E2020202020A7465245512E20202020A7465245512E20202020A8</line>
+      <line index="7">A720202001000000D9DA20A720202001000000D9DAA720202001000000D9DAA8</line>
+      <line index="8">A74E4F49534520BDDFDE20A74E4F49534520BDDFDEA74E4F49534520BDDFDEA8</line>
+      <line index="9">A7454E56454C2EBDDFDE20A7454E56454C2EBDDFDEA7454E56454C2EBDDFDEA8</line>
+      <line index="10">A7414D502E200000D9DA20A7414D502E200000D9DAA7414D502E200000D9DAA8</line>
+      <line index="11">F0E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E2</line>
+      <line index="12">E3736F6E6720696E666F202020202020202020202020202020202020202020E7</line>
+      <line index="13">E320204E414D453A2020202020202020202020202020202020202020202020E7</line>
+      <line index="14">E3415554484F523A2020202020202020202020202020202020202020202020E7</line>
+      <line index="15">E4E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E6</line>
+      <line index="16">A773657175656E6365722020A77061747465726E20202020202020202020F5A8</line>
+      <line index="17">A7D6D8D7D68E8597D7202020A7D6838C92D7D6838F9099D72020200001D9DAA8</line>
+      <line index="18">A7504F532020D4D50001D9DAA7DC20AFAFAFB0AFAFAFB0AFAFAFB0AFAFAFB0A8</line>
+      <line index="19">A75041545445524E0001D9DAA741BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="20">A74C454E475448200001D9DAA742BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="21">A742504D202020010206D9DAA743BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="22">ACADADADADADADADADADADADE9ADADADADADADADADADADADADADADADADADADAE</line>
+      <line index="23">800A88858C90DD0B838F8E86DD0C8C8F8184DD0E928587939F20F520FD20F620</line>
+    </map>
+    <map id="33765891" name="load2_SCR" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A74C4F41442020202020202020202020202020202020202020202020202020A8</line>
+      <line index="3">A3A4A4A4A4A4A4A4A4A4A4A4A4A4A4FBABA4A4A4A4A4A4A4A4A4A4A5A4A4A4A6</line>
+      <line index="4">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="5">A72020202020202020202020202020FAA620202020202020202020A7202020A8</line>
+      <line index="6">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="7">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="8">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="9">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="10">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="11">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="12">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="13">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="14">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="15">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="16">A7202020207B202020202020202020FAA620202020202020202020A7202020A8</line>
+      <line index="17">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="18">A3A4A4A4A4A4A4A4A4A4A4A4A4A4A4FAA9A4A4A4A4A4A4A4A4A4A4AAA4A4A4A6</line>
+      <line index="19">A7ECADADADADADADADADADADADADEDF9202020202020202020202020202020A8</line>
+      <line index="20">A7A8202020202020202020202020A7F9202020202020202020202020202020A8</line>
+      <line index="21">A7EFA1A1A1A1A1A1A1A1A1A1A1A1EEF9202020202020202020202020202020A8</line>
+      <line index="22">ACADADADADADADADADADADADADADADFCADADADADADADADADADADADADADADADAE</line>
+      <line index="23">8080808080808080808080808080808080DD11128C8F8184DD0F108598899480</line>
+    </map>
+    <map id="35458159" name="main_test" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A7454449542020202020202020202020202020202020202020202020202020A8</line>
+      <line index="3">A3A4A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A4A4A4AB</line>
+      <line index="4">A76368616E6E656C206120A76368616E6E656C2062A76368616E6E656C2063A8</line>
+      <line index="5">A7544F4E452020BDDFDE20A7544F4E452020BDDFDEA7544F4E452020BDDFDEA8</line>
+      <line index="6">A7465245512E2020202020A7465245512E20202020A7465245512E20202020A8</line>
+      <line index="7">A720202001000000D9DA20A720202001000000D9DAA720202001000000D9DAA8</line>
+      <line index="8">A74E4F49534520BDDFDE20A74E4F49534520BDDFDEA74E4F49534520BDDFDEA8</line>
+      <line index="9">A7454E56454C2EBDDFDE20A7454E56454C2EBDDFDEA7454E56454C2EBDDFDEA8</line>
+      <line index="10">A7414D502E200000D9DA20A7414D502E200000D9DAA7414D502E200000D9DAA8</line>
+      <line index="11">A3A4A4A4A4A4A4A4A4A4A4AAA5A4A4A4A4A4A4A4A4AAA4A4A4A4A4A4A4A4A4AB</line>
+      <line index="12">A76E6F697365202020202020A7656E76656C6F706520202020202020202020A8</line>
+      <line index="13">A7465245512E20200000D9DAA7534841504520200001C0C1C2DB2020202020A8</line>
+      <line index="14">A72020202020202020202020A7504552494F44200001000000D9DA20202020A8</line>
+      <line index="15">A3A4A4A4A4A4A4A4A4A4A4A4B3A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A6</line>
+      <line index="16">A773657175656E6365722020A77061747465726E20202020202020202020F5A8</line>
+      <line index="17">A7D6D8D7D68E8597D7202020A7D6838C92D7D6838F9099D72020200001D9DAA8</line>
+      <line index="18">A7504F532020D4D50001D9DAA7DC20AFAFAFB0AFAFAFB0AFAFAFB0AFAFAFB0A8</line>
+      <line index="19">A75041545445524E0001D9DAA741BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="20">A74C454E475448200001D9DAA742BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="21">A742504D202020010206D9DAA743BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="22">ACADADADADADADADADADADADE9ADADADADADADADADADADADADADADADADADADAE</line>
+      <line index="23">800A88858C90DD0B838F8E86DD0C8C8F8184DD0E928587939F20F520FD20F620</line>
+    </map>
+    <map id="18274840" name="load_SCR" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A74C4F41442020202020202020202020202020202020202020202020202020A8</line>
+      <line index="3">A3A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A6</line>
+      <line index="4">A7202020202020202020202020202020202020202020202020202020202020A8</line>
+      <line index="5">A764656D6F20747261636B7320202020202020202020202020202020202020A8</line>
+      <line index="6">A7202020202020202020202020202020202020202020202020202020202020A8</line>
+      <line index="7">A7209B44454D4F233031202020202020202020202020202020202020202020A8</line>
+      <line index="8">A72020425920414F52414E5445202020202020202020202020202020202020A8</line>
+      <line index="9">A7202020202020202020202020202020202020202020202020202020202020A8</line>
+      <line index="10">A7209B4D494E494D414C205445434820202020202020202020202020202020A8</line>
+      <line index="11">A720204259204E4555524F464C495020202020202020202020202020202020A8</line>
+      <line index="12">A7202020202020202020202020202020202020202020202020202020202020A8</line>
+      <line index="13">A7202020202020202020202020202020202020202020202020202020202020A8</line>
+      <line index="14">A7202020202020202020202020202020202020202020202020202020202020A8</line>
+      <line index="15">A7202020202020202020202020202020202020202020202020202020202020A8</line>
+      <line index="16">A7202020207B20202020202020202020202020202020202020202020202020A8</line>
+      <line index="17">A766696C657B73656C65637465642020202020202020202020202020202020A8</line>
+      <line index="18">A7ECADADADADADADADADADADADADADED202020202020202020202020202020A8</line>
+      <line index="19">A7A820202020202020202020202020A7202020202020202020202020202020A8</line>
+      <line index="20">A7EFA1A1A1A1A1A1A1A1A1A1A1A1A1EE202020202020202020202020202020A8</line>
+      <line index="21">A7202020202020202020202020202020202020202020202020202020202020A8</line>
+      <line index="22">ACADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADAE</line>
+      <line index="23">800A88858C90DD11128C8F8184DD80808080808080808080DD0F108598899480</line>
+    </map>
+    <map id="46565759" name="help2_SCR" maptype="1" tiletype="0" width="32" height="22" tileset="36732157">
+      <line index="0">A748454C502020202020202020202020202020202020202020202020202020A8</line>
+      <line index="1">A3A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4FBA6</line>
+      <line index="2">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="3">A72020202020202020202020202020202020202020202020202020202020FAA6</line>
+      <line index="4">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="5">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="6">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="7">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="8">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="9">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="10">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="11">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="12">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="13">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="14">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="15">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="16">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="17">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="18">A72020202020202020202020202020202020202020202020202020202020FAA6</line>
+      <line index="19">A72020202020202020202020202020202020202020202020202020202020F9A8</line>
+      <line index="20">ACADADADADADADADADADADADADADADADADADADADADADADADADADADADADADFCAE</line>
+      <line index="21">808080808080808080808080808080808080808080808080DD0F108598899480</line>
+    </map>
+    <map id="60084402" name="PSGed_v082b_regs" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A7454449542020202020202020202020202020202020202020202020202020A8</line>
+      <line index="3">A3A4A4F0E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E2A4A4AB</line>
+      <line index="4">A76368E3707367207265676973746572732064756D70202020202020E72063A8</line>
+      <line index="5">A7544FE3202020202020202020202020202020202020202020202020E7DFDEA8</line>
+      <line index="6">A74652E36368616E6E656C206120202020202020616D702020202020E72020A8</line>
+      <line index="7">A72020E3524547300203022052454731000003205245473820000000E7D9DAA8</line>
+      <line index="8">A74E4FE36368616E6E656C2062202020202020202020202020202020E7DFDEA8</line>
+      <line index="9">A7454EE3524547320203022052454733000003205245473920000000E7DFDEA8</line>
+      <line index="10">A7414DE36368616E6E656C2063202020202020202020202020202020E7D9DAA8</line>
+      <line index="11">A3A4A4E3524547340203022052454735000003205245473130000000E7A4A4AB</line>
+      <line index="12">A76E6FE36E6F69736520202052454736000000202020202020202020E72020A8</line>
+      <line index="13">A74652E36D6978657220202052454737000603202020202020202020E72020A8</line>
+      <line index="14">A72020E3656E76656C6F706520202020202020202020202020202020E72020A8</line>
+      <line index="15">A3A4A4E3706572696F64205245473131020302205245473132000003E7A4A4A6</line>
+      <line index="16">A77365E3736861706520205245473133000001202020202020202020E720F5A8</line>
+      <line index="17">A7D6D8E3202020202020202020202020202020202020202020202020E7D9DAA8</line>
+      <line index="18">A7504FE3F520F6202020202020202020202020209E0F10859889949FE7AFB0A8</line>
+      <line index="19">A75041E4E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E6B4B4A8</line>
+      <line index="20">A74C454E475448200001D9DAA742BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="21">A742504D202020010206D9DAA743BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="22">ACADADADADADADADADADADADE9ADADADADADADADADADADADADADADADADADADAE</line>
+      <line index="23">800A88858C90DD0B838F8E86DD0C8C8F8184DD0E928587939F20F520FD20F620</line>
+    </map>
+    <map id="18298458" name="copy_WIN" maptype="1" tiletype="0" width="14" height="3" tileset="36732157">
+      <line index="0">F0E1E1E1E1E1E1E1E1E1E1E1E1E2</line>
+      <line index="1">E3544F202020D9DA9E138F8BD7E7</line>
+      <line index="2">E4E5E5E5E5E5E5E5E5E5E5E5E5E6</line>
+    </map>
+    <map id="20118872" name="load3_SCR" maptype="1" tiletype="0" width="32" height="22" tileset="36732157">
+      <line index="0">A74C4F41442020202020202020202020202020202020202020202020202020A8</line>
+      <line index="1">A3A4A4A4A4A4A4A4A4A4A4A4A4A4A4FBABA4A4A4A4A4A4A4A4A4A4A5A4A4A4A6</line>
+      <line index="2">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="3">A72020202020202020202020202020FAA620202020202020202020A7202020A8</line>
+      <line index="4">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="5">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="6">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="7">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="8">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="9">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="10">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="11">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="12">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="13">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="14">A7202020207B202020202020202020FAA620202020202020202020A7202020A8</line>
+      <line index="15">A72020202020202020202020202020F9A820202020202020202020A7202020A8</line>
+      <line index="16">A3A4A4A4A4A4A4A4A4A4A4A4A4A4A4FAA9A4A4A4A4A4A4A4A4A4A4AAA4A4A4A6</line>
+      <line index="17">A7ECADADADADADADADADADADADADEDF9202020202020202020202020202020A8</line>
+      <line index="18">A7A8202020202020202020202020A7F9202020202020202020202020202020A8</line>
+      <line index="19">A7EFA1A1A1A1A1A1A1A1A1A1A1A1EEF9202020202020202020202020202020A8</line>
+      <line index="20">ACADADADADADADADADADADADADADADFCADADADADADADADADADADADADADADADAE</line>
+      <line index="21">8080808080808080808080808080808080DD11128C8F8184DD0F108598899480</line>
+    </map>
+    <map id="42061199" name="PSGed_v082b_confirmWIN" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A7454449542020202020202020202020202020202020202000202020202020A8</line>
+      <line index="3">A3A4A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A4A4A4AB</line>
+      <line index="4">A76368616E6E656C206120A76368616E6E656C2062A76368616E6E656C2063A8</line>
+      <line index="5">A7544F4E452020BDDFDE20A7544F4E452020BDDFDEA7544F4E452020BDDFDEA8</line>
+      <line index="6">A7465245512E2020202020A7465245512E20202020A7465245512E20202020A8</line>
+      <line index="7">A720202001000000D9DA20A720202001000000D9DAA720202001000000D9DAA8</line>
+      <line index="8">A74E4F495345E0E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E24520BDDFDEA8</line>
+      <line index="9">A7454E56454CE37C7D2041524520594F552053555245202020E74C2EBDDFDEA8</line>
+      <line index="10">A7414D502E20E37E7F20594F552057414E5420544F20202020E7200000D9DAA8</line>
+      <line index="11">A3A4A4A4A4A4E320202044454C45544520534F4E473F202020E7A4A4A4A4A4AB</line>
+      <line index="12">A76E6F697365E3202020202020202020202020202020202020E72020202020A8</line>
+      <line index="13">A7465245512EE32020202020209E1112998593DD0F108E8FD7E72020202020A8</line>
+      <line index="14">A72020202020E4E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E6DA20202020A8</line>
+      <line index="15">A3A4A4A4A4A4A4A4A4A4A4A4B3A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A6</line>
+      <line index="16">A773657175656E6365722020A77061747465726E20202020202020202020F5A8</line>
+      <line index="17">A7D6D8D7D68E8597D7202020A7D6838C92D7D6838F9099D72020200001D9DAA8</line>
+      <line index="18">A7504F532020D4D50001D9DAA7DC20AFAFAFB0AFAFAFB0AFAFAFB0AFAFAFB0A8</line>
+      <line index="19">A75041545445524E0001D9DAA741BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="20">A74C454E475448200001D9DAA742BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="21">A742504D202020010206D9DAA743BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="22">ACADADADADADADADADADADADE9ADADADADADADADADADADADADADADADADADADAE</line>
+      <line index="23">800A88858C90DD0B838F8E86DD0C8C8F8184DD0E928587939F20F520FD20F620</line>
+    </map>
+    <map id="5698486" name="main_SCR" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A7454449542020202020202020202020202020202020202020202020202020A8</line>
+      <line index="3">A3A4A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A4A4A4A5A4A4A4A4A4A4A4A4A4A6</line>
+      <line index="4">A76368616E6E656C206120A76368616E6E656C2062A76368616E6E656C2063A8</line>
+      <line index="5">A7544F4E452020BDDFDE20A7544F4E452020BDDFDEA7544F4E452020BDDFDEA8</line>
+      <line index="6">A7465245512E2020202020A7465245512E20202020A7465245512E20202020A8</line>
+      <line index="7">A720202020202020D9DA20A720202020202020D9DAA720202020202020D9DAA8</line>
+      <line index="8">A74E4F49534520BDDFDE20A74E4F49534520BDDFDEA74E4F49534520BDDFDEA8</line>
+      <line index="9">A7454E56454C2EBDDFDE20A7454E56454C2EBDDFDEA7454E56454C2EBDDFDEA8</line>
+      <line index="10">A7414D502E202020D9DA20A7414D502E202020D9DAA7414D502E202020D9DAA8</line>
+      <line index="11">A3A4A4A4A4A4A4A4A4A4A4AAA5A4A4A4A4A4A4A4A4AAA4A4A4A4A4A4A4A4A4A6</line>
+      <line index="12">A76E6F697365202020202020A7656E76656C6F706520202020202020202020A8</line>
+      <line index="13">A7465245512E20202020D9DAA7534841504520202020202020DB2020202020A8</line>
+      <line index="14">A72020202020202020202020A7504552494F44202020202020D9DA20202020A8</line>
+      <line index="15">A3A4A4A4A4A4A4A4A4A4A4A4B3A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A6</line>
+      <line index="16">A773657175656E6365722020A77061747465726E20202020202020202020F5A8</line>
+      <line index="17">A7D6D8D7D68E8597D7202020A7D6838C92D7D6838F9099D72020202020D9DAA8</line>
+      <line index="18">A7504F532020D4D52020D9DAA7DC20AFAFAFB0AFAFAFB0AFAFAFB0AFAFAFB0A8</line>
+      <line index="19">A75041545445524E2020D9DAA741BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="20">A74C454E475448202020D9DAA742BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="21">A742504D202020202020D9DAA743BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="22">ACADADADADADADADADADADADE9ADADADADADADADADADADADADADADADADADADAE</line>
+      <line index="23">800A88858C90DD0B838F8E86DD0C8C8F8184DD0E928587939F20F520FD20F620</line>
+    </map>
+    <map id="2309877" name="config_WIN" maptype="1" tiletype="0" width="24" height="17" tileset="36732157">
+      <line index="0">F0E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E2</line>
+      <line index="1">E3636F6E66696775726174696F6E202020202020202020E7</line>
+      <line index="2">E320202020202020202020202020202020202020202020E7</line>
+      <line index="3">E370616C6574746520BD544D5339393138412020202020E7</line>
+      <line index="4">E32020202020202020BD4E455720202020202020202020E7</line>
+      <line index="5">E320202020202020202020202020202020202020202020E7</line>
+      <line index="6">E37073672020202020BD494E5445524E414C2020202020E7</line>
+      <line index="7">E32020202020202020BD4D454741464C415348524F4D2BE7</line>
+      <line index="8">E320202020202020202020202020202020202020202020E7</line>
+      <line index="9">E3636F6E74726F6C20BD9E0A9F435552534F5220202020E7</line>
+      <line index="10">E32020202020202020BD9E0B9F4A4F59535449434B2031E7</line>
+      <line index="11">E32020202020202020BD9E0C9F4A4F59535449434B2032E7</line>
+      <line index="12">E32020202020202020BD9E0D9F4D4F5553452031202020E7</line>
+      <line index="13">E32020202020202020BD9E0E9F4D4F5553452032202020E7</line>
+      <line index="14">E320202020202020202020202020202020202020202020E7</line>
+      <line index="15">E320202020202020209E11128F8B80DD0F10859889949FE7</line>
+      <line index="16">E4E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E6</line>
+    </map>
+    <map id="43979682" name="PSGed_v082b_config" maptype="1" tiletype="0" width="32" height="24" tileset="36732157">
+      <line index="0">14151617181E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E</line>
+      <line index="1">A0A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A2</line>
+      <line index="2">A7454449542020202020202020202020202020202020202020202020202020A8</line>
+      <line index="3">A3A4A4A4F0E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E2A4A4A4AB</line>
+      <line index="4">A7636861E3636F6E66696775726174696F6E202020202020202020E76C2063A8</line>
+      <line index="5">A7544F4EE320202020202020202020202020202020202020202020E7BDDFDEA8</line>
+      <line index="6">A7465245E37664702020202020BE544D5339393138202020202020E7202020A8</line>
+      <line index="7">A7202020E32020202020202020BD56393933382020202020202020E700D9DAA8</line>
+      <line index="8">A74E4F49E320202020202020202020202020202020202020202020E7BDDFDEA8</line>
+      <line index="9">A7454E56E37073672020202020BE494E5445524E414C2020202020E7BDDFDEA8</line>
+      <line index="10">A7414D50E32020202020202020BD4D454741464C415348524F4D2BE700D9DAA8</line>
+      <line index="11">A3A4A4A4E320202020202020202020202020202020202020202020E7A4A4A4AB</line>
+      <line index="12">A76E6F69E3636F6E74726F6C20BE435552534F52204B4559532020E7202020A8</line>
+      <line index="13">A7465245E32020202020202020BD4A4F59535449434B2031202020E7202020A8</line>
+      <line index="14">A7202020E32020202020202020BD4A4F59535449434B2032202020E7202020A8</line>
+      <line index="15">A3A4A4A4E32020202020202020BD4D4F5553452031202020202020E7A4A4A4A6</line>
+      <line index="16">A7736571E32020202020202020BD4D4F5553452032202020202020E72020F5A8</line>
+      <line index="17">A7D6D8D7E320202020202020202020202020202020202020202020E701D9DAA8</line>
+      <line index="18">A7504F53E320202020202020209E11128F8B80DD0F10859889949FE7AFAFB0A8</line>
+      <line index="19">A7504154E4E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E6B4B4B4A8</line>
+      <line index="20">A74C454E475448200001D9DAA742BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="21">A742504D202020010206D9DAA743BBB4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4A8</line>
+      <line index="22">ACADADADADADADADADADADADE9ADADADADADADADADADADADADADADADADADADAE</line>
+      <line index="23">800A88858C90DD0B838F8E86DD0C8C8F8184DD0E928587939F20F520FD20F620</line>
+    </map>
+    <map id="51654221" name="info_WIN" maptype="1" tiletype="0" width="32" height="5" tileset="36732157">
+      <line index="0">F0E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E2</line>
+      <line index="1">E3736F6E6720696E666F202020202020202020202020202020202020202020E7</line>
+      <line index="2">E320204E414D453A2020202020202020202020202020202020202020202020E7</line>
+      <line index="3">E3415554484F523A2020202020202020202020202020202020202020202020E7</line>
+      <line index="4">E4E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E6</line>
+    </map>
+    <map id="3091535" name="PSGregs_WIN" maptype="1" tiletype="0" width="26" height="17" tileset="36732157">
+      <line index="0">F0E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E2</line>
+      <line index="1">E3707367207265676973746572732064756D70202020202020E7</line>
+      <line index="2">E3202020202020202020202020202020202020202020202020E7</line>
+      <line index="3">E36368616E6E656C206120202020202020616D702020202020E7</line>
+      <line index="4">E3524547302020202052454731202020205245473820202020E7</line>
+      <line index="5">E36368616E6E656C2062202020202020202020202020202020E7</line>
+      <line index="6">E3524547322020202052454733202020205245473920202020E7</line>
+      <line index="7">E36368616E6E656C2063202020202020202020202020202020E7</line>
+      <line index="8">E3524547342020202052454735202020205245473130202020E7</line>
+      <line index="9">E36E6F69736520202052454736202020202020202020202020E7</line>
+      <line index="10">E36D6978657220202052454737202020202020202020202020E7</line>
+      <line index="11">E3656E76656C6F706520202020202020202020202020202020E7</line>
+      <line index="12">E3706572696F64205245473131202020205245473132202020E7</line>
+      <line index="13">E3736861706520205245473133202020202020202020202020E7</line>
+      <line index="14">E3202020202020202020202020202020202020202020202020E7</line>
+      <line index="15">E3F520F6202020202020202020202020209E0F10859889949FE7</line>
+      <line index="16">E4E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E6</line>
+    </map>
+  </maps>
+  <sprites>
+    <spriteset id="13331508" name="logo_spriteset" size="1" mode="1" paletteID="0">
+      <sprite index="0" name="" InkColor="4" BGcolor="0">
+        <gfxData>0001030307070F0F</gfxData>
+      </sprite>
+      <sprite index="1" name="" InkColor="4" BGcolor="0">
+        <gfxData>0000000000010101</gfxData>
+      </sprite>
+      <sprite index="2" name="" InkColor="8" BGcolor="0">
+        <gfxData>8080000000000000</gfxData>
+      </sprite>
+      <sprite index="3" name="" InkColor="8" BGcolor="0">
+        <gfxData>C0F0FCFFFCF0C000</gfxData>
+      </sprite>
+    </spriteset>
+    <spriteset id="7317091" name="main_SPRITESET" size="2" mode="1" paletteID="0">
+      <sprite index="0" name="" InkColor="15" BGcolor="0">
+        <gfxData>C0A09088848281808F90A0C00000000000000000000000808000000000000000</gfxData>
+      </sprite>
+      <sprite index="1" name="" InkColor="15" BGcolor="0">
+        <gfxData>00406070787C7E7F706040000000000000000000000000000000000000000000</gfxData>
+      </sprite>
+      <sprite index="2" name="" InkColor="15" BGcolor="0">
+        <gfxData>183C7EFF00000000000000000000000000000000000000000000000000000000</gfxData>
+      </sprite>
+      <sprite index="3" name="" InkColor="15" BGcolor="0">
+        <gfxData>FF7E3C1800000000000000000000000000000000000000000000000000000000</gfxData>
+      </sprite>
+      <sprite index="4" name="" InkColor="15" BGcolor="0">
+        <gfxData>00FF8181818181FF000000000000000000000000000000000000000000000000</gfxData>
+      </sprite>
+      <sprite index="5" name="" InkColor="15" BGcolor="0">
+        <gfxData>0000000101010101010101000101000000000080808080808080800080800000</gfxData>
+      </sprite>
+    </spriteset>
+  </sprites>
+  <OAMs>
+    <oamset id="27572766" name="OAMset_00" type="1">
+      <sprite layer="0" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="1" x="0" y="209" pattern="1" color="7">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="2" x="122" y="33" pattern="2" color="4">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="3" x="122" y="137" pattern="3" color="4">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="4" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="5" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="6" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="7" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="8" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="9" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="10" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="11" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="12" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="13" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="14" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="15" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="16" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="17" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="18" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="19" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="20" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="21" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="22" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="23" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="24" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="25" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="26" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="27" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="28" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="29" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="30" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+      <sprite layer="31" x="0" y="209" pattern="0" color="15">
+        <colorData>0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F</colorData>
+      </sprite>
+    </oamset>
+  </OAMs>
+</msxOpenDocument>
