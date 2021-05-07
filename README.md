@@ -14,7 +14,7 @@ Programming language: C and Z80 assembler
 
 ## Description:
 
-PSGed is a program for MSX computers with the functionality to play with the registers from PSG (AY-3-8910).
+PSGed is an experimental application for MSX computers to make music working directly with the PSG registers (AY-3-8910).
 
 It is designed with a graphical user interface easy to use.
 
