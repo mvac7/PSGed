@@ -1101,15 +1101,6 @@ void mainWindow()
             if(isPause>0) // si se pulsa stop en modo pausa
             {
               stopSong();
-              /*isPlay=0;
-              isPause=0;
-              setStop=false;
-              playCounter=0;
-              tempoCounter=0;
-              setLastPos(lastPlayCounter, PSGsong.patterns[currentPattern].trackA, PSGsong.patterns[currentPattern].trackB, PSGsong.patterns[currentPattern].trackC);
-              lastPlayCounter=15;
-              VPOKE(0x1AFA,245);
-              VPOKE(0x1A1E,245);*/
             }else{ // si esta parado, coloca la secuencia en la posicion inicial.
               toSilencePSG();
               songPos=0;
@@ -1297,55 +1288,43 @@ void mainWindow()
         // Frequency channel A 4095
         if (column==9)//(-)
         {
-          if (PSGsong.freqA>0)
-          {
-            PSGsong.freqA-=keySpeed;
-            setFreqA();
-          }
+          if (PSGsong.freqA>keySpeed) PSGsong.freqA-=keySpeed;            
+          else PSGsong.freqA=0;
+          setFreqA(); 
         }
         if (column==8)//(+)
         {
-          if (PSGsong.freqA<4095)
-          {
-            PSGsong.freqA+=keySpeed;
-            setFreqA();
-          }else{PSGsong.freqA=4095;}
+          if (PSGsong.freqA<(4095-keySpeed)) PSGsong.freqA+=keySpeed;
+          else PSGsong.freqA=4095;
+          setFreqA();         
         }
         
         // Frequency channel B (4095)
         if (column==20)//(-)
         {
-          if (PSGsong.freqB>0)
-          {
-            PSGsong.freqB-=keySpeed;
-            setFreqB();
-          }
+          if (PSGsong.freqB>keySpeed) PSGsong.freqB-=keySpeed;
+          else PSGsong.freqB=0;
+          setFreqB();
         }
         if (column==19)//(+)
         {
-          if (PSGsong.freqB<4095)
-          {
-            PSGsong.freqB+=keySpeed;
-            setFreqB();
-          }else{PSGsong.freqB=4095;}
+          if (PSGsong.freqB<(4095-keySpeed)) PSGsong.freqB+=keySpeed;            
+          else PSGsong.freqB=4095;
+          setFreqB();
         }
         
         // Frequency channel C (4095)
         if (column==30)//(-)
         {
-          if (PSGsong.freqC>0)
-          {
-            PSGsong.freqC-=keySpeed;
-            setFreqC();
-          }
+          if (PSGsong.freqC>keySpeed) PSGsong.freqC-=keySpeed;
+          else PSGsong.freqC=0;
+          setFreqC();
         }
         if (column==29)//(+)
         {
-          if (PSGsong.freqC<4095)
-          {
-            PSGsong.freqC+=keySpeed;
-            setFreqC();
-          }else{PSGsong.freqC=4095;}
+          if (PSGsong.freqC<(4095-keySpeed)) PSGsong.freqC+=keySpeed;
+          else PSGsong.freqC=4095;
+          setFreqC();
         }
       }
       
@@ -1356,37 +1335,17 @@ void mainWindow()
       {
         if (column==26)//(-)
         {
-           if (PSGsong.envelopeFreq>0)
-           {
-              if(PSGsong.envelopeFreq<5){
-                PSGsong.envelopeFreq--;
-              }else{
-                PSGsong.envelopeFreq-=keySpeed;
-              }           
-              //PSGsong.envelopeFreq--;
-              VPrintNumber(20,14, PSGsong.envelopeFreq, 5);
-              //0B,0C = Envelope Frequency
-              /*sound_set(11,PSGsong.envelopeFreq & 0xFF);
-              sound_set(12,(PSGsong.envelopeFreq & 0xFF00)/255);*/
-              setEnvelopeFreq();
-           }
+           if (PSGsong.envelopeFreq>keySpeed) PSGsong.envelopeFreq-=keySpeed;
+           else PSGsong.envelopeFreq = 0;
+           VPrintNumber(20,14, PSGsong.envelopeFreq, 5);
+           setEnvelopeFreq();
         }
         if (column==25)//(+)
         {
-           if (PSGsong.envelopeFreq<65535)
-           {
-              if(PSGsong.envelopeFreq>65530){
-                PSGsong.envelopeFreq++;
-              }else{
-                PSGsong.envelopeFreq+=keySpeed;
-              }             
-              //PSGsong.envelopeFreq++;
-              VPrintNumber(20,14, PSGsong.envelopeFreq, 5);
-              //0B,0C = Envelope Frequency
-              /*sound_set(11,PSGsong.envelopeFreq & 0xFF);
-              sound_set(12,(PSGsong.envelopeFreq & 0xFF00)/255);*/
-              setEnvelopeFreq();
-          }else{PSGsong.envelopeFreq=65535;}
+           if (PSGsong.envelopeFreq<(4095-keySpeed)) PSGsong.envelopeFreq+=keySpeed;
+           else PSGsong.envelopeFreq=4095;
+           VPrintNumber(20,14, PSGsong.envelopeFreq, 5);
+           setEnvelopeFreq();
         }
       }  
         
@@ -2000,7 +1959,7 @@ void setEnvelopeC()
 void setFreqA()
 {
   if(PSGsong.freqA>4095) PSGsong.freqA=4095;
-  if(PSGsong.freqA<0) PSGsong.freqA=0;
+  //if(PSGsong.freqA<0) PSGsong.freqA=0;
   VPrintNumber(4,7, PSGsong.freqA, 4);
   //if (isPlay==0)
   SetTonePeriod(AY_Channel_A,PSGsong.freqA);
@@ -2012,7 +1971,7 @@ void setFreqA()
 void setFreqB()
 {
   if(PSGsong.freqB>4095) PSGsong.freqB=4095;
-  if(PSGsong.freqB<0) PSGsong.freqB=0;
+  //if(PSGsong.freqB<0) PSGsong.freqB=0;
   VPrintNumber(15,7, PSGsong.freqB, 4);
   //if (isPlay==0)
   SetTonePeriod(AY_Channel_B,PSGsong.freqB);
@@ -2024,7 +1983,7 @@ void setFreqB()
 void setFreqC()
 {
   if(PSGsong.freqC>4095) PSGsong.freqC=4095;
-  if(PSGsong.freqC<0) PSGsong.freqC=0;
+  //if(PSGsong.freqC<0) PSGsong.freqC=0;
   VPrintNumber(25,7, PSGsong.freqC, 4);
   //if (isPlay==0)
   SetTonePeriod(AY_Channel_C,PSGsong.freqB);
