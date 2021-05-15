@@ -219,7 +219,7 @@ void showScrollBar(char numlin, char maxNumLines);
 // config
 char controller;
 char trigController;
-char PSG_type;       // <<<----------------------------------------------------- << Necesita cambios en la libreria de sonido. Sirve para cambiar del PSG interno al del MegaflashROM SCC+
+//char PSG_type;
 char VDP_type;
 
 // data
@@ -262,7 +262,7 @@ char SCR_BUFFER[0x300];
 void main(void) 
 {
  
-  PSG_type=0; //selecciona el PSG interno por defecto
+  isAYextern = false; //selecciona el PSG interno por defecto
   
   checkMSX();
     
@@ -2514,7 +2514,7 @@ void config()
   if(VDP_type==0) VPOKE(0x18CD,190);
   else VPOKE(0x18ED,190);
   
-  if(PSG_type==0) VPOKE(0x192D,190);
+  if(isAYextern==false) VPOKE(0x192D,190);
   else VPOKE(0x194D,190);
   
   if(controller==0) VPOKE(0x198D,190);
@@ -2552,13 +2552,13 @@ void config()
       {
          VPOKE(0x192D,190);
          VPOKE(0x194D,189);
-         PSG_type=0;       
+         isAYextern = false;       
       }
       if (column>12 && column<27 && line==10)// PSG MEGAFLASHROM SCC+
       {
          VPOKE(0x192D,189);
          VPOKE(0x194D,190);
-         PSG_type=1;       
+         isAYextern = true;       
       }
       
       if (column>12 && column<25 && line==12)// control key

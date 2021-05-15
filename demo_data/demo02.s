@@ -18,9 +18,9 @@ db    0
 db    15,11,15
 
 ; mixer: tone on/off
-db    1,1,0
+db    0,0,1
 ; mixer: noise on/off
-db    1,0,1
+db    0,1,0
 
 ; envelope on/off
 db    1,0,1
