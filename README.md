@@ -37,8 +37,12 @@ where it allowed the entry of notes and changes in the sound parameters at the p
 PSGed v2 reached an advanced stage of development but was more complex to use than the previous version, so I left the project.
 I made the mistake of continuing to not include instrument-based operation.
 
+![PSGed v2.0b](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_v20b_GUI.png)
+
 After some time of this failure, I started version 0.9 of the initial PSGed with improvements based on v2: 
 new graphic interface design and patterns with musical note input.
+
+![PSGed v0.90b](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_v090b_main_v2.png)
 
 Continuing with the idea of creating a Groovebox type application, 
 I started looking at the existing MSX players such as PT3 and WYZ and in the end I decided to try the WYZ one.
@@ -49,7 +53,9 @@ It also allows the use of the AY-3-8910 effect with the low frequency envelope,
 to create a sound with a sawtooth-like waveform, providing a great bass sound ideal for developing a Groovebox.
  
 I contacted the programmer [(WYZ)](https://sites.google.com/site/wyzplayer/) and developed a demo of an application with a button-based interface designed to launch patterns. 
-I named it grooveSX. [New in MSX Resource Center](https://www.msx.org/news/en/groovesx-live-v004b)
+I named it grooveSX. [(New in MSX Resource Center)](https://www.msx.org/news/en/groovesx-live-v004b)
+
+![GrooveSXlive v0.03b](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/GrooveSXlive_v003b_play.png)
 
 The application only included the music reproduction part. 
 It consists of a matrix of buttons designed to launch the patterns of a module, and allow playing with the live playback designed for chiptune DJing. 
@@ -61,6 +67,10 @@ To develop the Groovebox application that I had devised, I needed to program a s
 
 Along the way, I have developed several music shows, [TARP](https://github.com/mvac7/TARP) (The Alan Randoms Project) being the first one that I have published fully finished. 
 I also developed a drum machine as part of a new vision of GrooveSX, this time in MSX-DOS format and with disk access.
+
+![Drumm](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/drumm04.2.png)
+
+I decided to open this project on GitHub, thanks to [Retro DeLuxe](https://github.com/retrodeluxe), since he showed interest in this project.
 
 In the short term I want to publish version 0.9 of PSGed and later an application resulting from the evolution of TARP but with editing (called TDB), 
 and in the future I do not rule out being able to do the GrooveSX application.
