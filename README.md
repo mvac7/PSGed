@@ -50,6 +50,7 @@ but when working directly editing the AY parameters instead of using instruments
 For that reason I left it as an AY sound editor that includes a simple sequencer and did not add disk access functionality.
 
 ![PSGed v0.1](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_15.png)
+<br/>*PSGed v0.1b*
 
 But it gave me ideas for a new, more complete version with improvements in the sequencer, 
 where it allowed the entry of notes and changes in the sound parameters at the pattern level.
@@ -62,11 +63,13 @@ PSGed v2 reached an advanced stage of development but was more complex to use th
 I made the mistake of continuing to not include instrument-based operation.
 
 ![PSGed v2.0b](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_v20b_GUI.png)
+<br/>*PSGed v2.0b*
 
 After some time of this failure, I started version 0.9 of the initial PSGed with improvements based on v2: 
 new graphic interface design and patterns with musical note input.
 
 ![PSGed v0.90b](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_v090b_main_v2.png)
+<br/>*PSGed v0.90b*
 
 <br/>
 
@@ -80,7 +83,7 @@ To do this, I developed an application for VJing where using the keyboard you co
 Those times were very crazy. Lots of sex (on the internet), Cola-drinks and Noise!!!
 
 ![veejingSX](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/veejingSX_v09b.png)
-[*veejingSX*](http://www.lowtoy.com/veejingsx/)
+<br/>[*veejingSX*](http://www.lowtoy.com/veejingsx/)
 
 This experience made me think of an application oriented to live playback and this led to the next chapter:
 
@@ -100,6 +103,7 @@ I contacted the programmer [(WYZ)](https://sites.google.com/site/wyzplayer/) and
 I named it grooveSX. [(New in MSX Resource Center)](https://www.msx.org/news/en/groovesx-live-v004b)
 
 ![GrooveSXlive v0.03b](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/GrooveSXlive_v003b_play.png)
+<br/>*GrooveSXlive v0.03b*
 
 The application only included the music reproduction part. 
 It consists of a matrix of buttons designed to launch the patterns of a module, and allow playing with the live playback designed for chiptune DJing. 
@@ -113,10 +117,10 @@ Along the way, I have developed several music shows, [TARP](https://github.com/m
 I also developed a drum machine as part of a new vision of GrooveSX, this time in MSX-DOS format and with disk access.
 
 ![TARP](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/TARPv1_main.png)
-*The Alan Randoms Project*
+<br/>*The Alan Randoms Project*
 
 ![Drumm](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/drumm04.2.png)
-*GrooveSX Drumm*
+<br/>*GrooveSX Drumm*
 
 <br/>
 
@@ -132,7 +136,7 @@ Nothing useful.
 For this reason, I now roam in the underworld of fake developers. 
 If you need me, *Who you gonna call?* **Ghostbusters!**
 
-**Note:* The images included are just a small sample of all the designs I have created. 
+**Note:** The images included are just a small sample of all the designs I have created. 
 Shame haunts me for not finishing my projects. 
 I deserve to be publicly punished with tarring and feathering for my offense to the MSX user community. 
 Sorry Nishi.
