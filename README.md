@@ -33,10 +33,10 @@ I will start by confessing that PSGed was my first attempt to develop an applica
 At this time, I knew the MSX hardware because when I was a teenager I had programmed in BASIC and I had even done some assembly routines, 
 but everything seemed very hard to me.
 
-...until at a meeting of MSX users, I met Mr. Alberto del Hoyo (Nerlaska), who told me that it could be programmed in C using the SDCC cross-development compiler.
+...until at a meeting of MSX users, I met Mr. Alberto de Hoyo (Nerlaska), who told me that it could be programmed in C using the SDCC cross-development compiler.
 
 I found on Alberto's WEB a tutorial to create a ROM and doing a lot of research on the internet (there wasn't much about development with SDCC for MSX), 
-and I was making my way through the fog of ignorance to the person I am today: A Smoke seller!
+and I was making my way through the fog of ignorance to the person I am today: *A Smoke seller!*
 
 To share my experience with the world, I opened an exclusive Blog for PSGed, where I posted everything I learned.
 Mysteriously, one day a UFO abducted the blog and disappeared. if anyone knows anything, report it to agents Mulder and Scully. *The truth is out there!*
@@ -44,6 +44,8 @@ Mysteriously, one day a UFO abducted the blog and disappeared. if anyone knows a
 The idea of PSGed was to develop an application to create music under a Groovebox-type interface (such as electrives or 303),
 but when working directly editing the AY parameters instead of using instruments, it did not provide the desired functionality.
 For that reason I left it as an AY sound editor that includes a simple sequencer and did not add disk access functionality.
+
+![PSGed v0.1](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_15.png)
 
 But it gave me ideas for a new, more complete version with improvements in the sequencer, 
 where it allowed the entry of notes and changes in the sound parameters at the pattern level.
@@ -69,7 +71,10 @@ A marginal musical subculture that moved through small spaces in the marginal ne
 We formed a group called 303bcn and we started with Neuroflip's C64 where he was DJing his music, while I was doing VJing from an MSX connected to a video projector. 
 To do this, I developed an application for VJing where using the keyboard you could visually interpret the music, showing different graphic effects.
 
-* About [veejingSX](http://www.lowtoy.com/veejingsx/)
+Those times were very crazy. Lots of sex (on the internet), Cola-drinks and Noise!!!
+
+![veejingSX](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/veejingSX_v09b.png)
+[*veejingSX*](http://www.lowtoy.com/veejingsx/)
 
 This experience made me think of an application oriented to live playback and this led to the next chapter:
 
@@ -100,8 +105,11 @@ To develop the Groovebox application that I had devised, I needed to program a s
 Along the way, I have developed several music shows, [TARP](https://github.com/mvac7/TARP) (The Alan Randoms Project) being the first one that I have published fully finished. 
 I also developed a drum machine as part of a new vision of GrooveSX, this time in MSX-DOS format and with disk access.
 
-![Drumm](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/drumm04.2.png)
+![TARP](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/TARPv1_main.png)
+*The Alan Randoms Project*
 
+![Drumm](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/drumm04.2.png)
+*GrooveSX Drumm*
 
 ### Chapter 5. Back to the future.
 
