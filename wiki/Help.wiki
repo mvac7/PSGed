@@ -1,0 +1,10 @@
+#summary Help screen.
+#sidebar TableOfContents
+
+=Help screen=
+Screen that displays a help text.
+ * Arrow up and down. Scroll text in the direction indicated.
+ * {{{[Esc]}}} - Returns to the previous screen.
+http://lh3.ggpht.com/_82S9Tngrad8/TDIwx11VdxI/AAAAAAAAA3o/cE6Gl_TKuTk/PSGed_v07a.09_help.png 
+<br/><br/>
+[Index Back to the index]

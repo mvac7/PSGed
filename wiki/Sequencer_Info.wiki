@@ -1,0 +1,13 @@
+#summary Info window
+#sidebar TableOfContents
+
+==Info window==
+View and edit the song information..
+<br>
+<br> 
+http://lh5.ggpht.com/_82S9Tngrad8/TDI62pOIQBI/AAAAAAAAA4A/fcUOCPyUtUU/PSGed_v07a.05_info_m.png
+ * Click on the row to edit the text.
+ * To end press {{{[Return]}}}. 
+ * {{{[Esc]}}} Exit the window.
+<br/><br/>
+[Index Back to the index]

@@ -1,0 +1,16 @@
+#summary Pattern Editor
+#sidebar TableOfContents
+
+=Pattern Editor=
+<br> 
+http://lh6.ggpht.com/_82S9Tngrad8/TDI63YFOz_I/AAAAAAAAA4I/-thzI1mnAwk/PSGed_v07a.02_edit_pattern.png
+ * Click on the boxes to enable sound. Click on the same box to activate up to two variations of the sound (marked with three shades of blue).
+ * With the {{{[GRAPH]}}} or the second button may be disabled or adding a note of silence mark (yellow). 
+ * Set pattern (red arrow button). Select the pattern you are editing in the position of the sequence. 
+ * Play the pattern ({{{[Select]}}} key). 
+ * (CLR) - Clears the pattern indicated. 
+ * (COPY) - Copies the selected pattern on the right. 
+ * Pattern Number - Displays the data of the selected pattern. 
+ * A, B, C - Press to activate or deactivate the mute the channel ({{{[1]}}}, {{{[2]}}} and {{{[3]}}} keys). 
+<br/><br/>
+[Index Back to the index]

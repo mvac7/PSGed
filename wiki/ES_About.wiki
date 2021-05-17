@@ -1,0 +1,15 @@
+#summary Acerca de PSGed.
+
+http://lh4.ggpht.com/_82S9Tngrad8/THkPRb512lI/AAAAAAAAA5o/3b_3WrveUis/s800/PSGed_logo_400x128x16transp.png
+
+(copyleft) 2010 aorante/303bcn<br>
+Versión 0.7 - 4/7/2010<br>
+http://psged.blogspot.com/
+<br>
+<br>
+
+=Introducción= 
+PSGed es un programa para ordenadores MSX, pensado para poder jugar con los registros del PSG (AY-3-8910). 
+<br>Esta diseñado con una interfaz gráfica de usuario, fácil de usar.
+
+[ES_Indice Volver al índice]

@@ -1,0 +1,11 @@
+#summary Introduction and menu
+#sidebar TableOfContents
+
+=Introduction and menu=
+
+Running PSGed, we will see a screen that contains the presentation and the menu to select the initial control device. This contains options for the cursor keys, joystick and if it detects mouse. We can choose the option that we want using the cursor or joystick and fire button. The mouse can connect any two ports.
+Later, you can change the device from the configuration menu.
+
+http://lh4.ggpht.com/_82S9Tngrad8/TDIwxesc5OI/AAAAAAAAA3c/sl511I9bd6w/PSGed_v07a.01_menu.png
+<br/><br/>
+[Index Back to the index]

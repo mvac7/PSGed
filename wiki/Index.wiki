@@ -1,0 +1,22 @@
+#summary Index.
+#labels Featured
+
+=PSGed User Guide.=
+
+==Index==
+ # [About About...]
+ # [License License.]
+ # [ENG_Requirements Requirements]
+ # [Menu Introduction and menu.]
+ # [Edit Edit. PSGed main screen.]
+ # [Edit_Shortcuts Edit. Shortcuts Keys.]
+ # [PatternEditor Pattern Editor.]
+ # [Sequencer  Sequencer.]
+ # [Sequencer_Info Sequencer. Info window.]
+ # [Sequencer_New Sequencer. New project.]
+ # [PSGregDump PSG registers Dump]
+ # [Save Save files.]
+ # [Load Load files.]
+ # [Config Configuration.]
+ # [Help Help screen.]
+ # [Acknowledgements Acknowledgements.]

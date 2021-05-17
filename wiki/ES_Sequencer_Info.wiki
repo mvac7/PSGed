@@ -1,0 +1,11 @@
+#summary Secuenciador. Ventana de información.
+
+=Secuenciador=
+==Ventana de información==
+Muestra y edita la información sobre la canción.
+<br>
+<br> 
+http://lh5.ggpht.com/_82S9Tngrad8/TDI62pOIQBI/AAAAAAAAA4A/fcUOCPyUtUU/PSGed_v07a.05_info_m.png
+ * Pulsar sobre las filas para editar los textos. 
+ * Para finalizar pulsar {{{[Return]}}}. 
+ * {{{[Esc]}}} Sale de la ventana.

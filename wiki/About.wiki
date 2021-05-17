@@ -1,0 +1,18 @@
+#summary About PSGed
+#labels Featured
+#sidebar TableOfContents
+
+http://lh4.ggpht.com/_82S9Tngrad8/THkPRb512lI/AAAAAAAAA5o/3b_3WrveUis/s800/PSGed_logo_400x128x16transp.png
+
+Copyright (c) 2010 aorante/303bcn<br>
+This program is free software. See [License License].<br>
+Version 0.7 - 4/7/2010<br>
+http://psged.blogspot.com/
+<br>
+<br>
+
+=Introduction= 
+PSGed is a program for MSX computers with the functionality to play with the registers from PSG (AY-3-8910).<br>
+It is designed with a graphical user interface easy to use. 
+<br/><br/>
+[Index Back to the index]

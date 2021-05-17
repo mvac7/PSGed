@@ -1,0 +1,17 @@
+#summary Volcado de registros del PSG.
+
+=Volcado de registros del PSG=
+Ventana donde se muestran los valores de los 13 registros de sonido del PSG, a partir de los datos de la pantalla del editor. Esta pensado para poder aplicarlo como efectos de sonido en nuestros desarrollos en Basic u otros lenguajes.<br>
+
+http://lh4.ggpht.com/_82S9Tngrad8/TJsyB8lVphI/AAAAAAAAA6o/LpQEAKrCbr0/PSGed_v07a.4pagDump.png
+<br>
+
+Registro 7. Mixer.
+El valor que se muestra, corresponde unicamente a la activación de los generadores de tonos y ruido en los 3 canales. Este registro contiene más información que se ha de conservar, por lo que antes de aplicarlo, se ha de leer y sumar el valor indicado (excepto con el comando sound de basic).
+
+Atajos de teclado:
+ * {{{[Ins]}}} Reproduce simultaneamente los registros del PSG. 
+ * {{{[Stop]}}} Silencia el PSG.
+ * {{{[Esc]}}} Regresa a la pantalla de edición.
+
+[ES_Indice Volver al índice]

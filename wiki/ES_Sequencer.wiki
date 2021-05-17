@@ -1,0 +1,15 @@
+#summary El Secuenciador.
+
+=El Secuenciador=
+El secuenciador permite crear canciones de hasta 32 pasos utilizando los 16 posibles patrones que podemos editar<br><br>
+http://lh3.ggpht.com/_82S9Tngrad8/TJo235uxHGI/AAAAAAAAA6g/C5VGN9QT4nE/PSGed_v07a.02_edit_sequence.png 
+ * Info (i) - Visualiza/edita la información de la canción. 
+ * New - Inicia todos los datos del PSGed. Muestra una ventana de confirmación.
+ * Pos - Posición del puntero de la secuencia. Al cambiarlo, actualiza el editor de patrón. 
+ * Insert (I) - Inserta un paso, en la posición en la que se encuentre, con el número de patrón en curso.
+ * Delete (D) - Elimina el paso de la posición actual. 
+ * Pattern - Número de patrón asociado a la posición. 
+ * Length - Número total de pasos que tiene la canción. 
+ * BPM - Tempo en Beats Per Minute.
+
+[ES_Indice Volver al índice]

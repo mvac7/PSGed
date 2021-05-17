@@ -1,0 +1,12 @@
+#summary Load files.
+#sidebar TableOfContents
+
+=Load files=
+Screen that manages the loading of music files. 
+ * {{{[F1]}}} - Help. 
+ * Demos 1, 2 and 3 - Select a demo to load. 
+ * Load or {{{[Return]}}} - Loads the selected file.
+ * Exit or {{{[Esc]}}} - Returns to the editor.
+http://lh4.ggpht.com/_82S9Tngrad8/TDIwxu-LthI/AAAAAAAAA3k/1mtlDuSxD6g/PSGed_v07a.04_edit.png
+<br/><br/>
+[Index Back to the index]

@@ -1,0 +1,10 @@
+#summary Secuenciador. Nuevo proyecto.
+
+=Secuenciador=
+==Nuevo proyecto==
+Al usar la opción New, se muestra una ventana que pide confirmación para borrar todos los datos de los sonidos y la secuencia.
+<br>
+<br> 
+http://lh4.ggpht.com/_82S9Tngrad8/TDSd9wUQQVI/AAAAAAAAA4g/_C1oZ7t8wtI/PSGed_v07a.06_new_win.png
+ * Yes {{{[Return]}}} - Acepta borrar los datos.
+ * No {{{[Esc]}}} - Para salir sin borrar.

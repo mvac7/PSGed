@@ -1,0 +1,93 @@
+#summary Lista de tareas del proyecto PSGed.
+
+=Lista de Tareas=
+
+  * (x) Tareas finalizadas.
+  * (.) Tareas pendientes.
+  * (_italica_) Nombre de tecla.
+<br/>
+
+==PSGed v0.4b==
+  * *x* Cambiar tempo a bpm (http://es.wikipedia.org/wiki/Pulsaciones_por_minuto)
+  * *x* Aumentar aceleración en cambio de valores en numéricos grandes.
+  * *x* Load demos.
+  * *x* re-diseño de la presentación del secuenciador.
+  * *x* Añadir control de ratón.
+  * *x* Help funcionalidad (scroll)
+  * *x* Al pulsar _Stop_, parar cuando acabe de sonar el final del pattern.
+<br/>
+
+==PSGed v0.5b==
+  * *x* En el menú, cuando se detecta el ratón, seleccionar su opción.
+  * *x* Rediseñada la pantalla principal.
+  * *x* Tecla _Return_ para play song
+  * *x* Tecla _Select_ para play Pattern.
+  * *x* Bug. parar el sonido, al mostrar la ayuda desde el editor.
+  * *x* Bug. PLAY al inicio de la interrupción/bucle.
+  * *x* Memoria de 16 patrones.
+  * *x* Secuenciador de 32 pasos.
+  * *x* Añadida información de Nombre y autor.
+  * *x* ventana info (puede sufrir cambios ya que ha de permitir editar)
+  * *x* Herramienta (CLR), borra el patrón en curso.
+  * *x* Herramienta (NEW), borra toda la información de la canción (reinicializa).
+  * *x* Ventana modal de confirmación (para New y CLR).
+  * *x* Herramienta Copy (CPY), Copia el patrón en curso al patrón indicado.
+  * *x* botón (Set). Aplica el pattern en curso a la posición del secuenciador.
+  * *x* After Stop- Si esta en modo pausa, el stop interrumpe totalmente la canción. Se muestra en modo reposo.
+  * *x* Botón activa/inhabilita el modo loop del play..
+  * *x* Tres tipos de tonos en los patrones.
+  * *x* Mute de canales mediante pulsación de ratón.
+  * *x* Añadido segundo botón (mouse/joystick) o tecla  _Graph_, para quitar nota o añadir un silencio.
+  * *x* Corregido bug en la interpretación del volumen/envolvente, en la estructura de datos.
+  * *x* Corregido bug en la presentación de la linea de posición de la reproducción del patrón.
+  * *x* Corregido bug en el cambio directo de modo play/song a play/pattern.
+  * *x* Corregido problema con el sincronismo (Uso de la instrucción asm:HALT).
+  * *x* Cambio de la paleta de colores al detectar el VDP 9938 o superior (MSX2).
+  * *x* Uso del PSG de MegaFlashROM SCC+.
+<br/>
+
+==PSGed v0.8b ROM edition==
+ * *x* uso de control tipo comboBox en selector de envolvente
+ * *x* Prueba de rutinas asm de Andrear (adaptación de rutinas mouse de Ramones a SDCC).
+ * *x* Campos editables en la ventana info.
+ * *x* Secuenciador. Añadida nota de silencio. (uso del segundo botón joy/mouse).
+ * *x* Separación del código del player del main a una función
+ * *x* tecla que lance todos los registros [ins]
+ * *x* ventana que muestre los registros del PSG
+ * *x* separada funcionalidad Stop en una función
+ * *x* help en soft (resumen)
+ * *x* help. rutina en asm con control de retornos de carro
+ * *x* añadir en la pantalla menú, "AY-3-8910 sound editor"
+ * *x* función Double-stop > sitúa la secuencia a la primera posición
+ * *x* copy to> muestra como valor inicial, el pattern en curso
+ * *x* función insertar posición
+ * *x* función delete posición
+ * *x* modificar pantalla edit. Añadidos cambios para nuevas funcionalidades y ajuste de áreas de noise y envolvente.
+ * *x* Bug. actualizar datos al finalizar play song sin loop
+ * *x* Bug. despues de play en stop, al abrir combo suena la música...
+ * *x* comprimir datos. demos, help
+ * *x* nueva version logo
+ * *x* añadir demo minimalTech/neuroFlip 
+ * *x* quitar demo3 para ganar espacio
+ * *x* cambio de la pantalla de load (nombre de las demos)
+<br/>
+
+==Próximas versiones== 
+ * *-* Pasar la aplicación a MSXDOS (.COM).
+ * *-* Añadir botón de salida.
+ * *-* Añadir ventana modal de confirmación de la salida de la aplicación.
+ * *-* Calculo de las BPMs para NTSC.
+ * *-* Secuenciador. Función Return Pattern (neuroflip). El número seleccionado será el patrón a donde vuelve el player cuando ha reproducido toda la secuéncia y el modo loop está activado. 
+ * *-* Secuenciador. Añadir 64 pasos total.
+ * *-* Secuenciador. Cambiar sistema actual por notas...
+ * *-* Guardar info de los regs en cada patrón...
+ * *-* Editor. Cambiar valor de frecuencia de tono por offset (-128>+128)
+ * *-* cambio en RT de parámetros de freq de tono... 
+ * *-* uso de 6 pots + 2 buttons (1 entrada joystick)
+ * *-* acceso a ficheros de disco
+ * *-* get dir
+ * *-* load file
+ * *-* save file
+ * *-* Help. Al clicar en la barra saltar páginas.
+ * *-* eliminar dump de registros (funcionalidad solo para v0.8b ROM)
+<br/>

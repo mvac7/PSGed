@@ -1,0 +1,17 @@
+#summary Keyboard shortcuts on the main screen.
+#sidebar TableOfContents
+
+=Edit=
+==Shortcuts Keys==
+ * {{{[F1]}}} Help.
+ * {{{[F2]}}} Configuration window. 
+ * {{{[F3]}}} Access to the loading screen. 
+ * {{{[F4]}}} Access to the screen to save.
+ * {{{[F5]}}} PSG registers Dump.
+ * {{{[Return]}}} Play / Pause Song. 
+ * {{{[Select]}}} Play / Pause Pattern.
+ * {{{[Ins]}}} Play PSG registers simultaneously. 
+ * {{{[Stop]}}} Stops playing the pattern. 
+ * {{{[1]}}}, {{{[2]}}} and {{{[3]}}}. Channel Mute.
+<br/><br/>
+[Index Back to the index]

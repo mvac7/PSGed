@@ -1,0 +1,13 @@
+#summary Configuration.
+#sidebar TableOfContents
+
+=Configuration= 
+Shows a window that allows you to change some parameters of use of the application. 
+ * VDP - Change the color palette on computers that have a V9938 VDP or higher. 
+ * PSG - PSG uses the internal or incorporating the MegaFlashROM SCC +
+ * Control - Change control device. 
+ * OK {{{[Return]}}} - Apply the changes. 
+ * Exit {{{[Esc]}}} - Returns without making changes.
+http://lh5.ggpht.com/_82S9Tngrad8/TDIwx6k_afI/AAAAAAAAA3s/Cy_1K3yYTm8/PSGed_v07a.10_config.png
+<br/><br/>
+[Index Back to the index]

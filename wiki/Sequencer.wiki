@@ -1,0 +1,15 @@
+#summary Sequencer.
+#sidebar TableOfContents
+
+=Sequencer=
+The sequencer to create songs of up to 32 steps using the 16 possible patterns that can edit.<br><br>
+http://lh3.ggpht.com/_82S9Tngrad8/TJo235uxHGI/AAAAAAAAA6g/C5VGN9QT4nE/PSGed_v07a.02_edit_sequence.png
+ * Info (i) - View/edit the song information.<br> 
+ * New - Starts all PSGed data. Shows a confirmation window.<br> 
+ * Pos - Position the pointer in the sequence. The change updates the standard editor.<br> 
+ * Insert (I) - Insert a step in the position where you are, with the current pattern number.
+ * Delete (D) - Removes the step from the current position. 
+ * Pattern - pattern number associated with the position.<br> 
+ * Length - Total number of steps that has the song.<br> 
+ * BPM - Tempo in Beats Per Minute (PAL).<br>
+[Index Go to index.] 

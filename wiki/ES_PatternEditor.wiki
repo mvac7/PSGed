@@ -1,0 +1,14 @@
+#summary Editor de patrones.
+
+=Editor de patrones=
+<br> 
+http://lh6.ggpht.com/_82S9Tngrad8/TDI63YFOz_I/AAAAAAAAA4I/-thzI1mnAwk/PSGed_v07a.02_edit_pattern.png
+ * Pulsar en los recuadros para activar el sonido. Pulsar sobre el mismo recuadro para activar hasta dos variaciones del sonido (marcado con tres tonalidades de azul).
+ * Con la tecla {{{[GRAPH]}}} o el segundo botón se podrá desactivar la nota o añadir una marca de silencio (color amarillo).. 
+ * Set pattern (Botón con una flecha roja). Selecciona el patrón que se esta editando, en la posición de la secuencia. 
+ * Play. Reproduce el patrón (Tecla {{{[Select]}}}). 
+ * CLR. Borra el patrón indicado. 
+ * COPY. Copia el patrón activo, en el indicado. 
+ * Número de patrón. Muestra los datos del patrón seleccionado. 
+ * A, B, C - Activa/inactiva el mute del canal (Teclas {{{[1]}}}, {{{[2]}}} y {{{[3]}}}). 
+[ES_Indice Volver al índice]

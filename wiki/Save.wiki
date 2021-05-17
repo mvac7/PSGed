@@ -1,0 +1,7 @@
+#sidebar TableOfContents
+
+=Save= 
+Screen that manages the disk storage of songs.<br> 
+Function not implemented in demo version (ROM). 
+<br/><br/>
+[Index Back to the index]

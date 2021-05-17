@@ -1,0 +1,7 @@
+#summary Pantalla de Ayuda.
+
+=Pantalla de Ayuda=
+Pantalla que muestra un texto de ayuda.
+ * Flechas arriba y abajo. Desplazar el texto en la dirección indicada.
+ * Exit {{{[Esc]}}} - Regresa a la pantalla anterior.
+http://lh3.ggpht.com/_82S9Tngrad8/TDIwx11VdxI/AAAAAAAAA3o/cE6Gl_TKuTk/PSGed_v07a.09_help.png

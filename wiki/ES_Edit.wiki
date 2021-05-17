@@ -1,0 +1,36 @@
+#summary El Editor. La pantalla principal de PSGed.
+
+=Editor=
+El editor es la pantalla principal, desde donde se puede editar los sonidos, secuenciador un canción y acceder al resto de funcionalidades de la aplicación.
+
+http://lh3.ggpht.com/_82S9Tngrad8/TJo8DQY_mdI/AAAAAAAAA6k/p-uPPZ3yQX8/PSGed_v07a.5.png 
+<br><br>
+La pantalla esta dividida en  áreas:
+ * Editor de sonidos. Podemos modificar los valores de los registros del PSG. Se encuentra agrupado en 4 bloques: Canal A, canal B, canal C, ruido y envolvente.
+ * Sequencer. Contiene parámetros para la composición de una canción.
+ * Pattern. Editor de Patrones.
+ * Toolbar buttons and playback.
+
+==Controles de pantalla== 
+*Campos numéricos:*<br>
+http://lh5.ggpht.com/_82S9Tngrad8/TDI4sU990aI/AAAAAAAAA3w/Lpp75OLku-Q/PSGed_v07a.02_edit_entry.png<br>
+Presionar en las botones para incrementar o decrementar el valor.
+<br>
+
+*Selector de forma de envolvente:*<br> 
+Pulsar sobre el botón, para desplegar las diferentes opciones. Para seleccionar pulsar sobre la opción. Para cancelar, pulsar tecla {{{[ESC]}}}.<br>
+http://lh3.ggpht.com/_82S9Tngrad8/TDI4sbEzZPI/AAAAAAAAA34/IVzL6VvfP-M/PSGed_v07a.03_combobox_m.png 
+<br>
+
+*Conmutadores:*<br>
+http://lh3.ggpht.com/_82S9Tngrad8/TDI4sXN3M2I/AAAAAAAAA30/Rt4hy0E-NbU/PSGed_v07a.02_edit_checkbox.png<br>   
+Pulsar sobre ellos, para habilitar o inhabilitar la función.
+<br>
+
+==Botones de control de reproducción:==
+http://lh3.ggpht.com/_82S9Tngrad8/TDI4tH3o96I/AAAAAAAAA38/BFnFhgbj6SU/PSGed_v07a.02_edit_playback.png 
+ * Play/Pause - Inicializa la reproducción de la canción o la pone en pausa.<br> 
+ * Loop - inhabilita/habilita la reproducción en bucle infinito de la canción.<br> 
+ * Stop - Para la reproducción de la canción. Si ya se encuentra parado, sitúa la secuencia en la posición inicial.<br>
+<br>
+[ES_Indice Volver al índice]

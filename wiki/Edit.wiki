@@ -1,0 +1,39 @@
+#summary Edit. PSGed main screen.
+#sidebar TableOfContents
+
+=Edit=
+The editor is the main screen, where you can edit sounds, a sequencer track and access to other functions of the application.
+
+[[File:http://lh3.ggpht.com/_82S9Tngrad8/TJo8DQY_mdI/AAAAAAAAA6k/p-uPPZ3yQX8/PSGed_v07a.5.png|caption]]
+
+The screen is divided into four areas:
+# Sound Editor. Modifies the value of the sound registers from the PSG. It is grouped into four blocks: Channel A, Channel B, Channel C, noise and envelopes.
+# Sequencer. Parameters to compose the song.
+# Pattern. Pattern Editor.
+# Toolbar buttons and playback.
+
+==Screen Fields== 
+*Numerical values:
+[[File:http://lh5.ggpht.com/_82S9Tngrad8/TDI4sU990aI/AAAAAAAAA3w/Lpp75OLku-Q/PSGed_v07a.02_edit_entry.png|caption]]
+
+Clicking on buttons to increase or decrease the value.
+
+
+*Envelope shape selector:
+Click on the button to display the list of options. To select click on the option. To cancel, press {{{[ESC]}}}.
+[[File:http://lh3.ggpht.com/_82S9Tngrad8/TDI4sbEzZPI/AAAAAAAAA34/IVzL6VvfP-M/PSGed_v07a.03_combobox_m.png|caption]] 
+
+
+*Switches:
+[[File:http://lh3.ggpht.com/_82S9Tngrad8/TDI4sXN3M2I/AAAAAAAAA30/Rt4hy0E-NbU/PSGed_v07a.02_edit_checkbox.png|caption]]
+  
+Click on it, to enable or disable the function.
+
+
+==Playback Control Buttons:==
+[[File:http://lh3.ggpht.com/_82S9Tngrad8/TDI4tH3o96I/AAAAAAAAA38/BFnFhgbj6SU/PSGed_v07a.02_edit_playback.png|caption]] 
+* Play/Pause - Starts playing the song or paused. 
+* Loop - Disables/enables loop playback of the song.
+* Stop - For playback of the song. If the player is stopped, put the sequence to the starting position.
+
+[Index Back to the index]

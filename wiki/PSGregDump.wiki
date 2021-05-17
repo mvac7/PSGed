@@ -1,0 +1,18 @@
+#summary PSG registers dump.
+#sidebar TableOfContents
+
+=PSG registers dump=
+Window showing the values of the thirteen PSG sound recordings, from the data editor screen. It is meant to apply it as sound effects in our developments in Basic or other programming languages.<br>
+
+http://lh4.ggpht.com/_82S9Tngrad8/TJsyB8lVphI/AAAAAAAAA6o/LpQEAKrCbr0/PSGed_v07a.4pagDump.png
+<br>
+
+Register 7. Mixer.
+The value displayed corresponds only to the activation of the tone generators and noise in the three channels. This record contains more information than is to be retained, so before you apply, you must read and add the value indicated (except for the *sound* command of basic).
+
+Keyboard Shortcuts:
+ * {{{[Ins]}}} Play simultaneously PSG registers. 
+ * {{{[Stop]}}} Mute the PSG.
+ * {{{[Esc]}}} Back to the editing screen.
+
+[Index Back to the index]

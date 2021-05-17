@@ -1,0 +1,14 @@
+#summary Agradecimientos.
+
+=Agradecimientos=
+Quiero dar las gracias a las siguientes personas, ya que directa o indirectamente me han ayudado a conseguir el desarrollo de este proyecto.
+ * [http://a1200.wordpress.com/ Neuroflip]/303bcn: Beta testing e ideas.
+ * Jamque/[http://www.thepetsmode.com/ TPM]: Beta testing e ideas.
+ * [http://andrear.altervista.org/home/index.php Andrear]: Beta testing e ideas.
+ * [http://www.nerlaska.com/msx/ Nerlaska]: Soporte en programación.
+ * [http://msx.atlantes.org/index_es.html Avelino Herrera]: Soporte en programación.
+ * [http://pentacour.com/blog/ Pentacour]: Herramienta nMSXtiles.
+ * Ramones: Rutinas de control de ratón.
+ * Marq/[http://www.kameli.net/lt/ L!T]: Soporte en programación.
+ * Baze: [http://baze.au.com/misc/z80bits.html Z80 bits] Rutinas ASM Z80.
+ * Friends of [http://karoshi.auic.es/ Karoshi MSX Community].

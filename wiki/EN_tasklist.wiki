@@ -1,0 +1,95 @@
+#summary Task List from project PSGed.
+
+=Task List=
+
+  * (x) Completed tasks.
+  * (.) Pending tasks.
+  * (_italics_) Key name.
+<br/>
+
+==PSGed v0.4b==
+  * *x* change tempo to bpm (http://en.wikipedia.org/wiki/Tempo)
+  * *x* increasing acceleration of change value in large numbers.
+  * *x* load demos
+  * *x* redesign the presentation of the sequencer.
+  * *x* Add mouse control
+  * *x* Help functionality (scroll)
+  * *x* Pressing _Stop_, stop when you just play the end of the pattern.
+<br/>
+
+==PSGed v0.5b==
+  * *x* On the menu when the mouse is detected, select your choice.
+  * *x* Redesigned main screen.
+  * *x* _Return_ Key to play song.
+  * *x* _Select_ key to play pattern.
+  * *x* Bug. Stop the sound, to show Help screen.
+  * *x* Bug. PLAY at the start of the interrupt / loop.
+  * *x* 16 patterns memory.
+  * *x* 32-step sequencer. 
+  * *x* Added Name and author information.
+  * *x* Info window.
+  * *x* Clear tool (CLR), delete the current pattern.
+  * *x* New tool (NEW), delete all the song information (resets).
+  * *x* Confirmation modal window (for New and CLR).
+  * *x* Copy tool (cpy), copy the current pattern to pattern indicated.
+  * *x* button (Set). Assigns the current pattern, at the position of the sequencer.
+  * *x* After Stop. If the player is in pause mode, the stop key terminates the playback of the song. Shown in standby mode.
+  * *x* Button enables/disables the loop mode of play.
+  * *x* Added three tones in the pattern editor (offset).
+<br/>
+
+==PSGed v0.7b==
+  * *x* Mute channels by mouse click.
+  * *x* Added second button (mouse/joystick) or _Graph_ key to remove or add a silent item.
+  * *x* Fixed bug in the interpretation of the volume / envelope, in the data structure.
+  * *x* Fixed bug in the presentation of the playback position of the pattern.
+  * *x* Fixed bug in direct change so play / song to play / pattern.
+  * *x* Fixed problem with Sync (Using the asm statement: HALT).
+  * *x* Changing the color palette to detect the VDP 9938 or higher (MSX2).
+  * *x* Using PSG MegaFlashROM SCC+
+<br/>
+
+==PSGed v0.8b ROM edition==
+ * *x* Added ComboBox control to select the envelope.
+ * *x* Asm routines added. Andrear adaptation of mouse routines by Ramones.
+ * *x* Editable fields in the Info window.
+ * *x* Separation of the main player code to a function.
+ * *x* Button to play all PSG registers [ins].
+ * *x* Added window that displays the registers of the PSG.
+ * *x* Separation of the stop code to a function.
+ * *x* Update help text (summary).
+ * *x* Help. Asm routine to return control line.
+ * *x* Added on-screen presentation, "AY-3-8910 sound editor"
+ * *x* Double-stop function. Place the sequencer to the first position.
+ * *x* Copy to function. Shows the initial value, the current pattern.
+ * *x* Sequencer. Added function insert step.
+ * *x* Sequencer. Added function delete step.
+ * *x* Edit screen. Added new features and changes for adjustment of noise and envelope areas.
+ * *x* Bug. Update data at the end of song play without loop.
+ * *x* Bug. After play in stop mode, when there will be a combobox, the music plays...
+ * *x* Compress Data: demos, help.
+ * *x* New version logo.
+ * *x* Added demo minimalTech / neuroFlip. 
+ * *x* Remove Demo3 to gain memory space.
+ * *x* Changing the load screen. Added name and author of the demos.
+<br/>
+
+==Future releases.== 
+ * *-* Convert application to MSXDOS. (.COM)
+ * *-* Add exit button.
+ * *-* Add confirmation modal window, exit the application.
+ * *-* Calculation of the BPMs for NTSC.
+ * *-* Sequencer. Return Function Pattern (neuroflip). The number selected will be the pattern where the player becomes, when you finish the playback of the sequence and loop mode is enabled. 
+ * *-* Sequencer. Add 64 steps.
+ * *-* Sequencer. Change current system notes.
+ * *-* Save info registers in each pattern.
+ * *-* Editor. Changing tone frequency value for offset. (-128>+128)
+ * *-* Change in real time registers of tone frequency... 
+ * *-* control parameters from 6 pots + 2 buttons (1 joystick input)
+ * *-* Disk file access.
+ * *-* get dir
+ * *-* load file
+ * *-* save file
+ * *-* Help. By clicking on the bar jump pages.
+ * *-* Delete record dump. (V0.8b ROM functionality only).
+<br/>

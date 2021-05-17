@@ -1,0 +1,13 @@
+#summary Sequencer. New project.
+#sidebar TableOfContents
+
+=Sequencer=
+==New project==
+When you press the new option, it displays a window that asks for confirmation to delete all data of sounds and song.
+<br>
+<br> 
+http://lh4.ggpht.com/_82S9Tngrad8/TDSd9wUQQVI/AAAAAAAAA4g/_C1oZ7t8wtI/PSGed_v07a.06_new_win.png
+ * Yes {{{[Return]}}} - To accept.
+ * No {{{[Esc]}}} - To exit without deleting the information.
+<br/><br/>
+[Index Back to the index]

@@ -1,0 +1,10 @@
+#summary Presentación y menú
+
+=Presentación y menú=
+
+Al ejecutar PSGed, veremos una pantalla que contiene la presentación y el menú para seleccionar el dispositivo de control inicial. Este contiene opciones para las teclas de cursor, joystick y si lo detecta, para ratón. Podremos elegir la opción que deseemos utilizando el cursor o joystick y el botón de disparo. El ratón podrá conectarse en cualquiera de los dos puertos.
+Posteriormente, se puede cambiar el dispositivo desde el el menú de configuración.
+
+http://lh4.ggpht.com/_82S9Tngrad8/TDIwxesc5OI/AAAAAAAAA3c/sl511I9bd6w/PSGed_v07a.01_menu.png
+
+[ES_Indice Volver al índice]

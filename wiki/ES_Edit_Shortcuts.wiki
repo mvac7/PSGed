@@ -1,0 +1,15 @@
+#summary Atajos de teclado de la pantalla principal.
+
+=Editor=
+==Atajos de teclado==
+ * {{{[F1]}}} Muestra la Ayuda.
+ * {{{[F2]}}} Ventana de configuración. 
+ * {{{[F3]}}} Accede a la pantalla de carga de ficheros. 
+ * {{{[F4]}}} Accede a la pantalla para guardar ficheros.
+ * {{{[F5]}}} Volcado de registros del PSG.
+ * {{{[Return]}}} Play / Pause de la canción. 
+ * {{{[Select]}}} Play / Pause del patrón en curso. 
+ * {{{[Ins]}}} Reproduce simultaneamente los registros del PSG. 
+ * {{{[Stop]}}} Detiene la reproducción de la canción o patrón. 
+ * {{{[1]}}}, {{{[2]}}} and {{{[3]}}}. Activa o inactiva el canal de sonido.
+<br>

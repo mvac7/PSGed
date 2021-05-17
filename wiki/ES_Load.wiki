@@ -1,0 +1,9 @@
+#summary Carga de ficheros.
+
+=Carga de ficheros=
+Pantalla que gestiona la carga de ficheros musicales. 
+ * {{{[F1]}}} - Pantalla de ayuda. 
+ * Ficheros de demos 1, 2 y 3. Selecciona una demo para cargar. 
+ * Load o {{{[Return]}}} - Carga el fichero seleccionado.
+ * Exit o {{{[Esc]}}} - Regresa al editor.
+http://lh4.ggpht.com/_82S9Tngrad8/TDIwxu-LthI/AAAAAAAAA3k/1mtlDuSxD6g/PSGed_v07a.04_edit.png

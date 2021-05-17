@@ -1,0 +1,13 @@
+#summary Requirements
+#sidebar TableOfContents
+
+==Requirements==
+
+To operate the PSGed, minimal configuration is required as a first generation MSX PAL (60Hz), computer with 16K of RAM.
+
+The optimal configuration would be an MSX2 or higher PAL computer,(improved color palette), with a mouse.
+
+You can also run on MSX emulators for other computers and consoles that allow ROM format files.
+
+
+[Index Back to the index]

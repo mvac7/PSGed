@@ -1,0 +1,11 @@
+#summary Requisitos
+
+=Requisitos=
+
+Para hacer funcionar el PSGed, es necesario como configuración mínima un ordenador MSX PAL (60Hz), de primera generación con 16k de RAM.
+
+La configuración más optima seria un MSX2 o superior (mejora la paleta de colores) en frecuencia PAL (60Hz), con un ratón.
+
+También se puede ejecutar en emuladores de MSX para otros ordenadores y consolas que permitan ficheros en formato ROM.
+
+[ES_Indice Volver al índice]

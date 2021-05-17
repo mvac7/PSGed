@@ -1,0 +1,22 @@
+#summary Indice.
+#labels Featured
+
+=Manual de uso de PSGed=
+==Indice==
+
+ # [ES_About Acerca de...]
+ # Licencia.
+ # [ES_requirements Requisitos]
+ # [ES_Menu Presentación y menú.]
+ # [ES_Edit El Editor. La pantalla principal de PSGed.]
+ # [ES_Edit_Shortcuts Atajos de teclado de la pantalla principal.]
+ # [ES_PatternEditor Editor de patrones.]
+ # [ES_Sequencer Secuenciador.]
+ # [ES_Sequencer_Info Secuenciador. Ventana de información.]
+ # [ES_Sequencer_New Secuenciador. Nuevo proyecto.]
+ # [ES_PSGregDump Volcado de registros del PSG]
+ # Guardar ficheros.
+ # [ES_Load Carga de ficheros.]
+ # [ES_Config Configuración.]
+ # [ES_Help Pantalla de Ayuda.]
+ # [ES_Acknowledgements Agradecimientos.]
