@@ -13,6 +13,7 @@ Includes a *minimalTech* demo song by [neuroflip](https://twitter.com/neuroflip)
 
 ## Sorry!: This text is pending correction of the English translation.
 
+<br/>
 
 ## Description:
 
@@ -20,11 +21,14 @@ PSGed is an experimental application for MSX computers to make music working dir
 
 It is designed with a graphical user interface easy to use.
 
-
+<br/>
+<br/>
 
 ## The little history of PSGed
 
 > ### Talking about PSGed is talking about procrastination, electronic music, energy drinks and chocolate cream sandwiches.
+
+<br/>
 
 ### Chapter 1. How do I do this?
 
@@ -50,6 +54,7 @@ For that reason I left it as an AY sound editor that includes a simple sequencer
 But it gave me ideas for a new, more complete version with improvements in the sequencer, 
 where it allowed the entry of notes and changes in the sound parameters at the pattern level.
 
+<br/>
 
 ### Chapter 2. What if it can be done better?
 
@@ -63,6 +68,7 @@ new graphic interface design and patterns with musical note input.
 
 ![PSGed v0.90b](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_v090b_main_v2.png)
 
+<br/>
 
 ### Chapter 3. The crazy ones of the chiptune.
 
@@ -78,6 +84,7 @@ Those times were very crazy. Lots of sex (on the internet), Cola-drinks and Nois
 
 This experience made me think of an application oriented to live playback and this led to the next chapter:
 
+<br/>
 
 ### Chapter 4. Drum and Bass Machinator!
 
@@ -111,6 +118,8 @@ I also developed a drum machine as part of a new vision of GrooveSX, this time i
 ![Drumm](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/drumm04.2.png)
 *GrooveSX Drumm*
 
+<br/>
+
 ### Chapter 5. Back to the future.
 
 I decided to open this project on GitHub, thanks to [Retro DeLuxe](https://github.com/retrodeluxe), since he showed interest in this project.
@@ -123,9 +132,16 @@ Nothing useful.
 For this reason, I now roam in the underworld of fake developers. 
 If you need me, *Who you gonna call?* **Ghostbusters!**
 
+**Note:* The images included are just a small sample of all the designs I have created. 
+Shame haunts me for not finishing my projects. 
+I deserve to be publicly punished with tarring and feathering for my offense to the MSX user community. 
+Sorry Nishi.
+
+<br/>
+
 *mvac7 (aka aorante)*
 
-
+<br/>
 
 ## Requirements: 
 
@@ -144,6 +160,7 @@ A standard MSX computer with 16K RAM.
 * From disk using tools like ODO, loadrom, execrom, etc. 
 * From cassette using WAVeR or a similar tool.
  
+<br/>
 
 ## Acknowledgements
  
@@ -160,6 +177,8 @@ I want to thank the following persons, who directly or indirectly helped me to a
 * [Fubukimaru](https://github.com/Fubukimaru) > [(Blog)](http://www.gamerachan.org/fubu/) 
 * Friends of [Karoshi MSX Community](http://karoshi.auic.es/) 
 
+
+<br/>
 
 ## Task List
 
