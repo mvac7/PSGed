@@ -22,17 +22,34 @@ It is designed with a graphical user interface easy to use.
 
 
 
-## Author's Notes
+## The little history of PSGed
 
-This application was my first experience learning C development and MSX Assembler.
+> ### Talking about PSGed is talking about procrastination, electronic music, energy drinks and chocolate cream sandwiches.
 
-The purpose was to develop an application to create music under a Groovebox type interface (such as the electrives or the 303), 
+### Chapter 1. How do I do this?
+
+I will start by confessing that PSGed was my first attempt to develop an application for MSX computers using C and Z80 assembler.
+
+At this time, I knew the MSX hardware because when I was a teenager I had programmed in BASIC and I had even done some assembly routines, 
+but everything seemed very hard to me.
+
+...until at a meeting of MSX users, I met Mr. Alberto del Hoyo (Nerlaska), who told me that it could be programmed in C using the SDCC cross-development compiler.
+
+I found on Alberto's WEB a tutorial to create a ROM and doing a lot of research on the internet (there wasn't much about development with SDCC for MSX), 
+and I was making my way through the fog of ignorance to the person I am today: A Smoke seller!
+
+To share my experience with the world, I opened an exclusive Blog for PSGed, where I posted everything I learned.
+Mysteriously, one day a UFO abducted the blog and disappeared. if anyone knows anything, report it to agents Mulder and Scully. *The truth is out there!*
+
+The idea of PSGed was to develop an application to create music under a Groovebox-type interface (such as electrives or 303),
 but when working directly editing the AY parameters instead of using instruments, it did not provide the desired functionality.
-
 For that reason I left it as an AY sound editor that includes a simple sequencer and did not add disk access functionality.
 
 But it gave me ideas for a new, more complete version with improvements in the sequencer, 
 where it allowed the entry of notes and changes in the sound parameters at the pattern level.
+
+
+### Chapter 2. What if it can be done better?
 
 PSGed v2 reached an advanced stage of development but was more complex to use than the previous version, so I left the project.
 I made the mistake of continuing to not include instrument-based operation.
@@ -43,6 +60,21 @@ After some time of this failure, I started version 0.9 of the initial PSGed with
 new graphic interface design and patterns with musical note input.
 
 ![PSGed v0.90b](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_v090b_main_v2.png)
+
+
+### Chapter 3. The crazy ones of the chiptune.
+
+But now I want to pause. During this time my friend Neuroflip, I had gotten into the chiptune scene in Barcelona. 
+A marginal musical subculture that moved through small spaces in the marginal neighborhoods of Barcelona.
+We formed a group called 303bcn and we started with Neuroflip's C64 where he was DJing his music, while I was doing VJing from an MSX connected to a video projector. 
+To do this, I developed an application for VJing where using the keyboard you could visually interpret the music, showing different graphic effects.
+
+* About [veejingSX](http://www.lowtoy.com/veejingsx/)
+
+This experience made me think of an application oriented to live playback and this led to the next chapter:
+
+
+### Chapter 4. Drum and Bass Machinator!
 
 Continuing with the idea of creating a Groovebox type application, 
 I started looking at the existing MSX players such as PT3 and WYZ and in the end I decided to try the WYZ one.
@@ -70,12 +102,20 @@ I also developed a drum machine as part of a new vision of GrooveSX, this time i
 
 ![Drumm](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/drumm04.2.png)
 
+
+### Chapter 5. Back to the future.
+
 I decided to open this project on GitHub, thanks to [Retro DeLuxe](https://github.com/retrodeluxe), since he showed interest in this project.
 
-In the short term I want to publish version 0.9 of PSGed and later an application resulting from the evolution of TARP but with editing (called TDB), 
-and in the future I do not rule out being able to do the GrooveSX application.
+It is possible that PSGed version 0.9 will be published soon and later an application called TDB based on the evolution of TARP but with editing. 
+I do not rule out in the future being able to make the GrooveSX application, although it may already be published in a parallel universe.
 
-*mvac7*
+In all this time I have also programmed some open source libraries, graphical tools for cross development and Random Monkey Generators. 
+Nothing useful. 
+For this reason, I now roam in the underworld of fake developers. 
+If you need me, *Who you gonna call?* **Ghostbusters!**
+
+*mvac7 (aka aorante)*
 
 
 
