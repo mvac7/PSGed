@@ -10,6 +10,7 @@ Programming language: C and Z80 assembler
 
 Includes a *minimalTech* demo song by [neuroflip](https://twitter.com/neuroflip)
 
+---
 
 <br/>
 
@@ -78,10 +79,13 @@ A marginal musical subculture that moved through small spaces in the marginal ne
 We formed a group called 303bcn and we started with Neuroflip's C64 where he was DJing his music, while I was doing VJing from an MSX connected to a video projector. 
 To do this, I developed an application for VJing where using the keyboard you could visually interpret the music, showing different graphic effects.
 
-Those times were very crazy. Lots of sex (on the internet), Cola-drinks and Noise!!!
-
 ![veejingSX](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/veejingSX_v09b.png)
 <br/>[*veejingSX*](http://www.lowtoy.com/veejingsx/)
+
+Later we went on to use Commodore Amiga computers, specifically three Amigas 1200: (2 for DJing and 1 for VJing). 
+We needed an extra-long table to fit so many A1200s. But this is another story.
+
+> Those times were very crazy. Sex (on the internet), Cola-drinks and above all a lot of Noise!!!! **YEAH!**
 
 This experience made me think of an application oriented to live playback and this led to the next chapter:
 
@@ -91,22 +95,20 @@ This experience made me think of an application oriented to live playback and th
 
 Continuing with the idea of creating a Groovebox type application, 
 I started looking at the existing MSX players such as PT3 and WYZ and in the end I decided to try the WYZ one.
-The WYZ player provides three channels to compose the melody plus a channel to launch effects that was mixed with one of the three channels, 
+
+The WYZ player provides three channels to compose the melody plus a channel to launch effects (this is mixed with one of the three channels), 
 allowing to provide the feeling of having 4 channels. 
-The FX channel allowed it to be used for percussion or gaming effects.
+The FX channel allowed it to be used for percussion or gaming sound effects.
 It also allows the use of the AY-3-8910 effect with the low frequency envelope, 
 to create a sound with a sawtooth-like waveform, providing a great bass sound ideal for developing a Groovebox.
  
-I contacted the programmer [(WYZ)](https://sites.google.com/site/wyzplayer/) and developed a demo of an application with a button-based interface designed to launch patterns. 
+I contacted the programmer [(WYZ)](https://sites.google.com/site/wyzplayer/) and I developed a demo that includes a matrix of buttons to launch patterns and to be able to perform or improvise the live playback (DJing). 
 I named it grooveSX. [(New in MSX Resource Center)](https://www.msx.org/news/en/groovesx-live-v004b)
 
 ![GrooveSXlive v0.03b](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/GrooveSXlive_v003b_play.png)
 <br/>*GrooveSXlive v0.03b*
 
-The application only included the music reproduction part. 
-It consists of a matrix of buttons designed to launch the patterns of a module, and allow playing with the live playback designed for chiptune DJing. 
-
-The problem that I found is that the player did not serve my purposes. 
+The problem that I found is that the WYZplayer did not serve my purposes. 
 It was designed to reproduce songs efficiently in games or demos and did not allow to work directly from an editor so it required a version with important changes.
 
 To develop the Groovebox application that I had devised, I needed to program a specific player and at that moment I didn't had the level of assembly programming for it, so I went to other projects.
@@ -124,21 +126,19 @@ I also developed a drum machine as part of a new vision of GrooveSX, this time i
 
 ### Chapter 5. Back to the future.
 
+In all this time I have also programmed some open source [libraries](https://github.com/mvac7/SDCC_MSX_fR3eL), [graphical tools](https://github.com/mvac7/mSXdevtools) (via Infinite Development System) and [Random Monkey Generators](https://github.com/mvac7/MSX_monKEY_Lib). 
+Nothing useful. 
+For this reason, I now roam in the underworld of losers developers. 
+If you need me, *Who you gonna call?* **Ghostbusters!**
+
 I decided to open this project on GitHub, thanks to [Retro DeLuxe](https://github.com/retrodeluxe), since he showed interest in this project.
 
 It is possible that PSGed version 0.9 will be published soon and later an application called TDB based on the evolution of TARP but with editing. 
 I do not rule out in the future being able to make the GrooveSX application, although it may already be published in a parallel universe.
 
-In all this time I have also programmed some open source libraries, graphical tools for cross development and Random Monkey Generators. 
-Nothing useful. 
-For this reason, I now roam in the underworld of fake developers. 
-If you need me, *Who you gonna call?* **Ghostbusters!**
-
 **Note:** The images included are just a small sample of all the designs I have created. 
 Shame haunts me for not finishing my projects. 
 I deserve to be publicly punished with tarring and feathering for my offense to the MSX user community. 
-
-<br/>
 
 *mvac7 (aka aorante)*
 
@@ -180,11 +180,13 @@ I want to thank the following persons, who directly or indirectly helped me to a
 
 
 <br/>
+---
+
 
 ## Task List
 
 
-### PSGed v0.4b
+### PSGed v0.4b (ROM)
 - [x] change tempo to bpm (http://en.wikipedia.org/wiki/Tempo)
 - [x] increasing acceleration of change value in large numbers.
 - [x] load demos
@@ -195,7 +197,7 @@ I want to thank the following persons, who directly or indirectly helped me to a
 <br/>
 
 
-### PSGed v0.5b
+### PSGed v0.5b (ROM)
 
 - [x] On the menu when the mouse is detected, select your choice.
 - [x] Redesigned main screen.
@@ -217,7 +219,7 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [x] Added three tones in the pattern editor (offset).
 <br/>
 
-### PSGed v0.7b
+### PSGed v0.7b (ROM)
 
 - [x] Mute channels by mouse click.
 - [x] Added second button (mouse/joystick) or _Graph_ key to remove or add a silent item.
@@ -229,7 +231,7 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [x] Using PSG MegaFlashROM SCC+
 <br/>
 
-### PSGed v0.8b ROM edition
+### PSGed v0.8b (ROM)
 
 - [x] Added ComboBox control to select the envelope.
 - [x] Asm routines added. Andrear adaptation of mouse routines by Ramones.
@@ -255,10 +257,11 @@ I want to thank the following persons, who directly or indirectly helped me to a
 <br/>
 
 
-### PSGed v0.84b ROM edition
+### PSGed v0.84b (ROM) GitHub Release
 
-- [x] Replacement of old functions and libraries with the latest fR3el libraries.
-- [x] RLEWB compression of graphic data and demos.
+- [x] Replacement of old functions and libraries with the latest [fR3el libraries](https://github.com/mvac7/SDCC_MSX_fR3eL).
+- [x] Reverse engineering to recover the graphics [(PSGed/GFX/)](https://github.com/mvac7/PSGed/tree/main/GFX).
+- [x] RLEWB compression of graphic and demo datas.
 - [x] New Load screen.
 <br/>
 
@@ -281,11 +284,20 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [ ] load file
 - [ ] save file
 - [ ] Help. By clicking on the bar jump pages.
-- [ ] Delete record dump. (V0.8b ROM functionality only).
+- [ ] Delete record dump.
 
 
+---
 
+## More and better
 
+If you want to make music for MSX computers from an MSX, you have the great TriloTracker but if you are looking for the comfort of your daily computer, 
+you have a great variety of good cross-trackers for different operating systems:
 
+* [TriloTracker](http://www.trilobyte-msx.com/TriloTracker/index.php/Main_Page) [(GitGub)](https://github.com/cornelisser/TriloTracker) [MSX] 
+* [WYZTracker](https://github.com/AugustoRuiz/WYZTracker) by Augusto Ruiz [Windows]
+* [Vortex Tracker II](https://bulba.untergrund.net/vortex_e.htm) [Windows]
+* [Arkos Tracker 2](https://www.julien-nevo.com/arkostracker/) [Windows/Linux/MacOSX]
 
+And if you want to use your MSX as a musical instrument, you can try the [MSX Synth](http://paxangasoft.retroinvaders.com/othersoft/msxsynth.html) application from Paxanga soft.
 
