@@ -11,8 +11,6 @@ Programming language: C and Z80 assembler
 Includes a *minimalTech* demo song by [neuroflip](https://twitter.com/neuroflip)
 
 
-## Sorry!: This text is pending correction of the English translation.
-
 <br/>
 
 ## Description:
@@ -37,13 +35,13 @@ I will start by confessing that PSGed was my first attempt to develop an applica
 At this time, I knew the MSX hardware because when I was a teenager I had programmed in BASIC and I had even done some assembly routines, 
 but everything seemed very hard to me.
 
-...until at a meeting of MSX users, I met Mr. Alberto de Hoyo (Nerlaska), who told me that it could be programmed in C using the SDCC cross-development compiler.
+...until at some MSX user meeting, where I met Mr. Alberto de Hoyo (Nerlaska). He told me that it could be programmed in C using the SDCC cross-development compiler.
 
-I found on Alberto's WEB a tutorial to create a ROM and doing a lot of research on the internet (there wasn't much about development with SDCC for MSX), 
+I found in Alberto's WEB a tutorial to create a ROM and doing a lot of research on the internet (there wasn't much about development with SDCC for MSX), 
 and I was making my way through the fog of ignorance to the person I am today: *A Smoke seller!*
 
 To share my experience with the world, I opened an exclusive Blog for PSGed, where I posted everything I learned.
-Mysteriously, one day a UFO abducted the blog and disappeared. if anyone knows anything, report it to agents Mulder and Scully. *The truth is out there!*
+Mysteriously, one day a UFO abducted the blog and disappeared. If anyone knows anything, report it to agents Mulder and Scully. *The truth is out there!*
 
 The idea of PSGed was to develop an application to create music under a Groovebox-type interface (such as electrives or 303),
 but when working directly editing the AY parameters instead of using instruments, it did not provide the desired functionality.
@@ -75,7 +73,7 @@ new graphic interface design and patterns with musical note input.
 
 ### Chapter 3. The crazy ones of the chiptune.
 
-But now I want to pause. During this time my friend Neuroflip, I had gotten into the chiptune scene in Barcelona. 
+But now I wantes to pause. However, during this time, because of my friend Neuroflip I got into the chiptune scene in Barcelona. 
 A marginal musical subculture that moved through small spaces in the marginal neighborhoods of Barcelona.
 We formed a group called 303bcn and we started with Neuroflip's C64 where he was DJing his music, while I was doing VJing from an MSX connected to a video projector. 
 To do this, I developed an application for VJing where using the keyboard you could visually interpret the music, showing different graphic effects.
@@ -111,7 +109,7 @@ It consists of a matrix of buttons designed to launch the patterns of a module, 
 The problem that I found is that the player did not serve my purposes. 
 It was designed to reproduce songs efficiently in games or demos and did not allow to work directly from an editor so it required a version with important changes.
 
-To develop the Groovebox application that I had devised, I needed to program a specific player and at that moment I did not find the level of assembly programming for it, so I went to other projects.
+To develop the Groovebox application that I had devised, I needed to program a specific player and at that moment I didn't had the level of assembly programming for it, so I went to other projects.
 
 Along the way, I have developed several music shows, [TARP](https://github.com/mvac7/TARP) (The Alan Randoms Project) being the first one that I have published fully finished. 
 I also developed a drum machine as part of a new vision of GrooveSX, this time in MSX-DOS format and with disk access.
@@ -139,7 +137,6 @@ If you need me, *Who you gonna call?* **Ghostbusters!**
 **Note:** The images included are just a small sample of all the designs I have created. 
 Shame haunts me for not finishing my projects. 
 I deserve to be publicly punished with tarring and feathering for my offense to the MSX user community. 
-Sorry Nishi.
 
 <br/>
 
@@ -251,12 +248,20 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [x] Edit screen. Added new features and changes for adjustment of noise and envelope areas.
 - [x] Bug. Update data at the end of song play without loop.
 - [x] Bug. After play in stop mode, when there will be a combobox, the music plays...
-- [x] Compress Data: demos, help.
 - [x] New version logo.
 - [x] Added demo minimalTech / neuroFlip. 
 - [x] Remove Demo3 to gain memory space.
 - [x] Changing the load screen. Added name and author of the demos.
 <br/>
+
+
+### PSGed v0.84b ROM edition
+
+- [x] Replacement of old functions and libraries with the latest fR3el libraries.
+- [x] RLEWB compression of graphic data and demos.
+- [x] New Load screen.
+<br/>
+
 
 ### Future releases 
 
