@@ -51,8 +51,8 @@ For that reason I left it as an AY sound editor that includes a simple sequencer
 ![PSGed v0.1](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_15.png)
 <br/>*PSGed v0.1b*
 
-![PSGed v0.1](https://raw.githubusercontent.com/mvac7/PSGed/main/GFX/psged_v082B_main.png)
-<br/>*PSGed v8.2b*
+![PSGed v0.1](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_v082b_main.png)
+<br/>*PSGed v0.82b*
 
 But it gave me ideas for a new, more complete version with improvements in the sequencer, 
 where it allowed the entry of notes and changes in the sound parameters at the pattern level.
