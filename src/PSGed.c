@@ -4,7 +4,7 @@
    
    Author: aorante (aka mvac7)                                                      
    Architecture: MSX 
-   Format: ROM 32K (h4000) 
+   Format: ROM 32K 
    Programming language: C and Z80 Assembler
    
    Powered by fR3eL (https://github.com/mvac7/SDCC_MSX_fR3eL)
@@ -13,15 +13,6 @@
      program for MSX computers with the functionality to play with the registers 
      from PSG (AY-3-8910).
 ============================================================================= */
-
-//v0.82B includes:
-//#include "../msx_lib/newTypes.h"
-//#include "../msx_lib/functions.h"
-//#include "../msx_lib/mouse.h"
-//#include "../msx_lib/VDP_TMS9918.h"
-//#include "../msx_lib/PSG_AY38910.h"
-//#include "screens.h"
-
 
 #include "../include/newTypes.h"
 #include "../include/msxSystemVars.h"
@@ -46,14 +37,8 @@
 
 #define FILESIZE 0x035D
 
-//#define SCR_BUFFER 0xC500 // screen buffer
-//#define LOAD_SCR_BUFFER SCR_BUFFER + 0x300
-//#define DATA_BUFFER LOAD_SCR_BUFFER + 0x300 //info win size
-//#define DEMO_DATA DATA_BUFFER + FILESIZE
-
-//#define VDPTYPE 0xE100
-
-const char appv[] = "VERSION 0.83";
+const char app_name[] = "PSGED";
+const char app_version[] = "0.83B";
 
 const char EnvelopeValue[8]={1,4,8,10,11,12,13,14}; 
 
@@ -382,7 +367,8 @@ void initScreen()
   
   ShowInitScreen();
    
-  VPRINT(9, 14, appv);
+  VPRINT(9, 14, "VERSION");
+  VPRINT(17, 14, app_version);
   
   // detecta el mouse 
   for (i=0;i<60;i++)

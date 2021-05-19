@@ -51,6 +51,9 @@ For that reason I left it as an AY sound editor that includes a simple sequencer
 ![PSGed v0.1](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/PSGed_15.png)
 <br/>*PSGed v0.1b*
 
+![PSGed v0.1](https://raw.githubusercontent.com/mvac7/PSGed/main/GFX/psged_v082B_main.png)
+<br/>*PSGed v8.2b*
+
 But it gave me ideas for a new, more complete version with improvements in the sequencer, 
 where it allowed the entry of notes and changes in the sound parameters at the pattern level.
 
@@ -186,7 +189,7 @@ I want to thank the following persons, who directly or indirectly helped me to a
 ## Task List
 
 
-### PSGed v0.4b (ROM)
+### PSGed v0.4b ROM (16/11/2010)
 - [x] change tempo to bpm (http://en.wikipedia.org/wiki/Tempo)
 - [x] increasing acceleration of change value in large numbers.
 - [x] load demos
@@ -197,7 +200,7 @@ I want to thank the following persons, who directly or indirectly helped me to a
 <br/>
 
 
-### PSGed v0.5b (ROM)
+### PSGed v0.5b ROM
 
 - [x] On the menu when the mouse is detected, select your choice.
 - [x] Redesigned main screen.
@@ -219,7 +222,7 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [x] Added three tones in the pattern editor (offset).
 <br/>
 
-### PSGed v0.7b (ROM)
+### PSGed v0.7b ROM
 
 - [x] Mute channels by mouse click.
 - [x] Added second button (mouse/joystick) or _Graph_ key to remove or add a silent item.
@@ -231,7 +234,7 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [x] Using PSG MegaFlashROM SCC+
 <br/>
 
-### PSGed v0.8b (ROM)
+### PSGed v0.8b ROM (20/11/2010)
 
 - [x] Added ComboBox control to select the envelope.
 - [x] Asm routines added. Andrear adaptation of mouse routines by Ramones.
@@ -257,7 +260,12 @@ I want to thank the following persons, who directly or indirectly helped me to a
 <br/>
 
 
-### PSGed v0.84b (ROM) GitHub Release
+### PSGed v0.82b ROM (26/01/2012)
+- [x] Real-time modification of AY records in playback mode.
+<br/>
+
+
+### PSGed v0.83b ROM GitHub Release
 
 - [x] Replacement of old functions and libraries with the latest [fR3el libraries](https://github.com/mvac7/SDCC_MSX_fR3eL).
 - [x] Reverse engineering to recover the graphics [(PSGed/GFX/)](https://github.com/mvac7/PSGed/tree/main/GFX).
