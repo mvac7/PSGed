@@ -83,12 +83,14 @@ We formed a group called 303bcn and we started with Neuroflip's C64 where he was
 To do this, I developed an application for VJing where using the keyboard you could visually interpret the music, showing different graphic effects.
 
 ![veejingSX](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/veejingSX_v09b.png)
-<br/>[*veejingSX*](http://www.lowtoy.com/veejingsx/)
+<br/>veejingSX · [*Lowtoy Review*](http://www.lowtoy.com/veejingsx/)
 
 Later we went on to use Commodore Amiga computers, specifically three Amigas 1200: (2 for DJing and 1 for VJing). 
 We needed an extra-long table to fit so many A1200s. But this is another story.
 
-> Those times were very crazy. Sex (on the internet), Cola-drinks and above all a lot of Noise!!!! **YEAH!**
+Those responsible for many of our concerts were the guys from [Lowtoy](http://www.lowtoy.com). Very cool people.
+
+> ### Those times were very crazy. Sex (on the internet), Cola-drinks and above all a lot of Noise!!!! **YEAH!**
 
 This experience made me think of an application oriented to live playback and this led to the next chapter:
 
@@ -139,9 +141,12 @@ I decided to open this project on GitHub, thanks to [Retro DeLuxe](https://githu
 It is possible that PSGed version 0.9 will be published soon and later an application called TDB based on the evolution of TARP but with editing. 
 I do not rule out in the future being able to make the GrooveSX application, although it may already be published in a parallel universe.
 
+Have I ever told you, that my main objective was actually to make a Tracker for the MSX Yamaha with the SFG-01/5 module?
+![openmoji thinking-face](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/272/thinking-face_1f914.png)
+
 **Note:** The images included are just a small sample of all the designs I have created. 
 Shame haunts me for not finishing my projects. 
-I deserve to be publicly punished with tarring and feathering for my offense to the MSX user community. 
+I deserve to be publicly *punished with tarring* and feathering for my offense to the MSX user community. 
 
 *mvac7 (aka aorante)*
 
@@ -178,7 +183,8 @@ I want to thank the following persons, who directly or indirectly helped me to a
 * [Pentacour](http://pentacour.com/blog/): nMSXtiles tool.
 * Ramones: mouse code. [(MSXblog)](https://www.msxblog.es/tutoriales-de-programacion-en-ensamblador-ramones/) - [(MSXbanzai)](http://msxbanzai.tni.nl/dev/faq.html)
 * [Baze](http://baze.au.com/misc/z80bits.html): ASM Z80 routines
-* [Fubukimaru](https://github.com/Fubukimaru) > [(Blog)](http://www.gamerachan.org/fubu/) 
+* Kun/[Paxanga Soft](http://paxangasoft.retroinvaders.com) Moral support. Another music app developer.
+* [Fubukimaru](http://www.gamerachan.org/fubu/) ASCII support and Markdown Advisor. 
 * Friends of [Karoshi MSX Community](http://karoshi.auic.es/) 
 
 
@@ -271,6 +277,8 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [x] Reverse engineering to recover the graphics [(PSGed/GFX/)](https://github.com/mvac7/PSGed/tree/main/GFX).
 - [x] RLEWB compression of graphic and demo datas.
 - [x] New Load screen.
+- [x] Help improvements.
+- [ ] Support for keyboard shortcuts to select the control device
 <br/>
 
 
