@@ -142,7 +142,7 @@ It is possible that PSGed version 0.9 will be published soon and later an applic
 I do not rule out in the future being able to make the GrooveSX application, although it may already be published in a parallel universe.
 
 Have I ever told you, that my main objective was actually to make a Tracker for the MSX Yamaha with the SFG-01/5 module?
-![openmoji thinking-face](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/272/thinking-face_1f914.png)
+<br/>![openmoji thinking-face](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/272/thinking-face_1f914.png)
 
 **Note:** The images included are just a small sample of all the designs I have created. 
 Shame haunts me for not finishing my projects. 
@@ -185,7 +185,7 @@ I want to thank the following persons, who directly or indirectly helped me to a
 * [Baze](http://baze.au.com/misc/z80bits.html): ASM Z80 routines
 * Kun/[Paxanga Soft](http://paxangasoft.retroinvaders.com) Moral support. Another music app developer.
 * [Fubukimaru](http://www.gamerachan.org/fubu/) ASCII support and Markdown Advisor. 
-* Friends of [Karoshi MSX Community](http://karoshi.auic.es/) 
+* [Karoshi MSX Community](http://karoshi.auic.es/) 
 
 
 <br/>

@@ -31,7 +31,7 @@
 
 #include "../include/PSGed_GFX.h"
 #include "../include/PSGed_demoSONGs.h"
-//#include "../include/PSGed_help.h"
+
 
 #define  HALT __asm halt __endasm
 
@@ -93,15 +93,13 @@ typedef struct {
 } PSG_SONG;
 
 
-// definicion funciones <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// ----------------------------------------------------- definition of functions
 void initScreen();
 void mainWindow();
 void checkMSX();
-//char getVdp(void);
 
 void SetPalette(char number);
-
-//void SetGUIgfxData();
 
 void ShowInitScreen();
 void ShowMainScreen(); //ShowEditScreen
@@ -113,13 +111,8 @@ void ShowWindow(char posX, char posY, char width, char height, uint RAMaddr);
 
 void ShowInfoWin();
 void ShowCopyWin();
-//void ShowPSGDumpWin();
-//void ShowConfigWin();
-//void ShowConfirmWin();
-
 
 void initPSGData();
-//void setPSGdata();
 void ShowEditData();
 
 boolean reverseCheckBox(boolean checked, int tiladdre);
@@ -127,19 +120,17 @@ void showCheckBox(char column, char line, boolean checked);
 char ShowEnvelope(char value);
 signed char ShowCombo(char posx, char posy);
 
+
+char ShowRadioControlDevice(char index);
+
 char getEnvelopeIndex(char envelope);
-//char getEnvelopeByIndex(char index);
 
 void showPattern(char column, char line, char *patternData);
 void showPatterns(char numPattern);
 
 void setLastPos(char value, char *patternA, char *patternB, char *patternC);
 
-//void setChannel(char NumChannel, boolean isTone, boolean isNoise);
-
 void FastClsSc2(char color);
-
-//void toHelpFromEdit();
 
 void setPosition();
 
@@ -155,6 +146,8 @@ void num2Dec16(int aNumber, char *address);
 unsigned int GetVRAMaddressByPosition(char column, char line);
 void VPRINT(char posx, char posy, char* text);
 void VPRINTN(char column, char line, char* text, unsigned int length);
+
+void ROW7unpress();
 
 void initDemoData();
 boolean load();
@@ -174,7 +167,7 @@ void playSong();
 void playPattern();
 void playStep();
 void stopSong();
-void toSilencePSG();
+void SilencePSG();
 void playPSGregs();
 void initPSGregs();
 //
@@ -198,12 +191,12 @@ void Help();
 void showHelpText(char numlin);
 void showHelpPage(char numlin);
 void showScrollBar(char numlin, char maxNumLines);
-// end
+// ------------------------------------------------------------------------- end
 
 
 
 
-// definicion variables globales <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// ---------------------------------------------- definition of global variables
 
 // config
 char controller;
@@ -238,12 +231,24 @@ boolean setStop;
 boolean isLoop;    // control del loop en el play song
 
 
+// pressure control variables
+//boolean Row0pressed;
+//boolean Row1pressed;
+//boolean Row2pressed;
+//boolean Row3pressed;  
+//boolean Row4pressed;
+//boolean Row5pressed;
+boolean Row6pressed;
+boolean Row7pressed;
+boolean Row8pressed;
+
+
 char SCR_BUFFER[0x300];
 //char LOAD_SCR_BUFFER[0x300];
 
 
 
-    
+// ----------------------------------------------------------------------------- functions    
 void main(void) 
 {
  
@@ -336,23 +341,13 @@ __endasm;
 }*/
 
 
-//
-/*
-#include "functions.c"
-#include "screens.c"
-#include "menu.c"
-#include "help.c"
-#include "load.c"
-#include "data.c"
-*/
-//
 
 
-/* ===========================================================================
+/* -----------------------------------------------------------------------------
 initScreen                                
 Function : Presentacion y menu de inicio
 Input    : 
-=========================================================================== */
+----------------------------------------------------------------------------- */
 void initScreen()
 {  
   char A=0, y=135, joyval=0, i=0; 
@@ -432,15 +427,18 @@ void initScreen()
 
 
 
-// ===========================================================================
-// gestion de la pantalla principal
-// ===========================================================================
+
+/* -----------------------------------------------------------------------------
+mainWindow                                
+Function : main screen management
+Input    : 
+----------------------------------------------------------------------------- */
 void mainWindow()
 {
   // define/inicializa variables locales
   uint tiladdre;
   boolean isLoad=false; 
-  boolean response=false;
+  boolean dialogResult=false;
   boolean trigbool=false, trig2bool=false, keybool=false;
   boolean chanAkeybool=false, chanBkeybool=false, chanCkeybool=false;
   boolean stopkeybool=false, playPSGkeybool=false;
@@ -452,7 +450,7 @@ void mainWindow()
    
   //char acel=10, speed=0; 
   char keyAcel=4, keySpeed=0;
-  char pressKey;
+  char keyPressed;
   char i;
   char songPattern=0;
   char bpmsdata[]={0,250,188,150,126,108,94,84,75,68,63};
@@ -545,17 +543,7 @@ void mainWindow()
               
         if (setStop==true)
         {
-          stopSong();
-          /*setStop=false;
-          toSilencePSG();          
-          isPlay=0;
-          isPause=0;
-          playCounter=0;
-          setLastPos(lastPlayCounter, PSGsong.patterns[currentPattern].trackA, PSGsong.patterns[currentPattern].trackB, PSGsong.patterns[currentPattern].trackC);
-          lastPlayCounter=15;
-          VPOKE(0x1AFA,245);
-          VPOKE(0x1A1E,245);*/
-          
+          stopSong();         
           setPosition();
                     
         }else{        
@@ -564,32 +552,20 @@ void mainWindow()
           //channelA
           tiladdre = GetVRAMaddressByPosition(15+playCounter,19);
           tmpValue = PSGsong.patterns[currentPattern].trackA[playCounter];
-          if (tmpValue==0)
-          {              
-            VPOKE(tiladdre,184);
-          }else{
-            VPOKE(tiladdre,185);     
-          }
+          if (tmpValue==0) VPOKE(tiladdre,184);
+          else VPOKE(tiladdre,185);
                   
           //channelB
           tiladdre = GetVRAMaddressByPosition(15+playCounter,20);
           tmpValue = PSGsong.patterns[currentPattern].trackB[playCounter];
-          if (tmpValue==0)
-          {
-            VPOKE(tiladdre,184);
-          }else{
-            VPOKE(tiladdre,185);                 
-          }
+          if (tmpValue==0) VPOKE(tiladdre,184);
+          else VPOKE(tiladdre,185);                 
                   
           //channelC
           tiladdre = GetVRAMaddressByPosition(15+playCounter,21);
           tmpValue = PSGsong.patterns[currentPattern].trackC[playCounter];
-          if (tmpValue==0)
-          {
-            VPOKE(tiladdre,184);
-          }else{
-            VPOKE(tiladdre,185);     
-          }
+          if (tmpValue==0) VPOKE(tiladdre,184);
+          else VPOKE(tiladdre,185);     
                               
           // muestra la linea anterior
           setLastPos(lastPlayCounter, PSGsong.patterns[currentPattern].trackA, PSGsong.patterns[currentPattern].trackB, PSGsong.patterns[currentPattern].trackC);
@@ -650,22 +626,14 @@ void mainWindow()
           {
              Help();
           }
-          if (column>6 && column<12)//CONFIG
-          {
-            config(); 
-          }
-          if (column>12 && column<18)// LOAD 
-          {
-              isLoad = true;
-          }                           
-          if (column>18 && column<24) //SAVE
-          {
-             PSGdump();
-          }
-          /*if (column>24) //(F5)
-          {
-            
-          } */
+          if (column>6 && column<12) config();//CONFIG
+
+          if (column>12 && column<18) isLoad=true;// LOAD 
+                        
+          if (column>18 && column<24) PSGdump(); //SAVE
+
+          //if (column>24) //(F5)
+
         }
         
         if (line==17)
@@ -679,9 +647,9 @@ void mainWindow()
           // NEW 
           if (column>3 && column<9)
           {
-            response=showModalWin("ARE YOU SURE\nYOU WANT TO\nDELETE SONG?");
+            dialogResult=showModalWin("ARE YOU SURE\nYOU WANT TO\nDELETE SONG?");
     
-            if (response==true)
+            if (dialogResult==true)
             {
               songPos=0;
               currentPattern=0;
@@ -695,9 +663,9 @@ void mainWindow()
           // CLR - borra la informacion del pattern en curso
           if (column>12 && column<18) 
           {
-            response=showModalWin("ARE YOU SURE\nYOU WANT TO\nDELETE PATTERN?");
+            dialogResult=showModalWin("ARE YOU SURE\nYOU WANT TO\nDELETE PATTERN?");
     
-            if (response==true)
+            if (dialogResult==true)
             {
               for (i=0;i<16;i++)
               { 
@@ -1021,7 +989,7 @@ void mainWindow()
             //isPlayPattern=false;
             VPOKE(0x1A1E,245);//play icon pattern
             VPOKE(0x1AFA,245);//play icon                       
-            toSilencePSG();                        
+            SilencePSG();                        
           }else{
             // reanuda play
             setPosition();
@@ -1044,7 +1012,7 @@ void mainWindow()
             pauseTimer=0;
             VPOKE(0x1A1E,245);//play icon pattern
             VPOKE(0x1AFA,245);//play icon            
-            toSilencePSG();            
+            SilencePSG();            
           }else{
             //isPlayPattern=true;
             isPlay=2;
@@ -1080,7 +1048,7 @@ void mainWindow()
             {
               stopSong();
             }else{ // si esta parado, coloca la secuencia en la posicion inicial.
-              toSilencePSG();
+              SilencePSG();
               songPos=0;
               setPosition(); 
             }          
@@ -1171,7 +1139,6 @@ void mainWindow()
               songPattern++;
               PSGsong.sequence[songPos] = songPattern;
               VPrintNumber(8,19, songPattern+1, 2);
-
             }
           }
           if (column==11)//(-)
@@ -1181,7 +1148,6 @@ void mainWindow()
               songPattern--;
               PSGsong.sequence[songPos] = songPattern;
               VPrintNumber(8,19, songPattern+1, 2);
-
             }
           }          
         }
@@ -1336,14 +1302,13 @@ void mainWindow()
     
     
     
-    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    //   keyboard control
-    pressKey = GetKeyMatrix(6);
+// ----------------------------------------------------------------------------- keyboard control
+    keyPressed = GetKeyMatrix(6);
     
     
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     // boton2 de joystick/raton o tecla Graph
-    if ((trigController>0 && STRIG(trigController+2)<0) || (pressKey|0xFB)==0xFB)
+    if ((trigController>0 && STRIG(trigController+2)<0) || !(keyPressed&Bit2))  //(keyPressed|0xFB)==0xFB [GRAPH]
     {
       if (trig2bool==false)
       {
@@ -1390,32 +1355,19 @@ void mainWindow()
           }
         }
       }    
-    }else{
-      trig2bool = false;
-    }
+    }else trig2bool = false;
     // end boton2
     
     
   
-    
-    if ((pressKey|0xDF)==0xDF) //F1
-    { 
-      Help();
-    }
-        
-    if ((pressKey|0xBF)==0xBF) //F2
-    {
-      config(); 
-    }
-    
-    if ((pressKey|0x7F)==0x7F) //F3
-    {
-      isLoad = true; 
-    } 
+    if (!(keyPressed&Bit5)) {Help();}; // [F1]
+    if (!(keyPressed&Bit6)) {config(); }; // [F2]
+    if (!(keyPressed&Bit7)) {isLoad = true; }; // [F3]
+                
     
 
-    pressKey = GetKeyMatrix(7);
-    if ((pressKey|0x7F)==0x7F) //RETURN Play song
+    keyPressed = GetKeyMatrix(7);
+    if (!(keyPressed&Bit7)) //[RETURN] Play song
     {
       if (playsngkeybool==false)
       {
@@ -1427,7 +1379,7 @@ void mainWindow()
           pauseTimer=0;
           VPOKE(0x1A1E,245);//play icon pattern
           VPOKE(0x1AFA,245);//play icon             
-          toSilencePSG();            
+          SilencePSG();            
         }else{
           setPosition();
           isPlay=1;
@@ -1437,12 +1389,10 @@ void mainWindow()
           VPOKE(0x1A1E,245);
         }
       }       
-    }else
-    {
-      playsngkeybool = false;
-    }
+    }else playsngkeybool = false;
+
     
-    if ((pressKey|0xBF)==0xBF) //SELECT  (PLAY Pattern)
+    if (!(keyPressed&Bit6)) //[SELECT]  PLAY Pattern
     {
       if (playpatkeybool==false)
       {
@@ -1455,7 +1405,7 @@ void mainWindow()
           pauseTimer=0;
           VPOKE(0x1A1E,245);//play icon pattern
           VPOKE(0x1AFA,245);//play icon            
-          toSilencePSG();            
+          SilencePSG();            
         }else{
           //isPlayPattern=true;
           isPlay=2;
@@ -1465,12 +1415,11 @@ void mainWindow()
           VPOKE(0x1AFA,245);
         }
       }       
-    }else
-    {
-      playpatkeybool = false;
-    }
+    }else playpatkeybool = false;
+
+    
        
-    if ((pressKey|0xEF)==0xEF) //STOP
+    if (!(keyPressed&Bit4)) //[STOP]
     {
       if (stopkeybool==false)
       {
@@ -1482,40 +1431,24 @@ void mainWindow()
           if(isPause>0) // si se pulsa stop en modo pausa
             {
               stopSong();
-              /*isPlay=0;
-              isPause=0;
-              setStop=false;
-              playCounter=0;
-              tempoCounter=0;
-              setLastPos(lastPlayCounter, PSGsong.patterns[currentPattern].trackA, PSGsong.patterns[currentPattern].trackB, PSGsong.patterns[currentPattern].trackC);
-              lastPlayCounter=15;
-              VPOKE(0x1AFA,245);
-              VPOKE(0x1A1E,245);*/
             }else{ // si esta parado, coloca la secuencia en la posicion inicial.
-              toSilencePSG();
+              SilencePSG();
               songPos=0;
               setPosition(); 
             }          
         }
       }
-    }else
-    {
-      stopkeybool = false;
-    }
+    }else stopkeybool = false;
+
     
-    /*if ((pressKey|0xFE)==0xFE) //F4
-    {              
-    } */
+    //if (!(keyPressed&Bit0)) //[F4]
     
-    if ((pressKey|0xFD)==0xFD) //F5
-    {
-      PSGdump();
-    }
+    if (!(keyPressed&Bit1)) PSGdump(); //[F5]
     
 
-    pressKey = GetKeyMatrix(0);
+    keyPressed = GetKeyMatrix(0);
        
-    if ((pressKey|0xFD)==0xFD) //[1] mute channel A on/off
+    if (!(keyPressed&Bit1)) //[1] mute channel A on/off
     {
       if (chanAkeybool==false)
       {
@@ -1530,11 +1463,10 @@ void mainWindow()
           chanA=true;              
         }
        }     
-    }else{
-      chanAkeybool = false;    
-    }
+    }else chanAkeybool = false;    
+
     
-    if ((pressKey|0xFB)==0xFB) //[2] mute channel B on/off
+    if (!(keyPressed&Bit2)) //[2] mute channel B on/off
     {
       if (chanBkeybool==false)
       {
@@ -1549,11 +1481,10 @@ void mainWindow()
           chanB=true;              
         }
       }     
-    }else{
-      chanBkeybool = false;    
-    }
+    }else chanBkeybool = false;    
+
     
-    if ((pressKey|0xF7)==0xF7) //[3] mute channel C on/off
+    if (!(keyPressed&Bit3)) //[3] mute channel C on/off
     {
       if (chanCkeybool==false)
       {
@@ -1568,23 +1499,20 @@ void mainWindow()
           chanC=true;              
         }
       } 
-    }else{
-      chanCkeybool = false;    
-    }
+    }else chanCkeybool = false;    
+
     
-    pressKey = GetKeyMatrix(8);
-    if ((pressKey|0xFB)==0xFB) //INS
+    keyPressed = GetKeyMatrix(8);
+    if (!(keyPressed&Bit2)) //INS
     {
       if (playPSGkeybool==false)
       {
         playPSGkeybool=true;
         if (isPlay==0) playPSGregs();
       } 
-    }else{
-      playPSGkeybool=false;
-    }
-    // end keycontrol
-    // #######################
+    }else playPSGkeybool=false;
+
+// ----------------------------------------------------------------------------- end keycontrol 
     
     
     
@@ -1593,7 +1521,7 @@ void mainWindow()
     {
       isLoad=false;
       
-      toSilencePSG();          
+      SilencePSG();          
       
       if(isPlay==2) // si esta en play, lo para
       {
@@ -1609,11 +1537,11 @@ void mainWindow()
       
       //guada la venta principal
       CopyFromVRAM(BASE10,(uint) SCR_BUFFER,0x300);
-      response=load();
+      dialogResult=load();
       //recupera la ventana principal
       CopyToVRAM((uint) SCR_BUFFER,BASE10,0x300);
       
-      if (response==true)
+      if (dialogResult==true)
       {
         songPos=0;
         currentPattern=0;
@@ -1624,18 +1552,17 @@ void mainWindow()
       }
     
     }
-    
-    //chekend();
-    //wait_retrace();   
+
     
   }
-  //return; 
+
 }// end mainWindow
 
 
-// ===========================================================================
-//  muestra la informacion de secuencia y pattern a partir de la posicion
-// ===========================================================================
+
+/* =============================================================================
+  muestra la informacion de secuencia y pattern a partir de la posicion
+============================================================================= */
 void setPosition()
 {
   currentPattern = PSGsong.sequence[songPos];
@@ -1647,12 +1574,12 @@ void setPosition()
 
 
 
-/* ===========================================================================
+/* =============================================================================
 playSong                                
 Function : Gestiona la reproduccion de una cancion.
 Input    : -
 Output   : -
-=========================================================================== */
+============================================================================= */
 void playSong()
 {
 
@@ -1694,6 +1621,13 @@ void playSong()
 } // end playSong
 
 
+
+/* =============================================================================
+playPattern                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void playPattern()
 {
 
@@ -1723,6 +1657,13 @@ void playPattern()
 } // end playPattern
 
 
+
+/* =============================================================================
+playStep                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void playStep()
 {
   boolean playEnvelopNote=false;
@@ -1850,9 +1791,16 @@ void playStep()
 }
 
 
+
+/* =============================================================================
+stopSong                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void stopSong()
 {
-  toSilencePSG();
+  SilencePSG();
   setStop=false;          
   isPlay=0;
   isPause=0;
@@ -1865,9 +1813,12 @@ void stopSong()
 
 
 
-// ===========================================================================
-// initialize PSG registers
-// ===========================================================================
+/* ============================================================================= 
+initPSGregs                                
+Function : initialize PSG registers
+Input    : -
+Output   : -
+============================================================================= */
 void initPSGregs()
 {
   SetNoisePeriod(PSGsong.noiseFreq);  //sound_set(6,PSGsong.noiseFreq);
@@ -1877,10 +1828,14 @@ void initPSGregs()
 }
 
 
-// ===========================================================================
-// silence
-// ===========================================================================
-void toSilencePSG()
+
+/* =============================================================================
+SilencePSG
+Function : silence
+Input    : -
+Output   : -
+============================================================================= */
+void SilencePSG()
 {
   SetVolume(AY_Channel_A,0);
   SetVolume(AY_Channel_B,0);
@@ -1933,7 +1888,7 @@ void setEnvelopeC()
 }
 
 
-//
+
 void setFreqA()
 {
   if(PSGsong.freqA>4095) PSGsong.freqA=4095;
@@ -1978,9 +1933,13 @@ void setEnvelopeFreq()
 }
 
 
-// ===========================================================================
-// inicializa los datos del PSG
-// ===========================================================================
+
+/* =============================================================================
+initPSGData                                
+Function : initialize PSG data 
+Input    : -
+Output   : -
+============================================================================= */
 void initPSGData()
 {
   char i,o;
@@ -2025,9 +1984,13 @@ void initPSGData()
 }
 
 
-// ===========================================================================
-// initialize screen controllers
-// ===========================================================================
+
+/* =============================================================================
+ShowEditData                                
+Function : initialize screen controllers
+Input    : -
+Output   : -
+============================================================================= */
 void ShowEditData()
 {
   char index;
@@ -2071,102 +2034,15 @@ void ShowEditData()
 }
 
 
-// ===========================================================================
-//
-// ===========================================================================
-/*void setPSGdata()
-{                                                    
-  uint address = DATA_BUFFER;
-  char value=0,i,o;
-
-  address+=6;
-  
-  for (i=0;i<20;i++) PSGsong.name[i]=PEEK(address++);
-  for (i=0;i<20;i++) PSGsong.author[i]=PEEK(address++);
-  
-  // inicializa datos del PSG
-  PSGsong.freqA=PEEKW(address);
-  address += 2;
-  PSGsong.freqB=PEEKW(address);
-  address += 2;
-  PSGsong.freqC=PEEKW(address);
-  address += 2;
-  PSGsong.noiseFreq=PEEK(address++);
-  
-  value = PEEK(address++);
-  
-  if ((value&0b00000001)==0b00000001) PSGsong.toneA=true;
-  else PSGsong.toneA=false;
-  
-  if ((value&0b00000010)==0b00000010) PSGsong.toneB=true;
-  else PSGsong.toneB=false;
-  
-  if ((value&0b00000100)==0b00000100) PSGsong.toneC=true;
-  else PSGsong.toneC=false;
-  
-  if ((value&0b00001000)==0b00001000) PSGsong.noiseA=true;
-  else PSGsong.noiseA=false;
-  
-  if ((value&0b00010000)==0b00010000) PSGsong.noiseB=true;
-  else PSGsong.noiseB=false;
-  
-  if ((value&0b00100000)==0b00100000) PSGsong.noiseC=true;
-  else PSGsong.noiseC=false;
-
-  value = PEEK(address++);
-  if (value<16){
-    PSGsong.ampA = value;
-    PSGsong.envelopeA=false;
-  }else{
-    PSGsong.ampA = 0;
-    PSGsong.envelopeA=true;  
-  }
-  
-  value = PEEK(address++);
-  if (value<16){
-    PSGsong.ampB = value;
-    PSGsong.envelopeB=false;
-  }else{
-    PSGsong.ampB = 0;
-    PSGsong.envelopeB=true;  
-  }
-  
-  value = PEEK(address++);
-  if (value<16){
-    PSGsong.ampC = value;
-    PSGsong.envelopeC=false;
-  }else{
-    PSGsong.ampC = 0;
-    PSGsong.envelopeC=true;  
-  }  
-   
-  PSGsong.envelopeFreq=PEEKW(address);
-  address += 2;
-    
-  PSGsong.envelopeType=PEEK(address++);  
-    
-  PSGsong.speed = PEEK(address++);
-  
-  PSGsong.length = PEEK(address++);
-  
-  for (i=0;i<32;i++) PSGsong.sequence[i]=PEEK(address++);
-  
-  for (o=0;o<16;o++)
-  {
-    for (i=0;i<16;i++)  PSGsong.patterns[o].trackA[i]=PEEK(address++);
-    for (i=0;i<16;i++)  PSGsong.patterns[o].trackB[i]=PEEK(address++);
-    for (i=0;i<16;i++)  PSGsong.patterns[o].trackC[i]=PEEK(address++);
-  }
-  // *tempo = PSGdata.speed + 2;
 
 
-  return;
-}*/
 
-
-// ===========================================================================
-//
-// ===========================================================================
+/* =============================================================================
+showPatterns                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void showPatterns(char numPattern)
 {
   showPattern(15,19,PSGsong.patterns[numPattern].trackA);
@@ -2175,9 +2051,13 @@ void showPatterns(char numPattern)
 }
 
 
-// ===========================================================================
-//
-// ===========================================================================
+
+/* =============================================================================
+showPattern                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void showPattern(char column, char line, char *patternData)
 {
   int tiladdre;
@@ -2192,32 +2072,12 @@ void showPattern(char column, char line, char *patternData)
 
 
 
-/*void setChannel(char NumChannel, boolean isTone, boolean isNoise)
-{
-  char newValue;
-  newValue = sound_get(7);
-  if(NumChannel==0) 
-  {
-      if(isTone==true){newValue&=254;}else{newValue|=1;}
-      if(isNoise==true){newValue&=247;}else{newValue|=8;}
-  }
-  if(NumChannel==1)    
-  {
-      if(isTone==true){newValue&=253;}else{newValue|=2;}
-      if(isNoise==true){newValue&=239;}else{newValue|=16;}
-  }
-  if(NumChannel==2)
-  { 
-      if(isTone==true){newValue&=251;}else{newValue|=4;}
-      if(isNoise==true){newValue&=223;}else{newValue|=32;}
-  }
-  sound_set(7,newValue);
-}*/
-
-
-// ===========================================================================
-//
-// ===========================================================================
+/* =============================================================================
+setLastPos                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void setLastPos(char value, char *patternA, char *patternB, char *patternC)
 {
   char position;
@@ -2238,9 +2098,11 @@ void setLastPos(char value, char *patternA, char *patternB, char *patternC)
 
 
 
-
 /* =============================================================================
-Show envelope wave selected in combobox
+ShowEnvelope                                
+Function : Show envelope wave selected in combobox
+Input    : -
+Output   : -
 ============================================================================= */
 char ShowEnvelope(char index)
 {
@@ -2255,7 +2117,12 @@ char ShowEnvelope(char index)
 
 
 
-// ShowCombo(24,13);
+/* =============================================================================
+ShowCombo                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 signed char ShowCombo(char posx, char posy)
 {
   char i,o;
@@ -2263,7 +2130,7 @@ signed char ShowCombo(char posx, char posy)
   uint tiladdre;  
   uint vpos;
   char line=0, column=0;
-  char pressKey;
+  char keyPressed;
   signed char isOut=0;
 
   tiladdre = GetVRAMaddressByPosition(posx,posy);
@@ -2296,7 +2163,7 @@ signed char ShowCombo(char posx, char posy)
       if (setStop==true)
       {
         setStop=false;
-        toSilencePSG();          
+        SilencePSG();          
         isPlay=0;          
       } 
     }
@@ -2323,17 +2190,10 @@ signed char ShowCombo(char posx, char posy)
     }
     
     // control del teclado
-    pressKey = GetKeyMatrix(7);
-    if ((pressKey|0x7F)==0x7F) //RETURN
-    {
-      isOut=1;
-      break;  
-    }
-    if ((pressKey|0xFB)==0xFB) //ESC
-    {
-      isOut=-1;
-      break; 
-    }
+    keyPressed = GetKeyMatrix(7);
+    if (!(keyPressed&Bit2)) {isOut=-1;break;}; // [ESC]
+    if (!(keyPressed&Bit7)) {isOut=1;break;};  // [RETURN]    
+
   }
   
   CopyToVRAM((uint) SCR_BUFFER,tiladdre,0x140);
@@ -2342,46 +2202,13 @@ signed char ShowCombo(char posx, char posy)
 }
 
 
-// ===========================================================================
-//
-// ===========================================================================
-/*char getEnvelopeByIndex(char index)
-{
-  int value=1;  
-  switch (index) 
-  {
-    case 0:
-      value = 1;  
-      break;
-    case 1:
-      value = 4;  
-      break;
-    case 2:
-      value = 8;  
-      break;
-    case 3:
-      value = 10;  
-      break;
-    case 4:
-      value = 11;  
-      break;
-    case 5:
-      value = 12;  
-      break;
-    case 6:
-      value = 13;  
-      break;
-    case 7:
-      value = 14;  
-      break;
-  }
-  return value;
-}*/
 
-
-// ===========================================================================
-//
-// ===========================================================================
+/* =============================================================================
+getEnvelopeIndex                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 char getEnvelopeIndex(char envelope)
 {
   char value=0;
@@ -2416,9 +2243,12 @@ char getEnvelopeIndex(char envelope)
 }
 
 
-// ===========================================================================
-//
-// ===========================================================================
+/* =============================================================================
+reverseCheckBox                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 boolean reverseCheckBox(boolean checked, int tiladdre)
 {  
   if (checked==true)
@@ -2436,9 +2266,12 @@ boolean reverseCheckBox(boolean checked, int tiladdre)
 }
 
 
-// ===========================================================================
-//
-// ===========================================================================
+/* =============================================================================
+showCheckBox                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void showCheckBox(char column, char line, boolean checked)
 {
   int tiladdre;  
@@ -2457,9 +2290,13 @@ void showCheckBox(char column, char line, boolean checked)
 }
 
 
-// ===========================================================================
-// Borra la pantalla a partir de un color indicado 
-// ===========================================================================
+
+/* =============================================================================
+FastClsSc2                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void FastClsSc2(char color)
 {
   FillVRAM(6144, 768, 32);
@@ -2471,23 +2308,40 @@ void FastClsSc2(char color)
 
 
 
-
-
+/* =============================================================================
+config                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void config()
 {
   char line=0, column=0, numlin=0;
-  char pressKey;
+  char keyPressed;
   char isOut=0;
   char i=0;
-  //char t_PSG_type = getPSGtype();
+  char t;
   char t_VDP_type = VDP_type;
   char t_controller = controller;
   
-  toSilencePSG();
+  Row6pressed=false;
+  Row7pressed=false;
+
+  
+  SilencePSG();
+  
+  //control the pressing of F2, so that it does not activate the joystick
+  t=100;
+  while(t-->0)
+  {
+    HALT;
+    if (GetKeyMatrix(6)==0xFF) break;  
+  }
+    
+  
   
   CopyFromVRAM(0x1864,(uint) SCR_BUFFER,0x21C);
   ShowWindow(4,3,24,17,(uint) config_WIN);
-  //ShowConfigWin();
   
   if(VDP_type==0) VPOKE(0x18CD,190);
   else VPOKE(0x18ED,190);
@@ -2495,11 +2349,7 @@ void config()
   if(isAYextern==false) VPOKE(0x192D,190);
   else VPOKE(0x194D,190);
   
-  if(controller==0) VPOKE(0x198D,190);
-  if(controller==1) VPOKE(0x19AD,190);
-  if(controller==2) VPOKE(0x19CD,190);
-  if(controller==3) VPOKE(0x19ED,190);
-  if(controller==4) VPOKE(0x1A0D,190);
+  ShowRadioControlDevice(controller);
      
   while(isOut == 0)
   {
@@ -2539,76 +2389,56 @@ void config()
          isAYextern = true;       
       }
       
-      if (column>12 && column<25 && line==12)// control key
+      //select control device
+      if (column>12 && column<25)
       {
-         VPOKE(0x198D,190);
-         VPOKE(0x19AD,189);
-         VPOKE(0x19CD,189);
-         VPOKE(0x19ED,189);
-         VPOKE(0x1A0D,189);
-         t_controller=0;        
+        if(line>11 && line<17) t_controller = ShowRadioControlDevice(line-12);
       }
-      if (column>12 && column<24 && line==13)// control joy
-      {
-         VPOKE(0x198D,189);
-         VPOKE(0x19AD,190);
-         VPOKE(0x19CD,189);
-         VPOKE(0x19ED,189);
-         VPOKE(0x1A0D,189);
-         t_controller=1;       
-      }
-      if (column>12 && column<24 && line==14)// control mouse
-      {
-         VPOKE(0x198D,189);
-         VPOKE(0x19AD,189);
-         VPOKE(0x19CD,190);
-         VPOKE(0x19ED,189);
-         VPOKE(0x1A0D,189);
-         t_controller=2;       
-      }
-      if (column>12 && column<21 && line==15)// control mouse
-      {
-         VPOKE(0x198D,189);
-         VPOKE(0x19AD,189);
-         VPOKE(0x19CD,189);
-         VPOKE(0x19ED,190);
-         VPOKE(0x1A0D,189);
-         t_controller=3;       
-      }
-      if (column>12 && column<21 && line==16)// control mouse
-      {
-         VPOKE(0x198D,189);
-         VPOKE(0x19AD,189);
-         VPOKE(0x19CD,189);
-         VPOKE(0x19ED,189);
-         VPOKE(0x1A0D,190);
-         t_controller=4;       
-      }      
       
-      if (column==4 && line==3)
-      {
-         isOut=2;                
-      }
-      if (column>12 && column<19 && line==18)//ok
-      {
-         isOut=1;                
-      }
-      if (column>19 && column<27 && line==18)//cancel
-      {
-         isOut=2;                
-      }
+      if (column==4 && line==3) isOut=2;  //exit button              
+
+      if (column>12 && column<19 && line==18) isOut=1; //ok               
+
+      if (column>19 && column<27 && line==18) isOut=2; //cancel               
+
     }
     
-    // control del teclado
-    pressKey = GetKeyMatrix(7);
-    if ((pressKey|0x7F)==0x7F) //RETURN
+
+    
+    // Keyboard row 6
+    keyPressed = GetKeyMatrix(6);
+    if (keyPressed!=0xFF)
     {
-      isOut=1; 
-    }
-    if ((pressKey|0xFB)==0xFB) //ESC
+      if(Row6pressed==false)
+      {
+        //if (!(keyPressed&Bit0)) {Row6pressed=true;}; // [SHIFT]
+        //if (!(keyPressed&Bit1)) {Row6pressed=true;}; // [CTRL]
+        //if (!(keyPressed&Bit2)) {Row6pressed=true;}; // [GRAPH]
+        //if (!(keyPressed&Bit3)) {Row6pressed=true;}; // [CAPS]
+        //if (!(keyPressed&Bit4)) {Row6pressed=true;}; // [CODE]
+        if (!(keyPressed&Bit5)) {Row6pressed=true;t_controller = ShowRadioControlDevice(0);}; // [F1]
+        if (!(keyPressed&Bit6)) {Row6pressed=true;t_controller = ShowRadioControlDevice(1);}; // [F2]
+        if (!(keyPressed&Bit7)) {Row6pressed=true;t_controller = ShowRadioControlDevice(2);}; // [F3]
+      }      
+    }else Row6pressed=false;
+    
+    
+    // Keyboard row 7
+    keyPressed = GetKeyMatrix(7);
+    if (keyPressed!=0xFF)
     {
-      isOut=2; 
-    }
+      if(Row7pressed==false)
+      {
+        if (!(keyPressed&Bit0)) {Row7pressed=true;t_controller = ShowRadioControlDevice(3);}; // [F4]
+        if (!(keyPressed&Bit1)) {Row7pressed=true;t_controller = ShowRadioControlDevice(4);}; // [F5]
+        if (!(keyPressed&Bit2)) {Row7pressed=true;isOut=2;}; // [ESC]
+        //if (!(keyPressed&Bit3)) {Row7pressed=true;}; // [TAB]
+        //if (!(keyPressed&Bit4)) {Row7pressed=true;}; // [STOP]
+        //if (!(keyPressed&Bit5)) {Row7pressed=true;}; // [BS]
+        //if (!(keyPressed&Bit6)) {Row7pressed=true;}; // [SELECT]
+        if (!(keyPressed&Bit7)) {Row7pressed=true;isOut=1;}; // [RETURN]
+      }      
+    }else Row7pressed=false;
     
   }
   
@@ -2637,29 +2467,63 @@ void config()
     }
     
   } 
+    
+  ROW7unpress();
   
-  CopyToVRAM((uint) SCR_BUFFER,0x1864,0x21C);
+  CopyToVRAM((uint) SCR_BUFFER,0x1864,0x21C);  //Restore the previous screen
 }
 
 
 
+/* =============================================================================
+ShowRadioControlDevice                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
+char ShowRadioControlDevice(char index)
+{
+  uint vaddr = 0x198D;
+  char i;
+  char tile;
+  
+  for(i=0;i<5;i++)
+  {
+    if(i==index) tile=190; 
+    else tile=189;
+  
+    VPOKE(vaddr,tile);
+    vaddr+=0x20;
+  }
+  
+  return index;
+}
 
 
 
+/* =============================================================================
+PSGdump                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void PSGdump()
 {
   char line=0, column=0, numlin=0;
-  char pressKey;
+  char keyPressed;
   boolean trigbool=false;
-  boolean playPSGkeybool=false;
+  //boolean playPSGkeybool=false;
   char isOut=0;
   char i=0;
   char newValue=0;
   char t_ampA = PSGsong.ampA;
   char t_ampB = PSGsong.ampB;
   char t_ampC = PSGsong.ampC;
+  
+  Row7pressed=false;
+  Row8pressed=false;
     
-  toSilencePSG();
+  SilencePSG();
   
   CopyFromVRAM(0x1863,(uint) SCR_BUFFER,0x21C);
   ShowWindow(3,3,26,17,(uint) PSGregs_WIN);
@@ -2705,11 +2569,6 @@ void PSGdump()
   {
     HALT;
     pointerController();
-    //showPointer();
-    
-    //control del boton de accion
-    
-
       
     
     if (STRIG(trigController)<0)
@@ -2731,7 +2590,7 @@ void PSGdump()
         }
         if (column==6 && line==18)  //stop
         {
-           toSilencePSG();                
+           SilencePSG();                
         }
         if (column>20 && column<28 && line==18)//cancel
         {
@@ -2743,36 +2602,57 @@ void PSGdump()
     }
     
     // control del teclado
-    pressKey = GetKeyMatrix(7);
-    
-    if ((pressKey|0xEF)==0xEF) //STOP
+    // Keyboard row 7
+    keyPressed = GetKeyMatrix(7);
+    if (keyPressed!=0xFF)
     {
-       toSilencePSG();
-    }
-    
-    if ((pressKey|0xFB)==0xFB) //ESC
-    {
-      isOut=2; 
-    }
-    
-    pressKey = GetKeyMatrix(8);
-    if ((pressKey|0xFB)==0xFB) //INS
-    {
-      if (playPSGkeybool==false)
+      if(Row7pressed==false)
       {
-        playPSGkeybool=true;
-        playPSGregs();
-      } 
-    }else{playPSGkeybool=false;}
+        //if (!(keyPressed&Bit0)) {Row7pressed=true;}; // [F4]
+        //if (!(keyPressed&Bit1)) {Row7pressed=true;}; // [F5]
+        if (!(keyPressed&Bit2)) {Row7pressed=true;isOut=2;}; // [ESC]
+        //if (!(keyPressed&Bit3)) {Row7pressed=true;}; // [TAB]
+        if (!(keyPressed&Bit4)) {Row7pressed=true;SilencePSG();}; // [STOP]
+        //if (!(keyPressed&Bit5)) {Row7pressed=true;}; // [BS]
+        //if (!(keyPressed&Bit6)) {Row7pressed=true;}; // [SELECT]
+        //if (!(keyPressed&Bit7)) {Row7pressed=true;}; // [RETURN]
+      }      
+    }else Row7pressed=false;
     
+   
+    
+    // Keyboard row 8
+    keyPressed = GetKeyMatrix(8);
+    if (keyPressed!=0xFF)
+    {
+      if(Row8pressed==false)
+      {
+        //if (!(keyPressed&Bit0)) {Row8pressed=true;}; // [SPACE]
+        //if (!(keyPressed&Bit1)) {Row8pressed=true;}; // [HOME]
+        if (!(keyPressed&Bit2)) {Row8pressed=true;playPSGregs();}; // [INS]
+        //if (!(keyPressed&Bit3)) {Row8pressed=true;}; // [DEL]
+        //if (!(keyPressed&Bit4)) {Row8pressed=true;}; // [LEFT]
+        //if (!(keyPressed&Bit5)) {Row8pressed=true;}; // [UP]
+        //if (!(keyPressed&Bit6)) {Row8pressed=true;}; // [DOWN]
+        //if (!(keyPressed&Bit7)) {Row8pressed=true;}; // [RIGHT]
+      }      
+    }else Row8pressed=false;
+        
   }
   
-  toSilencePSG();
+  SilencePSG();
   
   CopyToVRAM((uint) SCR_BUFFER,0x1863,0x21C);
 }
 
 
+
+/* =============================================================================
+playPSGregs                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void playPSGregs()
 {
   //char newValue;
@@ -2831,16 +2711,19 @@ void playPSGregs()
 }
 
 
-// ===========================================================================
-// funcion que gestiona la ventana que muestra/edita
-// el nombre y autor de un song
-// ===========================================================================
+
+/* =============================================================================
+info                                
+Function : window that shows/edits the song information (name and author)
+Input    : -
+Output   : -
+============================================================================= */
 void info()
 {
   char line=0, column=0, numlin=0;
-  char pressKey; 
+  char keyPressed; 
   
-  toSilencePSG();
+  SilencePSG();
    
   CopyFromVRAM(0x1960,(uint) SCR_BUFFER,0xA0);
   ShowInfoWin();
@@ -2879,8 +2762,8 @@ void info()
     }
     
     // control del teclado
-    pressKey = GetKeyMatrix(7);
-    if ((pressKey|0xFB)==0xFB) //ESC
+    keyPressed = GetKeyMatrix(7);
+    if ((keyPressed|0xFB)==0xFB) //ESC
     {
       break;
     }
@@ -2894,6 +2777,13 @@ void info()
 }
 
 
+
+/* =============================================================================
+vInput                                
+Function : 
+Input    : -
+Output   : -
+============================================================================= */
 void vInput(char posx, char posy, char* text, char length)
 {
   char aKey;
@@ -2969,17 +2859,20 @@ void vInput(char posx, char posy, char* text, char length)
 
 
 /* =============================================================================
- Muestra una ventana modal de confirmacion
- ejem: response=showModalWin("ARE YOU SURE\nYOU WANT TO\nDELETE SONG?");
+showModalWin                                
+Function : Show a confirmation dialog.
+Input    : -
+Output   : -
+Example  : dialogResult=showModalWin("ARE YOU SURE\nYOU WANT TO\nDELETE SONG?");
 ============================================================================= */
 boolean showModalWin(char* aText)
 {
   char line=0, column=0;
-  char pressKey;
+  char keyPressed;
   boolean result = false;
   char i=0;
   
-  toSilencePSG();
+  SilencePSG();
   
   CopyFromVRAM(0x1906,(uint) SCR_BUFFER,0xD4);
   ShowWindow(6,8,20,7,(uint) confirm_WIN);
@@ -3009,12 +2902,14 @@ boolean showModalWin(char* aText)
     }
     
     // control del teclado
-    pressKey = GetKeyMatrix(7);
-    if ((pressKey|0x7F)==0x7F){result=true;break;}  //(Yes) RETURN
+    keyPressed = GetKeyMatrix(7);
+    if ((keyPressed|0x7F)==0x7F){result=true;break;}  //(Yes) RETURN
 
-    if ((pressKey|0xFB)==0xFB){result=false;break;} //(No) ESC
+    if ((keyPressed|0xFB)==0xFB){result=false;break;} //(No) ESC
 
   }
+  
+  ROW7unpress();
   
   CopyToVRAM((uint) SCR_BUFFER,0x1906,0xD4);
   
@@ -3027,24 +2922,23 @@ boolean showModalWin(char* aText)
 
 
 
-
 /* =============================================================================
 copyPatternTool                                
-Function : Herramienta que copia patrones. Copy to.
+Function : Tool to copy a pattern.
 Input    : - 
 Output   : -
 ============================================================================= */
 void copyPatternTool()
 {
   char line=0, column=0;
-  char pressKey;
+  char keyPressed;
   char isOut=0;
   char i=0;
   //char sourcePattern=currentPattern+1;
   char newPattern=currentPattern+1;
   boolean trigbool=false;
   
-  toSilencePSG();
+  SilencePSG();
     
   CopyFromVRAM(0x1A52,(uint) SCR_BUFFER,0x4E);
   ShowCopyWin();
@@ -3102,16 +2996,13 @@ void copyPatternTool()
     }
     
     // control del teclado
-    pressKey = GetKeyMatrix(7);
-    if ((pressKey|0x7F)==0x7F) //RETURN
-    {
-      isOut=1; 
-    }
-    if ((pressKey|0xFB)==0xFB) //ESC
-    {
-      isOut=2; 
-    }
+    keyPressed = GetKeyMatrix(7);
+    if (!(keyPressed&Bit2)) {isOut=2;break;}; // [ESC]
+    if (!(keyPressed&Bit7)) {isOut=1;break;}; // [RETURN]
+
   }
+  
+  ROW7unpress();
   
   CopyToVRAM((uint) SCR_BUFFER,0x1A52,0x4E);
   
@@ -3136,8 +3027,11 @@ void copyPatternTool()
 
 
 /* =============================================================================
- muestra un texto en la pantalla de varias lineas separadas con \n
- ejem: VPrintLines(10,10,"ARE YOU SURE\nYOU WANT TO\nDELETE SONG?");
+VPRINT
+Function : displays a text composed of several lines separated with \n
+Input    : - 
+Output   : - 
+Example  : VPrintLines(10,10,"ARE YOU SURE\nYOU WANT TO\nDELETE SONG?");
 ============================================================================= */
 void VPRINT(char posx, char posy, char* text)
 {
@@ -3289,6 +3183,17 @@ unsigned int GetVRAMaddressByPosition(char column, char line)
 
 
 
+//wait until the Enter key is released 
+void ROW7unpress()
+{  
+  char t=100;
+  while(t-->0)
+  {
+    HALT;
+    if (GetKeyMatrix(7)==0xFF) break;  
+  }
+}
+
 
 
 
@@ -3298,35 +3203,8 @@ unsigned int GetVRAMaddressByPosition(char column, char line)
 // ############################################################################# HELP
 
 
-
-/* =============================================================================
- Muestra la ventana de ayuda desde la pantalla de principal
-============================================================================= */
-/*void toHelpFromEdit()
-{
-  toSilencePSG(); 
-  // guarda la pantalla principal     
-  CopyFromVRAM(BASE10,(uint) SCR_BUFFER,0x300);
-  help();
-  //recupera la pantalla principal
-  CopyToVRAM((uint) SCR_BUFFER,BASE10,0x300);
-}*/
-
-
-/* =============================================================================
- Muestra la ventana de ayuda desde la pantalla de carga
-============================================================================= */
-/*void toHelpFromLoad()
-{
-  CopyFromVRAM(BASE10,(uint) LOAD_SCR_BUFFER,0x300);
-  help();
-  //recupera la ventana principal
-  CopyToVRAM((uint) LOAD_SCR_BUFFER,BASE10,0x300);
-}*/
-
-
 /* ===========================================================================
-help                                
+Help                                
 Function : Controls the functionality of the help.
 Input    : -
 Output   : -
@@ -3334,10 +3212,10 @@ Output   : -
 void Help()
 {
   char line=0, column=0, numlin=0;
-  char pressKey;
+  char keyPressed;
   //boolean trigbool=false;
   
-  toSilencePSG(); 
+  SilencePSG(); 
   
   // guarda la pantalla principal     
   CopyFromVRAM(BASE10,(uint) SCR_BUFFER,0x300);
@@ -3372,23 +3250,16 @@ void Help()
           if (numlin<(HELP_LINES-18)) showHelpPage(++numlin);                 
         }
         
-        if (column>24 && line==23)
-        {
-           break;                
-        }
-        
-      //}
-      
+        if (column>24 && line==23) break;                
+     
     }else{
       //trigbool = false;
     }
     
     // control del teclado
-    pressKey = GetKeyMatrix(7);
-    if ((pressKey|0xFB)==0xFB) //ESC
-    {
-      break;
-    }   
+    keyPressed = GetKeyMatrix(7);
+    if (!(keyPressed&Bit2)) break; //[ESC]
+  
   }
   
   SetSpritePattern(2,31);  
@@ -3416,7 +3287,12 @@ void showHelpPage(char numlin)
 
 
 
-//void setHelpData()
+/* -----------------------------------------------------------------------------
+showHelpText                                
+Function :  
+Input    : [char] 
+Output   : -
+----------------------------------------------------------------------------- */
 void showHelpText(char numlin) __naked
 {
 numlin;
@@ -3665,13 +3541,13 @@ __endasm;
 
 
 
-/* ===========================================================================
+/* -----------------------------------------------------------------------------
 showScrollBar                                
 Function : shows the scroll bar 
 Input    : numlin (char) =  position
            maxNumLines (char) = maximum number of lines
 Output   : -
-=========================================================================== */
+----------------------------------------------------------------------------- */
 void showScrollBar(char numlin, char maxNumLines)
 {
   char i, size;
@@ -3712,66 +3588,20 @@ void showScrollBar(char numlin, char maxNumLines)
 // ############################################################################# L O A D
 
 
-/*void initDemoData()
-{
-  demofiles[0]=*demo01;
-  demofiles[1]=*demo02;
-  demofiles[2]=*demo03;
-} */
 
-/*void initDemoData()
-{
-// ficheros de demos
-// temporal (incoporar en ROM)
-unsigned int addressDemo = DEMO_DATA; //0xCB00;     
-unsigned int i=0; 
-
-unsigned int demoLength[2]={286,862};
-//aorante    894 - 576 - 286
-
-    char *demofiles[]={demo01, demo02};
-    int length=FILESIZE*2;
-    
-    while (length-->0){POKE(addressDemo++,0);}
-    
-    addressDemo = DEMO_DATA;
-    
-    for (i=0;i<2;i++)
-    {
-      //length = getLength(demofiles[i]);
-      CopyRAM(addressDemo, (uint) demofiles[i], (uint) demoLength[i]+1);
-      addressDemo += FILESIZE;
-    }
-}*/
-
-/*int getLength(char *str) 
-{
-    int i = 0;
-    while(*(str++)) i++;        //if(i == INT_MAX) return -1;
-    return i;
-}*/
-
-
-//
-/*void copyMem(int sourceAddress, int toAddress, int size)
-{
-  while (size-->0)
-  { 
-    POKE(toAddress++,peek(sourceAddress++)); 
-  }
-}*/
-
-
-
-//
+/* -----------------------------------------------------------------------------
+load                                
+Function :  
+Input    : -
+Output   : -
+----------------------------------------------------------------------------- */
 boolean load()
 {
   char isOut = 0;
   char selected = 0;
-  char pressKey;
+  char keyPressed;
   char line=0, column=0;
   boolean trigbool=false;
-  boolean escKeybool = false;
   boolean result = false;
   //unsigned char *data;
   //unsigned int addressDemo = DEMO_DATA;
@@ -3783,7 +3613,7 @@ boolean load()
   VPRINT(1,4,"›DEMO0001.PSG");
   VPRINT(1,5,"›MINITECH.PSG");
   
-  while(isOut == 0)
+  while(isOut==0)
   {
     HALT;
     pointerController();
@@ -3793,16 +3623,9 @@ boolean load()
     {
       line = y/8;
       column = x/8;
-      
-      /*if (column<6 && line==23) //Help
-      {
-        toHelpFromLoad();  
-      }*/
-              
+                    
       if (column>17 && column<24 && line==23) //OK
       {
-        //CopyRAM(addressDemo+(FILESIZE*selected),DATA_BUFFER,FILESIZE+1);
-        //CopyRAM(DATA_BUFFER, demofiles[selected], FILESIZE+1);
         isOut = 1;         
       }
       
@@ -3842,35 +3665,14 @@ boolean load()
       trigbool=false;
     }
         
-    // control del teclado
-    pressKey = GetKeyMatrix(7);    
-    if ((pressKey|0x7F)==0x7F) //RETURN
-    {
-      //lee el fichero    
-      //CopyRAM(addressDemo+(FILESIZE*selected),DATA_BUFFER,FILESIZE+1);
-      //CopyRAM(DATA_BUFFER, demofiles[selected], FILESIZE+1);    
-      //end
-      isOut = 1;
-    }
-         
-    if ((pressKey|0xFB)==0xFB) //ESC
-    {
-      if (escKeybool==false)
-      {
-        escKeybool = true;
-        isOut = 2;
-      }
-    }else{escKeybool=false;}
-
-    //pressKey = GetKeyMatrix(6);    
-    /*if ((pressKey|0xDF)==0xDF) //F1
-    {      
-      toHelpFromLoad();
-      escKeybool = true;
-    }*/    
+    // keys
+    keyPressed = GetKeyMatrix(7);    
+    if (!(keyPressed&Bit2)) {isOut=2;}; // [ESC]
+    if (!(keyPressed&Bit7)) {isOut=1;}; // [RETURN]
     
   }
 
+  ROW7unpress();
   
   SetSpritePattern(2,31);  
   SetSpritePattern(3,31);
@@ -3879,7 +3681,8 @@ boolean load()
   {
     LoadDemo(selected-1);
     result = true;
-  }  
+  }
+    
   return result;
 }
 
@@ -3900,16 +3703,17 @@ void LoadDemo(char index)
 }
 
 
+// ############################################################################# END LOAD
 
 
-// END LOAD ##################################################################
 
 
-
-/* ===========================================================================
-pointerController                               
-Function:  
-=========================================================================== */
+/* -----------------------------------------------------------------------------
+pointerController                                
+Function :  
+Input    : -
+Output   : -
+----------------------------------------------------------------------------- */
 void pointerController()
 {
   if (controller>2) mouseController(); 
@@ -3955,9 +3759,12 @@ void joyController()
 }
 
 
-// ===========================================================================
-//
-// ===========================================================================
+/* -----------------------------------------------------------------------------
+mouseController                                
+Function :  
+Input    : -
+Output   : -
+----------------------------------------------------------------------------- */
 void mouseController()
 {
   // control del puntero 
@@ -3969,7 +3776,13 @@ void mouseController()
 }
 
 
-// muestra el puntero
+
+/* -----------------------------------------------------------------------------
+showPointer                                
+Function :  
+Input    : -
+Output   : -
+----------------------------------------------------------------------------- */
 void showPointer()
 {                      
   SetSpritePosition(0,x,y);
@@ -4054,32 +3867,6 @@ void ShowInfoWin()
 
 
 
-
-
-/* =============================================================================
-
-============================================================================= */
-/*void ShowConfirmWin()
-{
-  byte i,o;
-  uint pos=0;
-  uint VRAMaddr=0x1906;
- 
-  for(i=8;i<15;i++)
-  {
-    for(o=6;o<26;o++) VPOKE(VRAMaddr++, confirm_WIN[pos++]);
-    VRAMaddr += 12;
-  }
-  
-  PUTSPRITE(5, 56, 71, 1,5);
-
-}*/
-
-
-
-
-
-
 /* =============================================================================
 
 ============================================================================= */
@@ -4095,47 +3882,6 @@ void ShowWindow(char posX, char posY, char width, char height, uint RAMaddr)
     VRAMaddr += 32;
   }
 }
-
-
-
-
-
-
-/* =============================================================================
-
-============================================================================= */
-/* void ShowConfigWin()
-{
-//ShowWindow(4,4,24,17,(uint) config_WIN);
-  char i;
-  uint VRAMaddr=0x1864; //4,4
-  uint RAMaddr=(uint) config_WIN;
-    
-  for(i=0;i<17;i++)
-  {
-    CopyToVRAM(RAMaddr,VRAMaddr,24);
-    RAMaddr += 24;
-    VRAMaddr += 32;
-  }
-}*/
-
-
-
-/* =============================================================================
-
-============================================================================= */
-/*void ShowPSGDumpWin()
-{
-  byte i,o;
-  uint pos=0;
-  uint VRAMaddr=0x1863; //3,4
-
-  for(i=3;i<20;i++)
-  {
-    for(o=3;o<29;o++) VPOKE(VRAMaddr++, PSGregs_WIN[pos++]);
-    VRAMaddr += 6;
-  }
-}*/
 
 
 
