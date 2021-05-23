@@ -21,7 +21,30 @@ PSGed is an experimental application for MSX computers to make music working dir
 It is designed with a graphical user interface easy to use.
 
 <br/>
+
+
+## Author's Notes
+
+As I explain in the description and in the story, this application is experimental, 
+in the sense that it was a learning experience in programming and in the design of these types of applications, 
+so it was not considered useful for musical composition.
+
+Like me, it can serve as a reference to make a musical application. 
+I hope it can inspire or help you in your developments.
+
+I use the BPM unit in the tempo control
+ 
+In programming I have used the VBLANK interrupt, so no fine tuning is available.
+
+To identify the values I have used a BPM meter from a DJing software, but a check has not been carried out so it may be inaccurate.
+
+Also keep in mind that it is measured only for computers running in PAL (50Hz), so in the case of using this application in NTSC, they will not correspond to the real tempo.
+It is possible that in the future it will be adapted for NTSC.
+
 <br/>
+
+---
+    
 
 ## The little history of PSGed
 
@@ -141,7 +164,7 @@ I decided to open this project on GitHub, thanks to [Retro DeLuxe](https://githu
 It is possible that PSGed version 0.9 will be published soon and later an application called TDB based on the evolution of TARP but with editing. 
 I do not rule out in the future being able to make the GrooveSX application, although it may already be published in a parallel universe.
 
-Have I ever told you, that my main objective was actually to make a Tracker for the MSX Yamaha with the SFG-01/5 module?
+> ### Have I ever told you, that my main objective was actually to make a Tracker for MSX Yamaha computers with the SFG-01/5 module?
 <br/>![openmoji thinking-face](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/272/thinking-face_1f914.png)
 
 **Note:** The images included are just a small sample of all the designs I have created. 
@@ -189,8 +212,8 @@ I want to thank the following persons, who directly or indirectly helped me to a
 
 
 <br/>
----
 
+---
 
 ## Task List
 
@@ -278,7 +301,8 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [x] RLEWB compression of graphic and demo datas.
 - [x] New Load screen.
 - [x] Help improvements.
-- [ ] Support for keyboard shortcuts to select the control device
+- [x] Support for keyboard shortcuts to select the control device.
+- [x] Control the keystroke when exiting a window/screen.
 <br/>
 
 
