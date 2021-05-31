@@ -45,6 +45,8 @@
 const char app_name[] = "PSGED";
 const char app_version[] = "0.83B";
 
+const char MOUSE_port[2][8] = {"MOUSE A","MOUSE B"};
+
 const char EnvelopeValue[8]={1,4,8,10,11,12,13,14}; 
 
 
@@ -350,9 +352,11 @@ Input    :
 ----------------------------------------------------------------------------- */
 void initScreen()
 {  
-  char A=0, y=135, joyval=0, i=0; 
-  //char fin = 0;
+  char A; 
+  char joyval=0; 
+  char index = 0;
   char isOut = 0;
+  char devices=2;
   boolean joybool=false;
   
   FastClsSc2(0x5F);
@@ -363,13 +367,14 @@ void initScreen()
   VPRINT(17, 14, app_version);
   
   A = CheckMouse();
-
   
   VPRINT(12, 17, "CURSOR KEYS");
-  VPRINT(12, 19, "JOYSTICK");
+  VPRINT(12, 18, "JOYSTICK A");
+  VPRINT(12, 19, "JOYSTICK B");
   if(A>0){
-    VPRINT(12, 21, "MOUSE");
-    y=167;
+    VPRINT(12, 20, MOUSE_port[A-1]);
+    index=3;
+    devices=3;
   }
   
   SetSpritePattern(3,3);
@@ -377,11 +382,13 @@ void initScreen()
   
   while(isOut==0)
   {
-    //put_sprite(3, 84, y, 6);
-    SetSpritePosition(3,84,y);
+    HALT;
+    
+    SetSpritePosition(3,84,135+(index*8));
     
     joyval=STICK(0);
     if(joyval==0) joyval=STICK(1);
+    if(joyval==0) joyval=STICK(2);
 
     if (joyval>0)
     {
@@ -391,13 +398,11 @@ void initScreen()
         
         if(joyval==1) // arriba
         { 
-          if(y==151){ y=135;}//cursor 
-          if(A>0 && y==167){ y=151;}//joystick 
+          if(index>0) index--; 
         }
         if(joyval==5) // abajo
         {
-          if(A>0 && y==151){ y=167;}// mouse
-          if(y==135){ y=151;}//joystick           
+          if(index<devices) index++;           
         }
       }
     }else{
@@ -406,20 +411,18 @@ void initScreen()
     
     if (STRIG(0)<0) isOut=1;
     if (STRIG(1)<0) isOut=1;
-    if (STRIG(2)<0) isOut=1;
-
-    
-    HALT;       
+    if (STRIG(2)<0) isOut=1;       
   }
   
   
-  if(y==135) controller=0;
-  if(y==151) controller=1;
-  trigController = controller;
-  if(y==167)
+
+  if(index==3)
   {
     controller=A+2;
     trigController = A;
+  }else{
+    controller=index;
+    trigController = index;  
   }
    
   return;
@@ -689,41 +692,32 @@ void mainWindow()
         {
           if (line==19) //mute channel A on/off
           {
-            if (chanA==true){
+            chanA=!chanA;
+            if (chanA==false){
               VPOKE(0x1A6E,188);
-              chanA=false;
               SetVolume(AY_Channel_A,0);
-              //sound_set(8,0);
-            }else{
-              VPOKE(0x1A6E,187);
-              chanA=true;              
-            }      
+            }else VPOKE(0x1A6E,187);
+  
           }
           
           if (line==20) //mute channel B on/off
           {
-            if (chanB==true){
+            chanB=!chanB;
+            if (chanB==false){
               VPOKE(0x1A8E,188);//14,20
-              chanB=false;
               SetVolume(AY_Channel_B,0);
-              //sound_set(9,0);
-            }else{
-              VPOKE(0x1A8E,187);
-              chanB=true;              
-            }
+            }else VPOKE(0x1A8E,187);             
+
           }
           
           if (line==21) //mute channel C on/off
           {
-            if (chanC==true){
+            chanC=!chanC;
+            if (chanC==false){
               VPOKE(0x1AAE,188);//14,21
-              chanC=false;
               SetVolume(AY_Channel_C,0);
-              //sound_set(10,0);
-            }else{
-              VPOKE(0x1AAE,187);
-              chanC=true;              
-            }
+            }else VPOKE(0x1AAE,187);
+
           }
         }
         
@@ -1718,8 +1712,6 @@ void playStep()
         
         //02,03 = Frequency channel B
         SetTonePeriod(AY_Channel_B,offsetFreq);
-        //sound_set(2,offsetFreq & 0xFF);
-        //sound_set(3,(offsetFreq & 0xFF00)/255);
         
         SetChannel(AY_Channel_B,PSGsong.toneB,PSGsong.noiseB);
         
@@ -1751,8 +1743,6 @@ void playStep()
         
         //04,05 = Frequency channel C
         SetTonePeriod(AY_Channel_C,offsetFreq);
-        //sound_set(4,offsetFreq & 0xFF);
-        //sound_set(5,(offsetFreq & 0xFF00)/255);
         
         SetChannel(AY_Channel_C,PSGsong.toneC,PSGsong.noiseC);
         
@@ -1769,19 +1759,22 @@ void playStep()
       }  
     }
     
-    // control del disparo de sonidos
+    // sound envelope trigger control
+    // Mutes channels that have surround on when there is no sound.
     if (playEnvelopNote==true){
-      if (PSGsong.patterns[currentPattern].trackA[playCounter]==0)
+      if (PSGsong.envelopeA==true)
       {
-        if (PSGsong.envelopeA==true) SetVolume(AY_Channel_A,0); //sound_set(8,0);
+        if (PSGsong.patterns[currentPattern].trackA[playCounter]==0) SetVolume(AY_Channel_A,0);
       }
-      if (PSGsong.patterns[currentPattern].trackB[playCounter]==0)
+      
+      if (PSGsong.envelopeB==true)
       {
-        if (PSGsong.envelopeB==true) SetVolume(AY_Channel_B,0); //sound_set(9,0);
+        if (PSGsong.patterns[currentPattern].trackB[playCounter]==0) SetVolume(AY_Channel_B,0);
       }
-      if (PSGsong.patterns[currentPattern].trackC[playCounter]==0)
+      
+      if (PSGsong.envelopeC==true)
       {
-        if (PSGsong.envelopeC==true) SetVolume(AY_Channel_C,0); //sound_set(10,0);
+        if (PSGsong.patterns[currentPattern].trackC[playCounter]==0) SetVolume(AY_Channel_C,0); //sound_set(10,0);
       }
       
       //0D = Envelope shape (0-15)
@@ -1870,7 +1863,7 @@ void setAmpC()
 void setEnvelopeA()
 {
   if (PSGsong.envelopeA==true) SetVolume(AY_Channel_A,16); //sound_set(8,16);       
-  else SetVolume(AY_Channel_C,PSGsong.ampA); //sound_set(8,PSGsong.ampA);
+  else SetVolume(AY_Channel_A,PSGsong.ampA); //sound_set(8,PSGsong.ampA);
 }
 
 
@@ -1892,44 +1885,33 @@ void setEnvelopeC()
 void setFreqA()
 {
   if(PSGsong.freqA>4095) PSGsong.freqA=4095;
-  //if(PSGsong.freqA<0) PSGsong.freqA=0;
   VPrintNumber(4,7, PSGsong.freqA, 4);
   //if (isPlay==0)
   SetTonePeriod(AY_Channel_A,PSGsong.freqA);
-  //sound_set(0,PSGsong.freqA & 0xFF);
-  //sound_set(1,(PSGsong.freqA & 0xFF00)/255);
 }
 
 
 void setFreqB()
 {
   if(PSGsong.freqB>4095) PSGsong.freqB=4095;
-  //if(PSGsong.freqB<0) PSGsong.freqB=0;
   VPrintNumber(15,7, PSGsong.freqB, 4);
   //if (isPlay==0)
   SetTonePeriod(AY_Channel_B,PSGsong.freqB);
-  //sound_set(2,PSGsong.freqB & 0xFF);
-  //sound_set(3,(PSGsong.freqB & 0xFF00)/255);
 }
 
 
 void setFreqC()
 {
   if(PSGsong.freqC>4095) PSGsong.freqC=4095;
-  //if(PSGsong.freqC<0) PSGsong.freqC=0;
   VPrintNumber(25,7, PSGsong.freqC, 4);
   //if (isPlay==0)
-  SetTonePeriod(AY_Channel_C,PSGsong.freqB);
-  //sound_set(4,PSGsong.freqC & 0xFF);  
-  //sound_set(5,(PSGsong.freqC & 0xFF00)/255);
+  SetTonePeriod(AY_Channel_C,PSGsong.freqC);
 }
 
 
 void setEnvelopeFreq()
 {
-    SetEnvelopePeriod(PSGsong.envelopeFreq);
-  //sound_set(11,PSGsong.envelopeFreq & 0xFF);
-  //sound_set(12,(PSGsong.envelopeFreq & 0xFF00)/255);
+  SetEnvelopePeriod(PSGsong.envelopeFreq);
 }
 
 
@@ -2243,6 +2225,7 @@ char getEnvelopeIndex(char envelope)
 }
 
 
+
 /* =============================================================================
 reverseCheckBox                                
 Function : 
@@ -2323,6 +2306,7 @@ void config()
   char t;
   char t_VDP_type = VDP_type;
   char t_controller = controller;
+  boolean radioAY = isAYextern;
   
   Row6pressed=false;
   Row7pressed=false;
@@ -2346,7 +2330,8 @@ void config()
   if(VDP_type==0) VPOKE(0x18CD,190);
   else VPOKE(0x18ED,190);
   
-  if(isAYextern==false) VPOKE(0x192D,190);
+  //show AY radio button
+  if(radioAY==false) VPOKE(0x192D,190);
   else VPOKE(0x194D,190);
   
   ShowRadioControlDevice(controller);
@@ -2380,13 +2365,13 @@ void config()
       {
          VPOKE(0x192D,190);
          VPOKE(0x194D,189);
-         isAYextern = false;       
+         radioAY = false;       
       }
       if (column>12 && column<27 && line==10)// PSG MEGAFLASHROM SCC+
       {
          VPOKE(0x192D,189);
          VPOKE(0x194D,190);
-         isAYextern = true;       
+         radioAY = true;       
       }
       
       //select control device
@@ -2442,8 +2427,11 @@ void config()
     
   }
   
-  if (isOut==1)
+  
+  if (isOut==1) //OK
   {
+    //udpate config
+    
     //VDP
     if (t_VDP_type!=VDP_type)
     {
@@ -2451,6 +2439,8 @@ void config()
       if (VDP_type==1) SetPalette(1);
       else SetPalette(2);
     }
+    
+    isAYextern = radioAY;
     
     //PSG
     //setPSGtype(PSG_type);
@@ -3936,8 +3926,8 @@ readPALaddr:
   out	 (#0x99),A
   ld	 A,#144
   out	 (#0x99),A
-  ld	 BC,#0x209A
-  otir
+  ld	 BC,#0x209A  ;B=32B /C=0x9A port
+  otir               
   ei
   
   pop  IX  
