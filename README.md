@@ -171,6 +171,9 @@ I do not rule out in the future being able to make the GrooveSX application, alt
 Shame haunts me for not finishing my projects. 
 I deserve to be publicly punished with [*tarring and feathering*](https://en.wikipedia.org/wiki/Tarring_and_feathering) for my offense to the MSX user community. 
 
+![grooveSX_tracker](https://raw.githubusercontent.com/mvac7/PSGed/main/screenshots/grooveSX_tracker01.png)
+<br/>*a tracker-like sequence editor!*
+
 *mvac7 (aka aorante)*
 
 <br/>
