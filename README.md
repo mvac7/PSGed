@@ -169,7 +169,7 @@ I do not rule out in the future being able to make the GrooveSX application, alt
 
 **Note:** The images included are just a small sample of all the designs I have created. 
 Shame haunts me for not finishing my projects. 
-I deserve to be publicly *punished with tarring* and feathering for my offense to the MSX user community. 
+I deserve to be publicly punished with [*tarring and feathering*](https://en.wikipedia.org/wiki/Tarring_and_feathering) for my offense to the MSX user community. 
 
 *mvac7 (aka aorante)*
 
@@ -288,11 +288,9 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [x] Changing the load screen. Added name and author of the demos.
 <br/>
 
-
 ### PSGed v0.82b ROM (26/01/2012)
 - [x] Real-time modification of AY records in playback mode.
 <br/>
-
 
 ### PSGed v0.83b ROM GitHub Release
 
@@ -318,13 +316,11 @@ I want to thank the following persons, who directly or indirectly helped me to a
 - [ ] Save info registers in each pattern.
 - [ ] Editor. Changing tone frequency value for offset. (-128>+128)
 - [ ] Change in real time registers of tone frequency... 
-- [ ] control parameters from 6 pots + 2 buttons (1 joystick input)
 - [ ] Disk file access.
 - [ ] get dir
 - [ ] load file
 - [ ] save file
-- [ ] Help. By clicking on the bar jump pages.
-- [ ] Delete record dump.
+- [ ] control parameters from 6 pots + 2 buttons (1 joystick input)
 
 
 ---

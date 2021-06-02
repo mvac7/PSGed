@@ -156,7 +156,7 @@ boolean load();
 void LoadDemo(char index);
 
 void info();
-void config();
+void Config();
 void PSGdump();
 
 void pointerController();
@@ -168,7 +168,7 @@ void showPointer();
 void playSong();
 void playPattern();
 void playStep();
-void stopSong();
+void StopSong();
 void SilencePSG();
 void playPSGregs();
 void initPSGregs();
@@ -546,7 +546,7 @@ void mainWindow()
               
         if (setStop==true)
         {
-          stopSong();         
+          StopSong();         
           setPosition();
                     
         }else{        
@@ -627,13 +627,22 @@ void mainWindow()
         {
           if (column<6)//HELP
           {
+             StopSong();
              Help();
           }
-          if (column>6 && column<12) config();//CONFIG
+          
+          if (column>6 && column<12){
+             StopSong();
+             Config();
+          } 
 
           if (column>12 && column<18) isLoad=true;// LOAD 
                         
-          if (column>18 && column<24) PSGdump(); //SAVE
+          if (column>18 && column<24)
+          {
+            StopSong();
+            PSGdump();
+          } 
 
           //if (column>24) //(F5)
 
@@ -654,6 +663,7 @@ void mainWindow()
     
             if (dialogResult==true)
             {
+              StopSong();
               songPos=0;
               currentPattern=0;
               initPSGData();
@@ -670,6 +680,7 @@ void mainWindow()
     
             if (dialogResult==true)
             {
+              StopSong();
               for (i=0;i<16;i++)
               { 
                 PSGsong.patterns[currentPattern].trackA[i]=0;
@@ -683,6 +694,7 @@ void mainWindow()
           // CPY - Copy
           if (column>17 && column<24) 
           {
+            StopSong();
             copyPatternTool();                        
           }
         }
@@ -747,7 +759,7 @@ void mainWindow()
           {
             tiladdre = GetVRAMaddressByPosition(7,9);
             PSGsong.envelopeA = reverseCheckBox(PSGsong.envelopeA, tiladdre);
-            setEnvelopeA();        
+            if (isPlay>0) setEnvelopeA();        
           }
         }
         
@@ -776,7 +788,7 @@ void mainWindow()
           {
             tiladdre = GetVRAMaddressByPosition(18,9);
             PSGsong.envelopeB = reverseCheckBox(PSGsong.envelopeB, tiladdre);
-            setEnvelopeB();        
+            if (isPlay>0) setEnvelopeB();        
           }
         }
         
@@ -806,7 +818,7 @@ void mainWindow()
           {
             tiladdre = GetVRAMaddressByPosition(28,9);
             PSGsong.envelopeC = reverseCheckBox(PSGsong.envelopeC, tiladdre);
-            setEnvelopeC();        
+            if (isPlay>0) setEnvelopeC();        
           }
         }
        
@@ -1040,7 +1052,7 @@ void mainWindow()
           }else{
             if(isPause>0) // si se pulsa stop en modo pausa
             {
-              stopSong();
+              StopSong();
             }else{ // si esta parado, coloca la secuencia en la posicion inicial.
               SilencePSG();
               songPos=0;
@@ -1354,8 +1366,18 @@ void mainWindow()
     
     
   
-    if (!(keyPressed&Bit5)) {Help();}; // [F1]
-    if (!(keyPressed&Bit6)) {config(); }; // [F2]
+    if (!(keyPressed&Bit5)) 
+    {
+        StopSong();
+        Help();
+    }; // [F1]
+    
+    if (!(keyPressed&Bit6)) 
+    {
+        StopSong();
+        Config(); 
+    }; // [F2]
+    
     if (!(keyPressed&Bit7)) {isLoad = true; }; // [F3]
                 
     
@@ -1424,7 +1446,7 @@ void mainWindow()
         }else{
           if(isPause>0) // si se pulsa stop en modo pausa
             {
-              stopSong();
+              StopSong();
             }else{ // si esta parado, coloca la secuencia en la posicion inicial.
               SilencePSG();
               songPos=0;
@@ -1437,7 +1459,12 @@ void mainWindow()
     
     //if (!(keyPressed&Bit0)) //[F4]
     
-    if (!(keyPressed&Bit1)) PSGdump(); //[F5]
+    if (!(keyPressed&Bit1))
+    {
+        StopSong();
+        PSGdump(); //[F5]
+    }
+     
     
 
     keyPressed = GetKeyMatrix(0);
@@ -1515,7 +1542,7 @@ void mainWindow()
     {
       isLoad=false;
       
-      SilencePSG();          
+      StopSong();         
       
       if(isPlay==2) // si esta en play, lo para
       {
@@ -1690,7 +1717,8 @@ void playStep()
         {
           SetVolume(AY_Channel_A,0); //sound_set(8,0);
         }else{
-          if (PSGsong.envelopeA==true){
+          if (PSGsong.envelopeA==true)
+          {
             SetVolume(AY_Channel_A,16); //sound_set(8,16);
             playEnvelopNote = true;        
           }else SetVolume(AY_Channel_A,PSGsong.ampA); //sound_set(8,PSGsong.ampA);
@@ -1720,7 +1748,8 @@ void playStep()
         {
           SetVolume(AY_Channel_B,0);  //sound_set(9,0);
         }else{
-          if (PSGsong.envelopeB==true){
+          if (PSGsong.envelopeB==true)
+          {
             SetVolume(AY_Channel_B,16);  //sound_set(9,16);
             playEnvelopNote = true;        
           }else SetVolume(AY_Channel_B,PSGsong.ampB);  //sound_set(9,PSGsong.ampB);          
@@ -1751,7 +1780,8 @@ void playStep()
         {
           SetVolume(AY_Channel_C,0); //sound_set(10,0);
         }else{
-          if (PSGsong.envelopeC==true){
+          if (PSGsong.envelopeC==true)
+          {
             SetVolume(AY_Channel_C,16); //sound_set(10,16);
             playEnvelopNote = true;                    
           }else SetVolume(AY_Channel_C,PSGsong.ampC); //sound_set(10,PSGsong.ampC);
@@ -1759,25 +1789,30 @@ void playStep()
       }  
     }
     
-    // sound envelope trigger control
+    // SETC (Sound Envelope Trigger Control)
     // Mutes channels that have surround on when there is no sound.
     if (playEnvelopNote==true){
-      if (PSGsong.envelopeA==true)
+    
+      if (!(PSGsong.envelopeType==8 || PSGsong.envelopeType==10 || PSGsong.envelopeType==12 || PSGsong.envelopeType==14))
       {
-        if (PSGsong.patterns[currentPattern].trackA[playCounter]==0) SetVolume(AY_Channel_A,0);
-      }
+        //can only mute if waveforms are non-cyclical
+        if (PSGsong.envelopeA==true)
+        {
+          if (PSGsong.patterns[currentPattern].trackA[playCounter]==0) SetVolume(AY_Channel_A,0);
+        }
+        
+        if (PSGsong.envelopeB==true)
+        {
+          if (PSGsong.patterns[currentPattern].trackB[playCounter]==0) SetVolume(AY_Channel_B,0);
+        }
+        
+        if (PSGsong.envelopeC==true)
+        {
+          if (PSGsong.patterns[currentPattern].trackC[playCounter]==0) SetVolume(AY_Channel_C,0); //sound_set(10,0);
+        }      
+      }      
       
-      if (PSGsong.envelopeB==true)
-      {
-        if (PSGsong.patterns[currentPattern].trackB[playCounter]==0) SetVolume(AY_Channel_B,0);
-      }
-      
-      if (PSGsong.envelopeC==true)
-      {
-        if (PSGsong.patterns[currentPattern].trackC[playCounter]==0) SetVolume(AY_Channel_C,0); //sound_set(10,0);
-      }
-      
-      //0D = Envelope shape (0-15)
+      //reg13 = Envelope shape (0-15)
       PlayEnvelope(PSGsong.envelopeType); //sound_set(13,PSGsong.envelopeType);  
     }
  
@@ -1786,12 +1821,12 @@ void playStep()
 
 
 /* =============================================================================
-stopSong                                
+StopSong                                
 Function : 
 Input    : -
 Output   : -
 ============================================================================= */
-void stopSong()
+void StopSong()
 {
   SilencePSG();
   setStop=false;          
@@ -1816,8 +1851,14 @@ void initPSGregs()
 {
   SetNoisePeriod(PSGsong.noiseFreq);  //sound_set(6,PSGsong.noiseFreq);
   setEnvelopeFreq();
-  /*sound_set(11,PSGsong.envelopeFreq & 0xFF);
-  sound_set(12,(PSGsong.envelopeFreq & 0xFF00)/255);*/
+
+  //setEnvelopeA();
+  //setEnvelopeB();
+  //setEnvelopeC();
+  
+  SetChannel(AY_Channel_A,PSGsong.toneA,PSGsong.noiseA);
+  SetChannel(AY_Channel_B,PSGsong.toneB,PSGsong.noiseB);
+  SetChannel(AY_Channel_C,PSGsong.toneC,PSGsong.noiseC);
 }
 
 
@@ -1843,22 +1884,23 @@ void SilencePSG()
 void setAmpA()
 {
   VPrintNumber(6,10, PSGsong.ampA, 2);
-  if (isPlay==0) setEnvelopeA();
+  if (isPlay>0) setEnvelopeA();
 }
 
 
 void setAmpB()
 {
   VPrintNumber(17,10, PSGsong.ampB, 2);
-  if (isPlay==0) setEnvelopeB();
+  if (isPlay>0) setEnvelopeB();
 }
 
 
 void setAmpC()
 {
   VPrintNumber(27,10, PSGsong.ampC, 2);
-  if (isPlay==0) setEnvelopeC();
+  if (isPlay>0) setEnvelopeC();
 }
+
 
 void setEnvelopeA()
 {
@@ -2297,7 +2339,7 @@ Function :
 Input    : -
 Output   : -
 ============================================================================= */
-void config()
+void Config()
 {
   char line=0, column=0, numlin=0;
   char keyPressed;
@@ -2441,9 +2483,6 @@ void config()
     }
     
     isAYextern = radioAY;
-    
-    //PSG
-    //setPSGtype(PSG_type);
     initPSGregs();
     
     //CONTROL
@@ -3104,6 +3143,7 @@ void VPrintNum(unsigned int vaddr, unsigned int value, char length)
   //while (length-->0){ VPOKE(vaddr++,text[pos++]);}
   CopyToVRAM((unsigned int) text + (5-length), vaddr, length);
 }
+
 
 
 // ===========================================================================
