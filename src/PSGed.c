@@ -38,7 +38,8 @@
 
 #define FILESIZE 0x035D
 
-#define HELP_LINES 76 
+#define HELP_LINES 76
+#define HELP_PAGE  18 
 
 
 
@@ -2576,7 +2577,6 @@ void PSGdump()
   VPrintNumber(16,7, (PSGsong.freqA & 0xFF00)/255, 3);
   VPrintNumber(25,7, t_ampA, 3);
   
-  
   VPrintNumber(8,9, PSGsong.freqB & 0xFF, 3);
   VPrintNumber(16,9, (PSGsong.freqB & 0xFF00)/255, 3);
   VPrintNumber(25,9, t_ampB, 3);
@@ -3243,7 +3243,7 @@ void Help()
 {
   char line=0, column=0, numlin=0;
   char keyPressed;
-  //boolean trigbool=false;
+  boolean trigbool=false;
   
   SilencePSG(); 
   
@@ -3264,26 +3264,58 @@ void Help()
     //control del boton de accion
     if (STRIG(trigController)<0)
     {
-      //if (trigbool==false)
-      //{
-        //trigbool = true;
-        line = y/8;
-        column = x/8;
+      line = y/8;
+      column = x/8;
+        
+        
+      if (trigbool==false)
+      {
+        trigbool = true;
+        
+        //need pressure control 
+        
+        if (column>29)
+        {
+          if (line>5 && line<14) // Re PAG
+          {
+            if (numlin>(HELP_PAGE-1)) numlin-=HELP_PAGE;
+            else numlin=0;
+            showHelpPage(numlin);                 
+          }
           
-        if (column>29 && line>3 && line<12) // scroll arriba
+          if (line>14 && line<20) // AV PAG
+          {
+            if (numlin<HELP_LINES-(HELP_PAGE+HELP_PAGE)) numlin+=HELP_PAGE;
+            else numlin=HELP_LINES-HELP_PAGE; 
+            showHelpPage(numlin);                 
+          }          
+        }
+        
+      }       
+        
+        
+      if (column>29)
+      {
+        if (line==4) // scroll arriba
         {
           if (numlin>0) showHelpPage(--numlin);                 
         }
         
-        if (column>29 && line>15 && line<22) // scroll abajo
-        {
-          if (numlin<(HELP_LINES-18)) showHelpPage(++numlin);                 
-        }
         
-        if (column>24 && line==23) break;                
+        
+        if (line==21) // scroll abajo
+        {
+          if (numlin<(HELP_LINES-HELP_PAGE)) showHelpPage(++numlin);                 
+        }
+  
+        
+                
+      }       
+      
+      if (column>24 && line==23) break;  //exit button              
      
     }else{
-      //trigbool = false;
+      trigbool = false;
     }
     
     // control del teclado
@@ -3358,10 +3390,10 @@ nxt:
   pop  BC
   djnz loop1  
 
-init:    ; muestra el texto en el area de la pantalla
+init:    ; displays the text in the screen area
   ld   HL,#0x1881
 
-  ld   B,#18
+  ld   B,#HELP_PAGE
   
 loop_ay:
   push BC
@@ -3409,7 +3441,7 @@ VPOKE32:
 HELP_TEXT:
 	.ascii "PSGed V0.83B"
 	.db 13
-	.ascii "COPYLEFT 2010 mvac7/303bcn"
+	.ascii "COPYLEFT 2021 mvac7/303bcn"
 	.db 13
 	.ascii "-----------------------------"
 	.db 13
@@ -3707,7 +3739,7 @@ boolean load()
   SetSpritePattern(2,31);  
   SetSpritePattern(3,31);
   
-  if (selected>0)
+  if (isOut==1 && selected>0)
   {
     LoadDemo(selected-1);
     result = true;
