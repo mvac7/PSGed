@@ -1,3 +1,5 @@
 /build/*
-**/_old/*
-**/_tmp/*
+**/build/*
+**/*old/*
+**/*tmp/*
+**/*bin/*
