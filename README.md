@@ -113,7 +113,7 @@ We needed an extra-long table to fit so many A1200s. But this is another story.
 
 Those responsible for many of our concerts were the guys from [Lowtoy](http://www.lowtoy.com). Very cool people.
 
-> ### Those times were very crazy. Sex (on the internet), Cola-drinks and above all a lot of Noise!!!! **YEAH!**
+> ### Those times were very crazy. Parties, Beer, energy-drinks and above all a lot of noise !!!! **YEAH!**
 
 This experience made me think of an application oriented to live playback and this led to the next chapter:
 
