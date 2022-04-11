@@ -453,7 +453,8 @@ void mainWindow()
   char pauseTimer=0;
    
   //char acel=10, speed=0; 
-  char keyAcel=4, keySpeed=0;
+  char keyAcel=0; 
+  char keySpeed=0;
   char keyPressed;
   char i;
   char songPattern=0;
@@ -1230,8 +1231,10 @@ void mainWindow()
       
       
       // aceleracion
-      if (keyAcel<60) keyAcel++;
-      keySpeed = keyAcel/10;
+      if (keyAcel<254) keyAcel++;
+      if (keyAcel==1) keySpeed=1;
+      else keySpeed = keyAcel>>4;
+ 
       
       
       if (line==7)
@@ -1293,8 +1296,8 @@ void mainWindow()
         }
         if (column==25)//(+)
         {
-           if (PSGsong.envelopeFreq<(4095-keySpeed)) PSGsong.envelopeFreq+=keySpeed;
-           else PSGsong.envelopeFreq=4095;
+           if (PSGsong.envelopeFreq<(0xFFFF-keySpeed)) PSGsong.envelopeFreq+=keySpeed;
+           else PSGsong.envelopeFreq=0xFFFF;
            VPrintNumber(20,14, PSGsong.envelopeFreq, 5);
            setEnvelopeFreq();
         }
@@ -1303,7 +1306,7 @@ void mainWindow()
         
     }else{
       trigbool = false;
-      keyAcel=4;
+      keyAcel=0;
     }
     // end boton1
     
